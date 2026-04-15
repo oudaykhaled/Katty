@@ -1,0 +1,22 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2026-04-15T08:49:01.749286Z:
+test_suite_meta_data {
+  device {
+    id: "R5CT71TVVAJ"
+    friendly_name: "primary"
+  }
+}
+test_status: ABORTED
+platform_error {
+  errors {
+    summary {
+      namespace {
+        namespace: "com.google.testing.platform"
+      }
+      error_code: 1006
+      error_name: "ABORTED"
+      error_classification: "INFRA"
+      error_message: "UTP was aborted externally"
+    }
+  }
+}

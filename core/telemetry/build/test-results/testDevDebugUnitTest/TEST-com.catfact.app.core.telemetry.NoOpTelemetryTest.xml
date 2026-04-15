@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.telemetry.NoOpTelemetryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:06.669Z" hostname="bb-system-3781-1.home" time="0.246">
+  <properties/>
+  <testcase name="NoOpPerformanceTracer measureDuration executes block and returns" classname="com.catfact.app.core.telemetry.NoOpTelemetryTest" time="0.003"/>
+  <testcase name="NoOpCrashReporter interface default parameters work through concrete type" classname="com.catfact.app.core.telemetry.NoOpTelemetryTest" time="0.007"/>
+  <testcase name="NoOpPerformanceTracer measureSuspendDuration preserves suspend semantics" classname="com.catfact.app.core.telemetry.NoOpTelemetryTest" time="0.221"/>
+  <testcase name="NoOpEventTracker interface default parameters work through concrete type" classname="com.catfact.app.core.telemetry.NoOpTelemetryTest" time="0.001"/>
+  <testcase name="NoOpTraceHandle lifecycle can be called without errors" classname="com.catfact.app.core.telemetry.NoOpTelemetryTest" time="0.001"/>
+  <testcase name="NoOpPerformanceTracer beginTrace returns non-null handle" classname="com.catfact.app.core.telemetry.NoOpTelemetryTest" time="0.0"/>
+  <testcase name="NoOpPerformanceTracer measureSuspendDuration returns block result" classname="com.catfact.app.core.telemetry.NoOpTelemetryTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

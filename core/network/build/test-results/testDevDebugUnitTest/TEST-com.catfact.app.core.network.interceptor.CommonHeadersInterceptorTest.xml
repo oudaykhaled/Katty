@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.network.interceptor.CommonHeadersInterceptorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:14.789Z" hostname="bb-system-3781-1.home" time="0.355">
+  <properties/>
+  <testcase name="adds X-Client-Version header" classname="com.catfact.app.core.network.interceptor.CommonHeadersInterceptorTest" time="0.346"/>
+  <testcase name="adds X-Platform header" classname="com.catfact.app.core.network.interceptor.CommonHeadersInterceptorTest" time="0.003"/>
+  <testcase name="adds Accept header" classname="com.catfact.app.core.network.interceptor.CommonHeadersInterceptorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

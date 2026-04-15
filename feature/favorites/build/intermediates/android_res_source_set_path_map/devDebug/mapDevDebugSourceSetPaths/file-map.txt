@@ -1,0 +1,10 @@
+com.catfact.app.feature.favorites-dev-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/generated/res/pngs/dev/debug
+com.catfact.app.feature.favorites-updated_navigation_xml-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/generated/updated_navigation_xml/devDebug
+com.catfact.app.feature.favorites-mergeDevDebugResources-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/intermediates/incremental/devDebug/mergeDevDebugResources/merged.dir
+com.catfact.app.feature.favorites-mergeDevDebugResources-3 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/intermediates/incremental/devDebug/mergeDevDebugResources/stripped.dir
+com.catfact.app.feature.favorites-devDebug-4 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/intermediates/merged_res/devDebug/mergeDevDebugResources
+com.catfact.app.feature.favorites-devDebug-5 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/intermediates/packaged_res/devDebug/packageDevDebugResources
+com.catfact.app.feature.favorites-debug-6 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/src/debug/res
+com.catfact.app.feature.favorites-dev-7 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/src/dev/res
+com.catfact.app.feature.favorites-devDebug-8 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/src/devDebug/res
+com.catfact.app.feature.favorites-main-9 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/src/main/res

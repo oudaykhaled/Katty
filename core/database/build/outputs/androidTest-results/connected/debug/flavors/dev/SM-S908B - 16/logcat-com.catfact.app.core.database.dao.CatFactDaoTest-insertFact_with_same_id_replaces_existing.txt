@@ -1,0 +1,2 @@
+04-15 09:52:58.314 18326 18340 I TestRunner: started: insertFact_with_same_id_replaces_existing(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.335 18326 18340 I TestRunner: finished: insertFact_with_same_id_replaces_existing(com.catfact.app.core.database.dao.CatFactDaoTest)

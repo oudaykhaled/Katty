@@ -1,0 +1,11 @@
+<resources>
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_empty_title">No favorites yet</string>
+    <string name="favorites_empty_body">Tap the heart on any fact to save it here.</string>
+    <string name="cd_no_favorites">No favorites yet</string>
+    <string name="error_remove_bookmark_failed">Failed to remove bookmark</string>
+    <string name="error_load_favorites_failed">Failed to load favorites</string>
+    <string name="error_network">No internet connection</string>
+    <string name="error_server">Server error, please try later</string>
+    <string name="cd_dismiss_error">Dismiss error</string>
+</resources>

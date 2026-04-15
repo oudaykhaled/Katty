@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_back">Back</string>
+    <string name="cd_share">Share</string>
+    <string name="detail_note_label">Personal note</string>
+    <string name="detail_note_placeholder">Add a personal note about this fact…</string>
+    <string name="detail_save_note">Save Note</string>
+    <string name="detail_share_chooser_title">Share fact</string>
+    <string name="detail_title">Fact Detail</string>
+    <string name="error_bookmark_failed">Failed to update bookmark</string>
+    <string name="error_fact_not_found">Fact not found</string>
+    <string name="error_load_detail_failed">Failed to load fact details</string>
+    <string name="error_network">No internet connection</string>
+    <string name="error_note_save_failed">Failed to save note</string>
+    <string name="error_server">Server error, please try later</string>
+    <string name="success_note_saved">Note saved</string>
+</resources>

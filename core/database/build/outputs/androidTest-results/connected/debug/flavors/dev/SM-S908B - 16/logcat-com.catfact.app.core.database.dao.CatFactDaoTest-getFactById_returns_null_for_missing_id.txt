@@ -1,0 +1,7 @@
+04-15 09:52:58.206 18326 18340 I TestRunner: started: getFactById_returns_null_for_missing_id(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.206 10618 18348 I Routine@Core[4.9.04.13]: InstanceCleaner: clean() - end
+04-15 09:52:58.208 10618 18348 I Routine@Core[4.9.04.13]: Pref: putSharedPrefsData: key=pref_metaloader_status, data.size=9
+04-15 09:52:58.209 10618 18348 I Routine@Core[4.9.04.13]: RoutineService: onMetadataLoadingCompleted.onComplete
+04-15 09:52:58.210 10618 10618 I Routine@Core[4.9.04.13]: RoutineService: onDestroy
+04-15 09:52:58.211 10618 10831 I Routine@Core[4.9.04.13]: COORD/ConditionProgressCallback: doTriggerOff: routineState=READY (routineId=2(uuid=000100, name=Sleep)[READY]) (conditionId=manual_execute(id=2, uuid=158228, routineId=2))
+04-15 09:52:58.213 18326 18340 I TestRunner: finished: getFactById_returns_null_for_missing_id(com.catfact.app.core.database.dao.CatFactDaoTest)

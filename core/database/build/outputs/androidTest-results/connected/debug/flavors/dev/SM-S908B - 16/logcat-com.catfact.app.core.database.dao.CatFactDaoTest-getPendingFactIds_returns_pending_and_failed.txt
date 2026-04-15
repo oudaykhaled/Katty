@@ -1,0 +1,8 @@
+04-15 09:52:58.215 18326 18340 I TestRunner: started: getPendingFactIds_returns_pending_and_failed(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.216 10618 10831 I Routine@Core[4.9.04.13]: ModeTriggerHandler: onTriggerOffCondition: routineId=2(uuid=000100, name=Sleep)[READY], triggeredOffConditionId=manual_execute(id=2, uuid=158228, routineId=2)
+04-15 09:52:58.216 10618 10831 I Routine@Core[4.9.04.13]: ModeTriggerHandler: resolveModeOffSuggestion: not running. routineId=2(uuid=000100, name=Sleep)[READY]
+04-15 09:52:58.220 10618 10831 I Routine@Core[4.9.04.13]: COORD/RoutineCommandHandlerImpl: needEndRunning: routineState=READY (routineId=2(uuid=000100, name=Sleep)[READY])
+04-15 09:52:58.220 10618 10831 W Routine@Core[4.9.04.13]: COORD/RoutineCommandHandlerImpl: needEndRunning: not handled status. routineState=READY
+04-15 09:52:58.221 10618 18350 I Routine@Core[4.9.04.13]: COORD/CoordinatorRequestHandler: onCallReceive: released! method=specific_condition_state_changed
+04-15 09:52:58.221 10618 18350 I Routine@Core[4.9.04.13]: ProcessUtils: setProcessImportant: needForeground=false, reason=ENGINE_COORDINATOR
+04-15 09:52:58.223 18326 18340 I TestRunner: finished: getPendingFactIds_returns_pending_and_failed(com.catfact.app.core.database.dao.CatFactDaoTest)

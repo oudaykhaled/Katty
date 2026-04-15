@@ -1,0 +1,13 @@
+<resources>
+    <string name="designsystem_name">CatFact Design System</string>
+    <string name="connectivity_banner_offline">No internet connection</string>
+    <string name="bookmark_add">Add to favorites</string>
+    <string name="bookmark_remove">Remove from favorites</string>
+    <string name="cd_cat_fact">Cat fact: %1$s</string>
+    <string name="sync_status_synced">Synced</string>
+    <string name="sync_status_syncing">Syncing</string>
+    <string name="sync_status_failed">Sync failed</string>
+    <string name="category_short">Short</string>
+    <string name="category_medium">Medium</string>
+    <string name="category_long">Long</string>
+</resources>

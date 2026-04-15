@@ -1,0 +1,3 @@
+com.catfact.app.feature.favorites.test.favorites-mergeDevDebugUnitTestResources-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/intermediates/incremental/devDebugUnitTest/mergeDevDebugUnitTestResources/merged.dir
+com.catfact.app.feature.favorites.test.favorites-mergeDevDebugUnitTestResources-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/intermediates/incremental/devDebugUnitTest/mergeDevDebugUnitTestResources/stripped.dir
+com.catfact.app.feature.favorites.test.favorites-devDebugUnitTest-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/intermediates/merged_res/devDebugUnitTest/mergeDevDebugUnitTestResources

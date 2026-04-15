@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+string cd_clear_search
+string cd_dismiss_error
+string cd_scroll_to_top
+string cd_search
+string error_bookmark_failed
+string error_failed_to_refresh
+string error_fetch_failed
+string error_load_failed
+string error_network
+string error_server
+string facts_search_placeholder
+string facts_title
+string hero_new_fact
+string hero_title

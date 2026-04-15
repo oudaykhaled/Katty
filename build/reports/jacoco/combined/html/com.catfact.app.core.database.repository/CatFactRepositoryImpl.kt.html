@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CatFactRepositoryImpl.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CatFact</a> &gt; <a href="index.source.html" class="el_package">com.catfact.app.core.database.repository</a> &gt; <span class="el_source">CatFactRepositoryImpl.kt</span></div><h1>CatFactRepositoryImpl.kt</h1><pre class="source lang-java linenums">package com.catfact.app.core.database.repository
+
+import com.catfact.app.core.database.dao.CatFactDao
+import com.catfact.app.core.database.mapper.toDomain
+import com.catfact.app.core.database.mapper.toEntity
+import com.catfact.app.core.domain.model.CatFact
+import com.catfact.app.core.domain.model.PageResult
+import com.catfact.app.core.domain.model.ServerException
+import com.catfact.app.core.domain.model.SyncStatus
+import com.catfact.app.core.domain.repository.CatFactRepository
+import com.catfact.app.core.logging.Logger
+import com.catfact.app.core.network.api.CatFactApi
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
+import retrofit2.HttpException
+import java.util.UUID
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+<span class="fc" id="L21">class CatFactRepositoryImpl @Inject constructor(</span>
+<span class="fc" id="L22">    private val catFactDao: CatFactDao,</span>
+<span class="fc" id="L23">    private val catFactApi: CatFactApi,</span>
+<span class="fc" id="L24">    private val logger: Logger</span>
+) : CatFactRepository {
+
+    override fun observeFacts(): Flow&lt;List&lt;CatFact&gt;&gt; =
+<span class="fc" id="L28">        catFactDao.observeAllFacts().map { entities -&gt; entities.map { it.toDomain() } }</span>
+
+    override fun observeFavorites(): Flow&lt;List&lt;CatFact&gt;&gt; =
+<span class="fc" id="L31">        catFactDao.observeFavorites().map { entities -&gt; entities.map { it.toDomain() } }</span>
+
+    override suspend fun getFactById(id: String): CatFact? =
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        catFactDao.getFactById(id)?.toDomain()</span>
+
+<span class="fc" id="L36">    override suspend fun fetchRandomFact(): CatFact {</span>
+<span class="fc" id="L37">        val start = System.currentTimeMillis()</span>
+<span class="fc" id="L38">        val response = wrapHttpException { catFactApi.getRandomFact() }</span>
+<span class="fc" id="L39">        logger.logNetworkRequest(&quot;GET&quot;, &quot;fact&quot;, System.currentTimeMillis() - start, 200)</span>
+<span class="fc" id="L40">        val entity = response.toEntity(id = UUID.randomUUID().toString())</span>
+<span class="fc" id="L41">        catFactDao.insertFact(entity)</span>
+<span class="fc" id="L42">        return entity.toDomain()</span>
+    }
+
+<span class="fc" id="L45">    override suspend fun refreshFacts(page: Int, limit: Int): PageResult {</span>
+<span class="fc" id="L46">        val start = System.currentTimeMillis()</span>
+<span class="fc" id="L47">        val response = wrapHttpException { catFactApi.getFacts(page = page, limit = limit) }</span>
+<span class="fc" id="L48">        logger.logNetworkRequest(&quot;GET&quot;, &quot;facts?page=$page&amp;limit=$limit&quot;, System.currentTimeMillis() - start, 200)</span>
+<span class="fc" id="L49">        val entities = response.data.map { it.toEntity() }</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (page == 1) {</span>
+<span class="fc" id="L51">            catFactDao.replaceAllFacts(entities)</span>
+        } else {
+<span class="fc" id="L53">            catFactDao.insertFacts(entities)</span>
+        }
+<span class="fc" id="L55">        return PageResult(</span>
+<span class="fc" id="L56">            facts = entities.map { it.toDomain() },</span>
+<span class="fc" id="L57">            currentPage = response.currentPage,</span>
+<span class="fc" id="L58">            lastPage = response.lastPage</span>
+        )
+    }
+
+    private suspend fun &lt;T&gt; wrapHttpException(block: suspend () -&gt; T): T =
+<span class="fc" id="L63">        try {</span>
+<span class="fc" id="L64">            block()</span>
+<span class="nc" id="L65">        } catch (e: HttpException) {</span>
+<span class="nc" id="L66">            logger.logError(&quot;Repository&quot;, e, mapOf(&quot;httpCode&quot; to e.code()))</span>
+<span class="pc" id="L67">            throw ServerException(e.code(), e.message())</span>
+<span class="fc" id="L68">        }</span>
+
+    override suspend fun toggleBookmark(factId: String, isCurrentlyBookmarked: Boolean) {
+<span class="fc" id="L71">        catFactDao.updateBookmark(</span>
+<span class="fc" id="L72">            factId = factId,</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">            isBookmarked = !isCurrentlyBookmarked,</span>
+<span class="fc" id="L74">            syncStatus = SyncStatus.SYNCED.name</span>
+        )
+<span class="fc" id="L76">    }</span>
+
+    override suspend fun updateNote(factId: String, note: String) {
+<span class="fc" id="L79">        catFactDao.updateNote(</span>
+<span class="fc" id="L80">            factId = factId,</span>
+<span class="fc" id="L81">            note = note,</span>
+<span class="fc" id="L82">            syncStatus = SyncStatus.SYNCED.name</span>
+        )
+<span class="fc" id="L84">    }</span>
+
+    override suspend fun searchFacts(query: String): Flow&lt;List&lt;CatFact&gt;&gt; =
+<span class="fc" id="L87">        catFactDao.searchFacts(query).map { entities -&gt; entities.map { it.toDomain() } }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

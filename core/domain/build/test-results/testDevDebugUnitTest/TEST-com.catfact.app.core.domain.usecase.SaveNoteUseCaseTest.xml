@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.domain.usecase.SaveNoteUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:11.835Z" hostname="bb-system-3781-1.home" time="0.043">
+  <properties/>
+  <testcase name="invoke calls repository updateNote" classname="com.catfact.app.core.domain.usecase.SaveNoteUseCaseTest" time="0.043"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

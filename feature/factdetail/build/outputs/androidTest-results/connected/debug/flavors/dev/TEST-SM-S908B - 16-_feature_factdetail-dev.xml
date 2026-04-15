@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="9" failures="0" errors="0" skipped="0" time="12.864" timestamp="2026-04-15T07:53:38" hostname="localhost">
+  <testsuite name="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" tests="9" failures="0" errors="0" skipped="0" time="9.406" timestamp="2026-04-15T07:53:38" hostname="localhost">
+    <properties>
+      <property name="device" value="SM-S908B - 16" />
+      <property name="flavor" value="dev" />
+      <property name="project" value=":feature:factdetail" />
+    </properties>
+    <testcase name="backButtonDispatchesNavigateBack" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="1.044" />
+    <testcase name="bookmarkToggleDispatchesEvent" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="0.815" />
+    <testcase name="errorStateShowsErrorMessage" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="0.731" />
+    <testcase name="loadingStateShowsProgressIndicator" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="0.734" />
+    <testcase name="shareButtonHiddenWhenNoFact" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="0.712" />
+    <testcase name="saveNoteButtonHiddenWhenNoChanges" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="1.32" />
+    <testcase name="saveNoteButtonAppearsWhenNoteChanged" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="1.352" />
+    <testcase name="shareButtonVisibleWhenFactLoaded" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="1.394" />
+    <testcase name="contentStateDisplaysFactText" classname="com.catfact.app.feature.factdetail.presentation.DetailScreenTest" time="1.304" />
+  </testsuite>
+</testsuites>

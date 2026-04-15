@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.catfact.app-devDebug-69:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.catfact.app-main-73:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-devDebug-69:/xml_backup_rules.xml.flat",
+        "source": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-main-73:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-devDebug-69:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-main-73:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.catfact.app-devDebug-69:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.catfact.app-main-73:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.catfact.app-devDebug-69:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.catfact.app-main-73:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-devDebug-69:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-main-73:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-devDebug-69:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/oudaykhaled/.gradle/daemon/9.3.1/com.catfact.app-main-73:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

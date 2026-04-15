@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CatFactDao.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CatFact</a> &gt; <a href="index.source.html" class="el_package">com.catfact.app.core.database.dao</a> &gt; <span class="el_source">CatFactDao.kt</span></div><h1>CatFactDao.kt</h1><pre class="source lang-java linenums">package com.catfact.app.core.database.dao
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Transaction
+import com.catfact.app.core.database.entity.CatFactEntity
+import kotlinx.coroutines.flow.Flow
+
+<span class="nc" id="L11">@Dao</span>
+abstract class CatFactDao {
+
+    @Query(&quot;SELECT * FROM cat_facts ORDER BY cachedAt DESC&quot;)
+    abstract fun observeAllFacts(): Flow&lt;List&lt;CatFactEntity&gt;&gt;
+
+    @Query(&quot;SELECT * FROM cat_facts WHERE isBookmarked = 1 ORDER BY cachedAt DESC&quot;)
+    abstract fun observeFavorites(): Flow&lt;List&lt;CatFactEntity&gt;&gt;
+
+    @Query(&quot;SELECT * FROM cat_facts WHERE id = :id&quot;)
+    abstract suspend fun getFactById(id: String): CatFactEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    abstract suspend fun insertFacts(facts: List&lt;CatFactEntity&gt;)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    abstract suspend fun insertFact(fact: CatFactEntity)
+
+    @Query(&quot;UPDATE cat_facts SET isBookmarked = :isBookmarked, syncStatus = :syncStatus WHERE id = :factId&quot;)
+    abstract suspend fun updateBookmark(factId: String, isBookmarked: Boolean, syncStatus: String)
+
+    @Query(&quot;UPDATE cat_facts SET personalNote = :note, syncStatus = :syncStatus WHERE id = :factId&quot;)
+    abstract suspend fun updateNote(factId: String, note: String, syncStatus: String)
+
+    @Query(&quot;SELECT id FROM cat_facts WHERE syncStatus IN ('PENDING', 'FAILED')&quot;)
+    abstract suspend fun getPendingFactIds(): List&lt;String&gt;
+
+    @Query(&quot;DELETE FROM cat_facts WHERE syncStatus = 'SYNCED'&quot;)
+    abstract suspend fun deleteSyncedFacts()
+
+    @Query(&quot;SELECT * FROM cat_facts WHERE fact LIKE '%' || :query || '%'&quot;)
+    abstract fun searchFacts(query: String): Flow&lt;List&lt;CatFactEntity&gt;&gt;
+
+<span class="nc" id="L44">    @Transaction</span>
+    open suspend fun replaceAllFacts(facts: List&lt;CatFactEntity&gt;) {
+<span class="nc" id="L46">        val pendingIds = getPendingFactIds()</span>
+<span class="nc" id="L47">        deleteSyncedFacts()</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        val safeToInsert = facts.filter { it.id !in pendingIds }</span>
+<span class="nc" id="L49">        insertFacts(safeToInsert)</span>
+<span class="nc" id="L50">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

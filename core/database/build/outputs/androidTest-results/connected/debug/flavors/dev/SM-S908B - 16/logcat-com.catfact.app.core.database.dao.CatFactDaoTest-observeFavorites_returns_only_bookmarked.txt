@@ -1,0 +1,2 @@
+04-15 09:52:58.277 18326 18340 I TestRunner: started: observeFavorites_returns_only_bookmarked(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.296 18326 18340 I TestRunner: finished: observeFavorites_returns_only_bookmarked(com.catfact.app.core.database.dao.CatFactDaoTest)

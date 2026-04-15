@@ -1,0 +1,3 @@
+com.catfact.app.core.testing.test.testing-mergeDevDebugUnitTestResources-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/intermediates/incremental/devDebugUnitTest/mergeDevDebugUnitTestResources/merged.dir
+com.catfact.app.core.testing.test.testing-mergeDevDebugUnitTestResources-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/intermediates/incremental/devDebugUnitTest/mergeDevDebugUnitTestResources/stripped.dir
+com.catfact.app.core.testing.test.testing-devDebugUnitTest-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/intermediates/merged_res/devDebugUnitTest/mergeDevDebugUnitTestResources

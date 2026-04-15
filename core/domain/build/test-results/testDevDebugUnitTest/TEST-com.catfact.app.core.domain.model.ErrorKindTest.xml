@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.domain.model.ErrorKindTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:10.257Z" hostname="bb-system-3781-1.home" time="0.002">
+  <properties/>
+  <testcase name="ServerException maps to Server with code" classname="com.catfact.app.core.domain.model.ErrorKindTest" time="0.001"/>
+  <testcase name="ServerException 404 maps to Server" classname="com.catfact.app.core.domain.model.ErrorKindTest" time="0.0"/>
+  <testcase name="exception with null message uses fallback" classname="com.catfact.app.core.domain.model.ErrorKindTest" time="0.0"/>
+  <testcase name="IOException with null message uses fallback" classname="com.catfact.app.core.domain.model.ErrorKindTest" time="0.001"/>
+  <testcase name="IllegalStateException maps to Unknown" classname="com.catfact.app.core.domain.model.ErrorKindTest" time="0.0"/>
+  <testcase name="generic RuntimeException maps to Unknown" classname="com.catfact.app.core.domain.model.ErrorKindTest" time="0.0"/>
+  <testcase name="IOException maps to Network" classname="com.catfact.app.core.domain.model.ErrorKindTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

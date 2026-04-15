@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_clear_search">Clear search</string>
+    <string name="cd_dismiss_error">Dismiss error</string>
+    <string name="cd_scroll_to_top">Scroll to top</string>
+    <string name="cd_search">Search</string>
+    <string name="error_bookmark_failed">Failed to update bookmark</string>
+    <string name="error_failed_to_refresh">Failed to refresh</string>
+    <string name="error_fetch_failed">Failed to fetch</string>
+    <string name="error_load_failed">Load failed</string>
+    <string name="error_network">No internet connection</string>
+    <string name="error_server">Server error, please try later</string>
+    <string name="facts_search_placeholder">Search facts…</string>
+    <string name="facts_title">Cat Facts</string>
+    <string name="hero_new_fact">New Fact</string>
+    <string name="hero_title">Did you know?</string>
+</resources>

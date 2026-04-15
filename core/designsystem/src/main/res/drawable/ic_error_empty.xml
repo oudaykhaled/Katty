@@ -1,0 +1,146 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="240"
+    android:viewportHeight="240">
+
+    <!-- Cat body circle (orange) -->
+    <path
+        android:pathData="M120,105 m-55,0 a55,55 0,1 1,110 0 a55,55 0,1 1,-110 0"
+        android:fillColor="#F5A623" />
+
+    <!-- Cat body outline -->
+    <path
+        android:pathData="M120,105 m-55,0 a55,55 0,1 1,110 0 a55,55 0,1 1,-110 0"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="5"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Cat ears - left -->
+    <path
+        android:pathData="M80,58 L68,28 L92,48 Z"
+        android:fillColor="#F5A623"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="3.5"
+        android:strokeLineJoin="round" />
+
+    <!-- Cat ears - right -->
+    <path
+        android:pathData="M160,58 L172,28 L148,48 Z"
+        android:fillColor="#F5A623"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="3.5"
+        android:strokeLineJoin="round" />
+
+    <!-- Cat inner ears - left -->
+    <path
+        android:pathData="M80,56 L73,38 L88,50 Z"
+        android:fillColor="#E8943A" />
+
+    <!-- Cat inner ears - right -->
+    <path
+        android:pathData="M160,56 L167,38 L152,50 Z"
+        android:fillColor="#E8943A" />
+
+    <!-- Cat belly (white) -->
+    <path
+        android:pathData="M120,115 m-30,0 a30,28 0,1 1,60 0 a30,28 0,1 1,-60 0"
+        android:fillColor="#F4F4F4" />
+
+    <!-- Cat tail -->
+    <path
+        android:pathData="M65,120 C50,110 40,90 45,75 C48,66 55,68 55,78 C55,90 60,108 65,120"
+        android:fillColor="#F5A623"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="2.5" />
+
+    <!-- Left eye - worried/half-closed arc -->
+    <path
+        android:pathData="M100,92 C103,86 109,86 112,92"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Right eye - worried/half-closed arc -->
+    <path
+        android:pathData="M128,92 C131,86 137,86 140,92"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Sad mouth / frown -->
+    <path
+        android:pathData="M112,108 C116,114 124,114 128,108"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Nose -->
+    <path
+        android:pathData="M118,103 L120,106 L122,103"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Whiskers left -->
+    <path
+        android:pathData="M97,100 L78,95"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M97,104 L78,106"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+
+    <!-- Whiskers right -->
+    <path
+        android:pathData="M143,100 L162,95"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M143,104 L162,106"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round" />
+
+    <!-- Paws at bottom -->
+    <path
+        android:pathData="M95,152 C95,148 100,145 105,145 C110,145 115,148 115,152"
+        android:fillColor="#F5A623"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="2" />
+    <path
+        android:pathData="M125,152 C125,148 130,145 135,145 C140,145 145,148 145,152"
+        android:fillColor="#F5A623"
+        android:strokeColor="#1B1617"
+        android:strokeWidth="2" />
+
+    <!-- Empty heart outline -->
+    <group
+        android:translateX="120"
+        android:translateY="196">
+
+        <path
+            android:pathData="M0,16 C-6,10 -24,-2 -24,-16 C-24,-25 -16,-30 -8,-25 C-3,-22 0,-16 0,-16 C0,-16 3,-22 8,-25 C16,-30 24,-25 24,-16 C24,-2 6,10 0,16 Z"
+            android:strokeColor="#B4B4B4"
+            android:strokeWidth="3"
+            android:strokeLineJoin="round"
+            android:fillColor="@android:color/transparent" />
+
+        <!-- Dashed center line indicating emptiness -->
+        <path
+            android:pathData="M0,-18 L0,8"
+            android:strokeColor="#B4B4B4"
+            android:strokeWidth="2"
+            android:strokeLineCap="round" />
+    </group>
+
+</vector>

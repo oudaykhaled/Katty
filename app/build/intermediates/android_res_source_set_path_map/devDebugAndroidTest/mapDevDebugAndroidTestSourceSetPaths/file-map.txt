@@ -1,0 +1,4 @@
+com.catfact.app.test.app-updated_navigation_xml-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/generated/updated_navigation_xml/devDebugAndroidTest
+com.catfact.app.test.app-packageDevDebugAndroidTestResources-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/intermediates/incremental/devDebugAndroidTest/packageDevDebugAndroidTestResources/merged.dir
+com.catfact.app.test.app-packageDevDebugAndroidTestResources-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/intermediates/incremental/devDebugAndroidTest/packageDevDebugAndroidTestResources/stripped.dir
+com.catfact.app.test.app-devDebugAndroidTest-3 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/intermediates/merged_res/devDebugAndroidTest/mergeDevDebugAndroidTestResources

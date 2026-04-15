@@ -1,0 +1,11 @@
+R_DEF: Internal format may change without notice
+local
+string cd_dismiss_error
+string cd_no_favorites
+string error_load_favorites_failed
+string error_network
+string error_remove_bookmark_failed
+string error_server
+string favorites_empty_body
+string favorites_empty_title
+string favorites_title

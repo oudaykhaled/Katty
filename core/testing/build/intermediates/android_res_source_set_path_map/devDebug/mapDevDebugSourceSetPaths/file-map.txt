@@ -1,0 +1,10 @@
+com.catfact.app.core.testing-dev-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/generated/res/pngs/dev/debug
+com.catfact.app.core.testing-updated_navigation_xml-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/generated/updated_navigation_xml/devDebug
+com.catfact.app.core.testing-mergeDevDebugResources-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/intermediates/incremental/devDebug/mergeDevDebugResources/merged.dir
+com.catfact.app.core.testing-mergeDevDebugResources-3 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/intermediates/incremental/devDebug/mergeDevDebugResources/stripped.dir
+com.catfact.app.core.testing-devDebug-4 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/intermediates/merged_res/devDebug/mergeDevDebugResources
+com.catfact.app.core.testing-devDebug-5 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/build/intermediates/packaged_res/devDebug/packageDevDebugResources
+com.catfact.app.core.testing-debug-6 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/src/debug/res
+com.catfact.app.core.testing-dev-7 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/src/dev/res
+com.catfact.app.core.testing-devDebug-8 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/src/devDebug/res
+com.catfact.app.core.testing-main-9 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/testing/src/main/res

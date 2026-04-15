@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.network.model.NetworkModelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:20.726Z" hostname="bb-system-3781-1.home" time="0.042">
+  <properties/>
+  <testcase name="CatFactResponse serializes correctly" classname="com.catfact.app.core.network.model.NetworkModelTest" time="0.029"/>
+  <testcase name="CatFactListResponse data class properties" classname="com.catfact.app.core.network.model.NetworkModelTest" time="0.002"/>
+  <testcase name="CatFactListResponse serializes correctly" classname="com.catfact.app.core.network.model.NetworkModelTest" time="0.01"/>
+  <testcase name="CatFactResponse deserializes correctly" classname="com.catfact.app.core.network.model.NetworkModelTest" time="0.0"/>
+  <testcase name="CatFactResponse data class properties" classname="com.catfact.app.core.network.model.NetworkModelTest" time="0.001"/>
+  <testcase name="CatFactListResponse deserializes correctly" classname="com.catfact.app.core.network.model.NetworkModelTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

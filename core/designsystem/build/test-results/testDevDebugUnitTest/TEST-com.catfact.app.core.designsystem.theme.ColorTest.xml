@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.designsystem.theme.ColorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:13.261Z" hostname="bb-system-3781-1.home" time="0.106">
+  <properties/>
+  <testcase name="primary tones are distinct across palette" classname="com.catfact.app.core.designsystem.theme.ColorTest" time="0.094"/>
+  <testcase name="neutral variant tones are distinct from neutral" classname="com.catfact.app.core.designsystem.theme.ColorTest" time="0.001"/>
+  <testcase name="light and dark primary tones differ" classname="com.catfact.app.core.designsystem.theme.ColorTest" time="0.0"/>
+  <testcase name="neutral extremes are distinct" classname="com.catfact.app.core.designsystem.theme.ColorTest" time="0.0"/>
+  <testcase name="error tones are distinct from primary" classname="com.catfact.app.core.designsystem.theme.ColorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

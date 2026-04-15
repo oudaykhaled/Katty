@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="4" failures="0" errors="0" skipped="0" time="6.483" timestamp="2026-04-15T07:54:11" hostname="localhost">
+  <testsuite name="com.catfact.app.feature.favorites.presentation.FavoritesScreenTest" tests="4" failures="0" errors="0" skipped="0" time="3.815" timestamp="2026-04-15T07:54:11" hostname="localhost">
+    <properties>
+      <property name="device" value="SM-S908B - 16" />
+      <property name="flavor" value="dev" />
+      <property name="project" value=":feature:favorites" />
+    </properties>
+    <testcase name="populatedStateShowsFavoriteCards" classname="com.catfact.app.feature.favorites.presentation.FavoritesScreenTest" time="1.038" />
+    <testcase name="factCardClickDispatchesFactClicked" classname="com.catfact.app.feature.favorites.presentation.FavoritesScreenTest" time="0.767" />
+    <testcase name="errorBannerAppearsAndDismissWorks" classname="com.catfact.app.feature.favorites.presentation.FavoritesScreenTest" time="0.747" />
+    <testcase name="emptyStateShowsEmptyMessage" classname="com.catfact.app.feature.favorites.presentation.FavoritesScreenTest" time="1.263" />
+  </testsuite>
+</testsuites>

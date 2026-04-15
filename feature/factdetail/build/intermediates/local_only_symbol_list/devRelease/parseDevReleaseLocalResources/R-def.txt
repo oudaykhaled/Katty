@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+string cd_back
+string cd_share
+string detail_note_label
+string detail_note_placeholder
+string detail_save_note
+string detail_share_chooser_title
+string detail_title
+string error_bookmark_failed
+string error_fact_not_found
+string error_load_detail_failed
+string error_network
+string error_note_save_failed
+string error_server
+string success_note_saved

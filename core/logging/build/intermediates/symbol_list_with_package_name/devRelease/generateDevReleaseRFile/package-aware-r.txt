@@ -1,0 +1,1 @@
+com.catfact.app.core.logging

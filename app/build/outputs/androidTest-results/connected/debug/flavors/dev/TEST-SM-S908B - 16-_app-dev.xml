@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="6" failures="0" errors="0" skipped="0" time="10.648" timestamp="2026-04-15T07:53:18" hostname="localhost">
+  <testsuite name="com.catfact.app.HiltGraphTest" tests="1" failures="0" errors="0" skipped="0" time="0.014" timestamp="2026-04-15T07:53:18" hostname="localhost">
+    <properties>
+      <property name="device" value="SM-S908B - 16" />
+      <property name="flavor" value="dev" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="hiltDependencyGraphResolves" classname="com.catfact.app.HiltGraphTest" time="0.014" />
+  </testsuite>
+  <testsuite name="com.catfact.app.navigation.AppNavigationFlowTest" tests="5" failures="0" errors="0" skipped="0" time="8.508" timestamp="2026-04-15T07:53:18" hostname="localhost">
+    <properties>
+      <property name="device" value="SM-S908B - 16" />
+      <property name="flavor" value="dev" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="bottomNavigation_displaysFavoritesTab" classname="com.catfact.app.navigation.AppNavigationFlowTest" time="1.721" />
+    <testcase name="bottomNavigation_displaysFactsTab" classname="com.catfact.app.navigation.AppNavigationFlowTest" time="1.799" />
+    <testcase name="navigateToFavorites_showsFavoritesScreen" classname="com.catfact.app.navigation.AppNavigationFlowTest" time="1.756" />
+    <testcase name="hiltGraphResolvesAndActivityLaunches" classname="com.catfact.app.navigation.AppNavigationFlowTest" time="1.225" />
+    <testcase name="navigateBackToFacts_showsFactsScreen" classname="com.catfact.app.navigation.AppNavigationFlowTest" time="2.007" />
+  </testsuite>
+</testsuites>

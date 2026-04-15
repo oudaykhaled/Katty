@@ -1,0 +1,2 @@
+04-15 09:52:58.224 18326 18340 I TestRunner: started: searchFacts_returns_matching_facts(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.243 18326 18340 I TestRunner: finished: searchFacts_returns_matching_facts(com.catfact.app.core.database.dao.CatFactDaoTest)

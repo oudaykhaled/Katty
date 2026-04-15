@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.domain.model.ErrorKindMapperTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:10.248Z" hostname="bb-system-3781-1.home" time="0.007">
+  <properties/>
+  <testcase name="RuntimeException maps to ErrorKind Unknown" classname="com.catfact.app.core.domain.model.ErrorKindMapperTest" time="0.001"/>
+  <testcase name="IOException with null message uses default" classname="com.catfact.app.core.domain.model.ErrorKindMapperTest" time="0.001"/>
+  <testcase name="IOException maps to ErrorKind Network" classname="com.catfact.app.core.domain.model.ErrorKindMapperTest" time="0.0"/>
+  <testcase name="exception with null message uses default" classname="com.catfact.app.core.domain.model.ErrorKindMapperTest" time="0.001"/>
+  <testcase name="IllegalStateException maps to ErrorKind Unknown" classname="com.catfact.app.core.domain.model.ErrorKindMapperTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

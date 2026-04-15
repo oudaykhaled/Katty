@@ -1,0 +1,2 @@
+04-15 09:52:58.245 18326 18340 I TestRunner: started: updateBookmark_toggles_flag_and_sets_syncStatus(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.253 18326 18340 I TestRunner: finished: updateBookmark_toggles_flag_and_sets_syncStatus(com.catfact.app.core.database.dao.CatFactDaoTest)

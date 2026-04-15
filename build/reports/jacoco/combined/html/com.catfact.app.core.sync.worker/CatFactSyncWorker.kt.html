@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CatFactSyncWorker.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CatFact</a> &gt; <a href="index.source.html" class="el_package">com.catfact.app.core.sync.worker</a> &gt; <span class="el_source">CatFactSyncWorker.kt</span></div><h1>CatFactSyncWorker.kt</h1><pre class="source lang-java linenums">package com.catfact.app.core.sync.worker
+
+import android.content.Context
+import androidx.hilt.work.HiltWorker
+import androidx.work.CoroutineWorker
+import androidx.work.WorkerParameters
+import com.catfact.app.core.domain.repository.CatFactRepository
+import com.catfact.app.core.logging.Logger
+import com.catfact.app.core.telemetry.EventTracker
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedInject
+
+@HiltWorker
+<span class="fc" id="L14">class CatFactSyncWorker @AssistedInject constructor(</span>
+    @Assisted appContext: Context,
+    @Assisted workerParams: WorkerParameters,
+<span class="fc" id="L17">    private val repository: CatFactRepository,</span>
+<span class="fc" id="L18">    private val logger: Logger,</span>
+<span class="fc" id="L19">    private val eventTracker: EventTracker</span>
+<span class="fc" id="L20">) : CoroutineWorker(appContext, workerParams) {</span>
+
+<span class="fc" id="L22">    override suspend fun doWork(): Result {</span>
+<span class="fc" id="L23">        logger.logSyncEvent(&quot;sync_started&quot;, mapOf(&quot;runAttempt&quot; to runAttemptCount))</span>
+<span class="fc" id="L24">        val startTime = System.currentTimeMillis()</span>
+<span class="fc" id="L25">        return try {</span>
+<span class="fc" id="L26">            val result = repository.refreshFacts(page = 1, limit = SYNC_PAGE_SIZE)</span>
+<span class="fc" id="L27">            val durationMs = System.currentTimeMillis() - startTime</span>
+<span class="fc" id="L28">            logger.logSyncEvent(&quot;sync_completed&quot;, mapOf(&quot;factCount&quot; to result.facts.size))</span>
+<span class="fc" id="L29">            eventTracker.trackSyncCompleted(result.facts.size, durationMs)</span>
+<span class="fc" id="L30">            Result.success()</span>
+<span class="fc" id="L31">        } catch (e: Exception) {</span>
+<span class="fc" id="L32">            logger.logError(&quot;CatFactSyncWorker&quot;, e, mapOf(&quot;runAttempt&quot; to runAttemptCount))</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            if (runAttemptCount &lt; MAX_RETRIES) Result.retry() else Result.failure()</span>
+        }
+    }
+
+    companion object {
+        const val WORK_NAME = &quot;cat_fact_sync&quot;
+        private const val SYNC_PAGE_SIZE = 50
+        private const val MAX_RETRIES = 3
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

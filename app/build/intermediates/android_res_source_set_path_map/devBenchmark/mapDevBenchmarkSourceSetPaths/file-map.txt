@@ -1,0 +1,10 @@
+com.catfact.app-dev-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/generated/res/pngs/dev/benchmark
+com.catfact.app-updated_navigation_xml-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/generated/updated_navigation_xml/devBenchmark
+com.catfact.app-packageDevBenchmarkResources-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/intermediates/incremental/devBenchmark/packageDevBenchmarkResources/merged.dir
+com.catfact.app-packageDevBenchmarkResources-3 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/intermediates/incremental/devBenchmark/packageDevBenchmarkResources/stripped.dir
+com.catfact.app-dev-4 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/intermediates/merged-not-compiled-resources/dev/benchmark
+com.catfact.app-devBenchmark-5 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/intermediates/merged_res/devBenchmark/mergeDevBenchmarkResources
+com.catfact.app-benchmark-6 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/src/benchmark/res
+com.catfact.app-dev-7 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/src/dev/res
+com.catfact.app-devBenchmark-8 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/src/devBenchmark/res
+com.catfact.app-main-9 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/src/main/res

@@ -1,0 +1,2 @@
+04-15 09:52:58.337 18326 18340 I TestRunner: started: insertFacts_batch_and_observeAll_emits_ordered_by_cachedAt(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.356 18326 18340 I TestRunner: finished: insertFacts_batch_and_observeAll_emits_ordered_by_cachedAt(com.catfact.app.core.database.dao.CatFactDaoTest)

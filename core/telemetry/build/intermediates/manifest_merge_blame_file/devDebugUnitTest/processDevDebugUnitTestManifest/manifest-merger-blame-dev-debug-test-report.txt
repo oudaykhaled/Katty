@@ -1,0 +1,28 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.catfact.app.core.telemetry.test" >
+4
+5    <uses-sdk
+5-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:5:5-74
+6        android:minSdkVersion="24"
+6-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:5:15-41
+7        android:targetSdkVersion="36" />
+7-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:5:42-71
+8
+9    <instrumentation
+9-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:9:5-11:85
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:9:22-76
+11        android:label="Tests for com.catfact.app.core.telemetry.test"
+11-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:11:22-83
+12        android:targetPackage="com.catfact.app.core.telemetry.test" />
+12-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:10:22-81
+13
+14    <application
+14-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:7:5-46
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.8.0] /Users/oudaykhaled/.gradle/caches/9.3.1/transforms/a7c4c4f1247f89c0031d420e8bf2304d/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+16        android:debuggable="true" />
+16-->/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/telemetry/build/intermediates/tmp/manifest/test/dev/debug/tempFile1ProcessTestManifest7803822581984614264.xml:7:18-43
+17
+18</manifest>

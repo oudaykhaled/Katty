@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.sync.worker.CatFactSyncWorkerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:29.882Z" hostname="bb-system-3781-1.home" time="0.541">
+  <properties/>
+  <testcase name="work name is correct" classname="com.catfact.app.core.sync.worker.CatFactSyncWorkerTest" time="0.427"/>
+  <testcase name="doWork returns success when repository succeeds" classname="com.catfact.app.core.sync.worker.CatFactSyncWorkerTest" time="0.106"/>
+  <testcase name="doWork returns failure when max retries exceeded" classname="com.catfact.app.core.sync.worker.CatFactSyncWorkerTest" time="0.005"/>
+  <testcase name="doWork returns retry when repository fails and attempt is low" classname="com.catfact.app.core.sync.worker.CatFactSyncWorkerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

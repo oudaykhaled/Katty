@@ -1,0 +1,10 @@
+com.catfact.app.core.logging-dev-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/build/generated/res/pngs/dev/debug
+com.catfact.app.core.logging-updated_navigation_xml-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/build/generated/updated_navigation_xml/devDebug
+com.catfact.app.core.logging-mergeDevDebugResources-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/build/intermediates/incremental/devDebug/mergeDevDebugResources/merged.dir
+com.catfact.app.core.logging-mergeDevDebugResources-3 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/build/intermediates/incremental/devDebug/mergeDevDebugResources/stripped.dir
+com.catfact.app.core.logging-devDebug-4 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/build/intermediates/merged_res/devDebug/mergeDevDebugResources
+com.catfact.app.core.logging-devDebug-5 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/build/intermediates/packaged_res/devDebug/packageDevDebugResources
+com.catfact.app.core.logging-debug-6 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/src/debug/res
+com.catfact.app.core.logging-dev-7 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/src/dev/res
+com.catfact.app.core.logging-devDebug-8 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/src/devDebug/res
+com.catfact.app.core.logging-main-9 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/logging/src/main/res

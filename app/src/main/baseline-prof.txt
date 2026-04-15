@@ -1,0 +1,86 @@
+# Baseline profile for CatFact app
+# Ensures critical paths are AOT-compiled at install time via ProfileInstaller.
+# Re-generate with BaselineProfileGenerator when AGP plugin supports AGP 9+.
+
+# ─── App startup & Activity ───────────────────────────────────────────────────
+HSPLcom/catfact/app/CatFactApplication;->onCreate()V
+HSPLcom/catfact/app/MainActivity;->onCreate(Landroid/os/Bundle;)V
+HSPLcom/catfact/app/BaseApplication;->onCreate()V
+
+# ─── Hilt dependency injection ────────────────────────────────────────────────
+HSPLdagger/hilt/android/internal/**;->**(**)**
+HSPLdagger/internal/**;->**(**)**
+HSPLandroidx/hilt/**;->**(**)**
+
+# ─── Compose runtime & foundation ────────────────────────────────────────────
+HSPLandroidx/compose/runtime/**;->**(**)**
+HSPLandroidx/compose/ui/**;->**(**)**
+HSPLandroidx/compose/foundation/**;->**(**)**
+HSPLandroidx/compose/foundation/lazy/**;->**(**)**
+HSPLandroidx/compose/material3/**;->**(**)**
+HSPLandroidx/compose/animation/**;->**(**)**
+HSPLandroidx/compose/animation/core/**;->**(**)**
+
+# ─── Compose Lifecycle integration ───────────────────────────────────────────
+HSPLandroidx/lifecycle/compose/**;->**(**)**
+
+# ─── Navigation3 ─────────────────────────────────────────────────────────────
+HSPLandroidx/navigation3/**;->**(**)**
+
+# ─── Theme & design system composables ───────────────────────────────────────
+HSPLcom/catfact/app/core/designsystem/theme/**;->**(**)**
+HSPLcom/catfact/app/core/designsystem/component/**;->**(**)**
+HSPLcom/catfact/app/core/designsystem/util/**;->**(**)**
+
+# ─── Navigation graph ────────────────────────────────────────────────────────
+HSPLcom/catfact/app/navigation/**;->**(**)**
+
+# ─── Feature: Facts list (primary screen) ────────────────────────────────────
+HSPLcom/catfact/app/feature/facts/presentation/**;->**(**)**
+HSPLcom/catfact/app/feature/facts/viewmodel/**;->**(**)**
+
+# ─── Feature: Favorites ──────────────────────────────────────────────────────
+HSPLcom/catfact/app/feature/favorites/presentation/**;->**(**)**
+HSPLcom/catfact/app/feature/favorites/viewmodel/**;->**(**)**
+
+# ─── Feature: Fact detail ────────────────────────────────────────────────────
+HSPLcom/catfact/app/feature/factdetail/presentation/**;->**(**)**
+HSPLcom/catfact/app/feature/factdetail/viewmodel/**;->**(**)**
+
+# ─── Domain use cases ────────────────────────────────────────────────────────
+HSPLcom/catfact/app/core/domain/usecase/**;->**(**)**
+HSPLcom/catfact/app/core/domain/model/**;->**(**)**
+
+# ─── Database / Room ─────────────────────────────────────────────────────────
+HSPLcom/catfact/app/core/database/dao/**;->**(**)**
+HSPLcom/catfact/app/core/database/repository/**;->**(**)**
+HSPLcom/catfact/app/core/database/mapper/**;->**(**)**
+HSPLcom/catfact/app/core/database/di/**;->**(**)**
+HSPLandroidx/room/**;->**(**)**
+
+# ─── Network / Retrofit / OkHttp ─────────────────────────────────────────────
+HSPLcom/catfact/app/core/network/api/**;->**(**)**
+HSPLcom/catfact/app/core/network/di/**;->**(**)**
+HSPLcom/catfact/app/core/network/interceptor/**;->**(**)**
+HSPLokhttp3/**;->**(**)**
+HSPLretrofit2/**;->**(**)**
+
+# ─── Sync ─────────────────────────────────────────────────────────────────────
+HSPLcom/catfact/app/core/sync/**;->**(**)**
+HSPLandroidx/work/**;->**(**)**
+
+# ─── Coroutines & Flow ───────────────────────────────────────────────────────
+HSPLkotlinx/coroutines/**;->**(**)**
+HSPLkotlinx/coroutines/flow/**;->**(**)**
+
+# ─── Immutable collections (used in state) ───────────────────────────────────
+HSPLkotlinx/collections/immutable/**;->**(**)**
+
+# ─── Lottie animation (pull-to-refresh) ──────────────────────────────────────
+HSPLcom/airbnb/lottie/**;->**(**)**
+
+# ─── ProfileInstaller itself ─────────────────────────────────────────────────
+HSPLandroidx/profileinstaller/**;->**(**)**
+
+# ─── Kotlin serialization (JSON parsing) ─────────────────────────────────────
+HSPLkotlinx/serialization/**;->**(**)**

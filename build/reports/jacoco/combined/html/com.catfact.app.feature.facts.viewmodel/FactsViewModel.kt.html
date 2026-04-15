@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FactsViewModel.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CatFact</a> &gt; <a href="index.source.html" class="el_package">com.catfact.app.feature.facts.viewmodel</a> &gt; <span class="el_source">FactsViewModel.kt</span></div><h1>FactsViewModel.kt</h1><pre class="source lang-java linenums">package com.catfact.app.feature.facts.viewmodel
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.catfact.app.core.designsystem.util.UiText
+import com.catfact.app.core.domain.model.CatFact
+import com.catfact.app.core.domain.model.ErrorKind
+import com.catfact.app.core.domain.model.toErrorKind
+import com.catfact.app.core.domain.usecase.FetchRandomFactUseCase
+import com.catfact.app.core.domain.usecase.GetFactsUseCase
+import com.catfact.app.core.domain.usecase.RefreshFactsUseCase
+import com.catfact.app.core.domain.usecase.ToggleBookmarkUseCase
+import com.catfact.app.core.telemetry.EventTracker
+import com.catfact.app.feature.facts.R
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.receiveAsFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@OptIn(FlowPreview::class)
+@HiltViewModel
+<span class="fc" id="L36">class FactsViewModel @Inject constructor(</span>
+<span class="fc" id="L37">    private val getFactsUseCase: GetFactsUseCase,</span>
+<span class="fc" id="L38">    private val fetchRandomFactUseCase: FetchRandomFactUseCase,</span>
+<span class="fc" id="L39">    private val toggleBookmarkUseCase: ToggleBookmarkUseCase,</span>
+<span class="fc" id="L40">    private val refreshFactsUseCase: RefreshFactsUseCase,</span>
+<span class="fc" id="L41">    private val eventTracker: EventTracker</span>
+<span class="fc" id="L42">) : ViewModel() {</span>
+
+<span class="fc" id="L44">    private val _state = MutableStateFlow(FactsUiState())</span>
+<span class="fc" id="L45">    val state: StateFlow&lt;FactsUiState&gt; = _state.asStateFlow()</span>
+
+<span class="fc" id="L47">    private val _sideEffects = Channel&lt;FactsSideEffect&gt;(Channel.BUFFERED)</span>
+<span class="fc" id="L48">    val sideEffects = _sideEffects.receiveAsFlow()</span>
+
+<span class="fc" id="L50">    private val searchQueryFlow = MutableStateFlow(&quot;&quot;)</span>
+
+<span class="fc" id="L52">    init {</span>
+<span class="fc" id="L53">        eventTracker.trackScreenView(&quot;FactsScreen&quot;)</span>
+<span class="fc" id="L54">        observeFacts()</span>
+<span class="fc" id="L55">        setupSearchDebounce()</span>
+<span class="fc" id="L56">        loadInitial()</span>
+<span class="fc" id="L57">    }</span>
+
+    fun onEvent(event: FactsEvent) {
+<span class="fc" id="L60">        when (event) {</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            is FactsEvent.Refresh -&gt; refresh()</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">            is FactsEvent.LoadNextPage -&gt; loadNextPage()</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">            is FactsEvent.ToggleBookmark -&gt; toggleBookmark(event.factId, event.isCurrentlyBookmarked)</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">            is FactsEvent.Search -&gt; onSearch(event.query)</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">            is FactsEvent.DismissError -&gt; _state.update { it.copy(error = null) }</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">            is FactsEvent.FactClicked -&gt; viewModelScope.launch {</span>
+<span class="fc" id="L67">                _sideEffects.send(FactsSideEffect.NavigateToDetail(event.factId))</span>
+<span class="fc" id="L68">            }</span>
+<span class="fc" id="L69">            is FactsEvent.FetchRandomFact -&gt; fetchRandomFact()</span>
+        }
+<span class="fc" id="L71">    }</span>
+
+    private fun observeFacts() {
+<span class="fc" id="L74">        getFactsUseCase()</span>
+<span class="fc" id="L75">            .distinctUntilChanged()</span>
+<span class="fc" id="L76">            .map&lt;List&lt;CatFact&gt;, ImmutableList&lt;CatFact&gt;&gt; { it.toImmutableList() }</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">            .onEach { facts -&gt; _state.update { it.copy(facts = facts) } }</span>
+<span class="pc bnc" id="L78" title="All 2 branches missed.">            .catch { e -&gt; _state.update { it.copy(error = e.toUiText()) } }</span>
+<span class="fc" id="L79">            .launchIn(viewModelScope)</span>
+<span class="fc" id="L80">    }</span>
+
+    private fun setupSearchDebounce() {
+<span class="fc" id="L83">        searchQueryFlow</span>
+<span class="fc" id="L84">            .debounce(SEARCH_DEBOUNCE_MS)</span>
+<span class="fc" id="L85">            .distinctUntilChanged()</span>
+<span class="fc" id="L86">            .map { it }</span>
+<span class="pc bpc" id="L87" title="1 of 2 branches missed.">            .onEach { query -&gt; _state.update { it.copy(searchQuery = query) } }</span>
+<span class="fc" id="L88">            .launchIn(viewModelScope)</span>
+<span class="fc" id="L89">    }</span>
+
+    private fun loadInitial() {
+<span class="fc" id="L92">        viewModelScope.launch {</span>
+<span class="fc" id="L93">            _state.update { it.copy(isLoading = true) }</span>
+<span class="fc" id="L94">            try {</span>
+<span class="fc" id="L95">                fetchRandomFactUseCase().let { fact -&gt;</span>
+<span class="fc" id="L96">                    _state.update { it.copy(randomFact = fact) }</span>
+<span class="fc" id="L97">                }</span>
+<span class="fc" id="L98">            } catch (_: Exception) { /* Random fact is optional */ }</span>
+<span class="fc" id="L99">            _state.update { it.copy(isLoading = false) }</span>
+<span class="fc" id="L100">        }</span>
+<span class="fc" id="L101">    }</span>
+
+    private fun refresh() {
+<span class="fc" id="L104">        viewModelScope.launch {</span>
+<span class="fc" id="L105">            _state.update { it.copy(isLoading = true, error = null) }</span>
+<span class="fc" id="L106">            try {</span>
+<span class="fc" id="L107">                fetchRandomFactUseCase().let { fact -&gt;</span>
+<span class="fc" id="L108">                    _state.update { it.copy(randomFact = fact) }</span>
+<span class="fc" id="L109">                }</span>
+<span class="fc" id="L110">            } catch (e: Exception) {</span>
+<span class="fc" id="L111">                _state.update { it.copy(error = e.toUiText()) }</span>
+            }
+<span class="fc" id="L113">            _state.update { it.copy(isLoading = false) }</span>
+<span class="fc" id="L114">        }</span>
+<span class="fc" id="L115">    }</span>
+
+    private fun loadNextPage() {
+<span class="fc" id="L118">        val current = _state.value</span>
+<span class="pc bpc" id="L119" title="1 of 4 branches missed.">        if (current.isLoadingMore || !current.hasMorePages) return</span>
+
+<span class="fc" id="L121">        viewModelScope.launch {</span>
+<span class="fc" id="L122">            _state.update { it.copy(isLoadingMore = true) }</span>
+<span class="fc" id="L123">            try {</span>
+<span class="fc" id="L124">                val nextPage = current.currentPage + 1</span>
+<span class="fc" id="L125">                val result = refreshFactsUseCase(nextPage, PAGE_SIZE)</span>
+<span class="fc" id="L126">                _state.update {</span>
+<span class="fc" id="L127">                    it.copy(currentPage = nextPage, hasMorePages = result.hasMorePages)</span>
+                }
+<span class="fc" id="L129">            } catch (e: Exception) {</span>
+<span class="fc" id="L130">                _sideEffects.send(FactsSideEffect.ShowSnackbar(UiText.Resource(R.string.error_load_failed)))</span>
+            }
+<span class="fc" id="L132">            _state.update { it.copy(isLoadingMore = false) }</span>
+<span class="fc" id="L133">        }</span>
+<span class="fc" id="L134">    }</span>
+
+    private fun toggleBookmark(factId: String, isCurrentlyBookmarked: Boolean) {
+<span class="fc" id="L137">        viewModelScope.launch {</span>
+<span class="fc" id="L138">            _state.update { state -&gt;</span>
+<span class="fc" id="L139">                state.copy(</span>
+<span class="fc" id="L140">                    bookmarkLoadingIds = (state.bookmarkLoadingIds + factId).toImmutableList()</span>
+<span class="fc" id="L141">                )</span>
+            }
+<span class="fc" id="L143">            try {</span>
+<span class="fc" id="L144">                toggleBookmarkUseCase(factId, isCurrentlyBookmarked)</span>
+<span class="pc bpc" id="L145" title="1 of 2 branches missed.">                eventTracker.trackBookmarkToggled(factId, !isCurrentlyBookmarked)</span>
+<span class="fc" id="L146">            } catch (e: Exception) {</span>
+<span class="fc" id="L147">                _sideEffects.send(FactsSideEffect.ShowSnackbar(UiText.Resource(R.string.error_bookmark_failed)))</span>
+            }
+<span class="fc" id="L149">            _state.update { state -&gt;</span>
+<span class="fc" id="L150">                state.copy(</span>
+<span class="pc bpc" id="L151" title="1 of 2 branches missed.">                    bookmarkLoadingIds = state.bookmarkLoadingIds.filter { it != factId }.toImmutableList()</span>
+<span class="fc" id="L152">                )</span>
+            }
+<span class="fc" id="L154">        }</span>
+<span class="fc" id="L155">    }</span>
+
+    private fun onSearch(query: String) {
+<span class="fc" id="L158">        _state.update { it.copy(searchInput = query) }</span>
+<span class="fc" id="L159">        searchQueryFlow.value = query</span>
+<span class="fc" id="L160">    }</span>
+
+    private fun fetchRandomFact() {
+<span class="fc" id="L163">        viewModelScope.launch {</span>
+<span class="fc" id="L164">            try {</span>
+<span class="fc" id="L165">                val fact = fetchRandomFactUseCase()</span>
+<span class="fc" id="L166">                _state.update { it.copy(randomFact = fact) }</span>
+<span class="fc" id="L167">            } catch (e: Exception) {</span>
+<span class="fc" id="L168">                _sideEffects.send(FactsSideEffect.ShowSnackbar(UiText.Resource(R.string.error_fetch_failed)))</span>
+            }
+<span class="fc" id="L170">        }</span>
+<span class="fc" id="L171">    }</span>
+
+<span class="fc" id="L173">    private fun Throwable.toUiText(): UiText = when (toErrorKind()) {</span>
+<span class="pc bpc" id="L174" title="1 of 2 branches missed.">        is ErrorKind.Network -&gt; UiText.Resource(R.string.error_network)</span>
+<span class="pc bpc" id="L175" title="1 of 2 branches missed.">        is ErrorKind.Server -&gt; UiText.Resource(R.string.error_server)</span>
+<span class="fc" id="L176">        is ErrorKind.Unknown -&gt; UiText.Resource(R.string.error_load_failed)</span>
+<span class="fc" id="L177">    }</span>
+
+    companion object {
+        private const val SEARCH_DEBOUNCE_MS = 300L
+        private const val PAGE_SIZE = 20
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

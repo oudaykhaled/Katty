@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:23.991Z" hostname="bb-system-3781-1.home" time="2.159">
+  <properties/>
+  <testcase name="refreshFacts page 2 calls insertFacts" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="1.937"/>
+  <testcase name="observeFacts maps entities to domain models" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.075"/>
+  <testcase name="fetchRandomFact generates UUID for id" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.036"/>
+  <testcase name="getFactById returns null when not found" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.037"/>
+  <testcase name="refreshFacts page 1 calls replaceAllFacts" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.006"/>
+  <testcase name="getFactById returns mapped domain model when found" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.003"/>
+  <testcase name="updateNote calls dao with note and synced status" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.003"/>
+  <testcase name="observeFavorites maps bookmarked entities" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.005"/>
+  <testcase name="refreshFacts reports hasMorePages when not on last page" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.004"/>
+  <testcase name="refreshFacts page 1 generates deterministic UUID from fact content" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.009"/>
+  <testcase name="toggleBookmark from bookmarked to unbookmarked" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.017"/>
+  <testcase name="fetchRandomFact calls api and inserts into dao" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.006"/>
+  <testcase name="toggleBookmark calls dao with inverted bookmark" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.014"/>
+  <testcase name="searchFacts delegates to dao and maps results" classname="com.catfact.app.core.database.repository.CatFactRepositoryImplTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/oudaykhaled/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.6/46e2545d7a97b6ccb195621650c5957279eb4812/byte-buddy-agent-1.14.6.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

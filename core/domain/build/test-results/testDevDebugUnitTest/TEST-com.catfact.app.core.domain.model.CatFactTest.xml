@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.domain.model.CatFactTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:10.235Z" hostname="bb-system-3781-1.home" time="0.011">
+  <properties/>
+  <testcase name="withBookmark returns copy with updated bookmark" classname="com.catfact.app.core.domain.model.CatFactTest" time="0.003"/>
+  <testcase name="withSyncStatus returns copy with updated status" classname="com.catfact.app.core.domain.model.CatFactTest" time="0.001"/>
+  <testcase name="copy preserves all fields" classname="com.catfact.app.core.domain.model.CatFactTest" time="0.0"/>
+  <testcase name="default category is computed from length" classname="com.catfact.app.core.domain.model.CatFactTest" time="0.0"/>
+  <testcase name="withNote returns copy with updated note" classname="com.catfact.app.core.domain.model.CatFactTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

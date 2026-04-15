@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.network.interceptor.RetryInterceptorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:15.162Z" hostname="bb-system-3781-1.home" time="5.56">
+  <properties/>
+  <testcase name="exhausts retries on persistent 500" classname="com.catfact.app.core.network.interceptor.RetryInterceptorTest" time="1.514"/>
+  <testcase name="throws IOException when all retries exhausted by connection failures" classname="com.catfact.app.core.network.interceptor.RetryInterceptorTest" time="1.517"/>
+  <testcase name="wraps non-IOException as IOException after retries exhausted" classname="com.catfact.app.core.network.interceptor.RetryInterceptorTest" time="1.507"/>
+  <testcase name="retries on IOException and eventually succeeds" classname="com.catfact.app.core.network.interceptor.RetryInterceptorTest" time="0.509"/>
+  <testcase name="does not retry on 4xx" classname="com.catfact.app.core.network.interceptor.RetryInterceptorTest" time="0.003"/>
+  <testcase name="retries on 500 and succeeds" classname="com.catfact.app.core.network.interceptor.RetryInterceptorTest" time="0.506"/>
+  <testcase name="successful request does not retry" classname="com.catfact.app.core.network.interceptor.RetryInterceptorTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,2 @@
+04-15 09:52:58.298 18326 18340 I TestRunner: started: replaceAllFacts_also_preserves_failed_items(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.312 18326 18340 I TestRunner: finished: replaceAllFacts_also_preserves_failed_items(com.catfact.app.core.database.dao.CatFactDaoTest)

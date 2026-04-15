@@ -1,0 +1,245 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2026-04-15T07:54:11.148721Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 4
+  device {
+    id: "R5CT71TVVAJ"
+    friendly_name: "primary"
+  }
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "FavoritesScreenTest"
+    test_package: "com.catfact.app.feature.favorites.presentation"
+    test_method: "populatedStateShowsFavoriteCards"
+    start_time {
+      seconds: 1776239644
+      nanos: 645000000
+    }
+    end_time {
+      seconds: 1776239645
+      nanos: 687000000
+    }
+    device {
+      id: "R5CT71TVVAJ"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.favorites.presentation.FavoritesScreenTest-populatedStateShowsFavoriteCards.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "FavoritesScreenTest"
+    test_package: "com.catfact.app.feature.favorites.presentation"
+    test_method: "factCardClickDispatchesFactClicked"
+    start_time {
+      seconds: 1776239646
+      nanos: 262000000
+    }
+    end_time {
+      seconds: 1776239647
+      nanos: 29000000
+    }
+    device {
+      id: "R5CT71TVVAJ"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.favorites.presentation.FavoritesScreenTest-factCardClickDispatchesFactClicked.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "FavoritesScreenTest"
+    test_package: "com.catfact.app.feature.favorites.presentation"
+    test_method: "errorBannerAppearsAndDismissWorks"
+    start_time {
+      seconds: 1776239647
+      nanos: 527000000
+    }
+    end_time {
+      seconds: 1776239648
+      nanos: 300000000
+    }
+    device {
+      id: "R5CT71TVVAJ"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.favorites.presentation.FavoritesScreenTest-errorBannerAppearsAndDismissWorks.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "FavoritesScreenTest"
+    test_package: "com.catfact.app.feature.favorites.presentation"
+    test_method: "emptyStateShowsEmptyMessage"
+    start_time {
+      seconds: 1776239648
+      nanos: 777000000
+    }
+    end_time {
+      seconds: 1776239650
+      nanos: 41000000
+    }
+    device {
+      id: "R5CT71TVVAJ"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.favorites.presentation.FavoritesScreenTest-emptyStateShowsEmptyMessage.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/favorites/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

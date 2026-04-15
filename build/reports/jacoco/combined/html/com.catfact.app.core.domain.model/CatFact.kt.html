@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CatFact.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CatFact</a> &gt; <a href="index.source.html" class="el_package">com.catfact.app.core.domain.model</a> &gt; <span class="el_source">CatFact.kt</span></div><h1>CatFact.kt</h1><pre class="source lang-java linenums">package com.catfact.app.core.domain.model
+
+import androidx.compose.runtime.Immutable
+
+@Immutable
+<span class="fc" id="L6">data class CatFact(</span>
+<span class="fc" id="L7">    val id: String,</span>
+<span class="fc" id="L8">    val fact: String,</span>
+<span class="fc" id="L9">    val length: Int,</span>
+<span class="fc" id="L10">    val isBookmarked: Boolean = false,</span>
+<span class="fc" id="L11">    val personalNote: String = &quot;&quot;,</span>
+<span class="fc" id="L12">    val syncStatus: SyncStatus = SyncStatus.SYNCED,</span>
+<span class="fc" id="L13">    val category: FactCategory = FactCategory.fromLength(length)</span>
+<span class="fc" id="L14">) {</span>
+<span class="fc" id="L15">    fun withBookmark(bookmarked: Boolean): CatFact = copy(isBookmarked = bookmarked)</span>
+<span class="fc" id="L16">    fun withNote(note: String): CatFact = copy(personalNote = note)</span>
+<span class="fc" id="L17">    fun withSyncStatus(status: SyncStatus): CatFact = copy(syncStatus = status)</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

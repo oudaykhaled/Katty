@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:33.191Z" hostname="bb-system-3781-1.home" time="0.301">
+  <properties/>
+  <testcase name="loads fact on init" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.199"/>
+  <testcase name="share fact emits ShareText side effect" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.033"/>
+  <testcase name="navigateBack emits NavigateBack side effect" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.004"/>
+  <testcase name="toggle bookmark updates fact" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.002"/>
+  <testcase name="loadFact with non-existent id sets error" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.002"/>
+  <testcase name="update note changes edited note and flags changes" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.045"/>
+  <testcase name="toggleBookmark error emits ShowSnackbar" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.003"/>
+  <testcase name="save note persists and clears hasNoteChanges" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.002"/>
+  <testcase name="draft note survives process death via SavedStateHandle" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.001"/>
+  <testcase name="saveNote error emits ShowSnackbar" classname="com.catfact.app.feature.factdetail.viewmodel.DetailViewModelTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.DeepLinkParsingTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:37.460Z" hostname="bb-system-3781-1.home" time="1.223">
+  <properties/>
+  <testcase name="no path segment returns null" classname="com.catfact.app.DeepLinkParsingTest" time="1.202"/>
+  <testcase name="null uri returns null" classname="com.catfact.app.DeepLinkParsingTest" time="0.005"/>
+  <testcase name="wrong host returns null" classname="com.catfact.app.DeepLinkParsingTest" time="0.004"/>
+  <testcase name="valid deep link returns fact id" classname="com.catfact.app.DeepLinkParsingTest" time="0.005"/>
+  <testcase name="wrong scheme returns null" classname="com.catfact.app.DeepLinkParsingTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

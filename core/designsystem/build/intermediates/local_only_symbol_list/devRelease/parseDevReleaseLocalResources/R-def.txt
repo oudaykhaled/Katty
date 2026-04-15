@@ -1,0 +1,18 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_error_empty
+drawable ic_error_general
+drawable ic_error_network
+drawable ic_error_not_found
+raw loading_cat
+string bookmark_add
+string bookmark_remove
+string category_long
+string category_medium
+string category_short
+string cd_cat_fact
+string connectivity_banner_offline
+string designsystem_name
+string sync_status_failed
+string sync_status_synced
+string sync_status_syncing

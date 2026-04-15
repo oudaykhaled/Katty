@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.logging.TimberLoggerTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:08.916Z" hostname="bb-system-3781-1.home" time="0.138">
+  <properties/>
+  <testcase name="logError logs with context" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.123"/>
+  <testcase name="w logs warning without throwable" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <testcase name="e logs error with throwable" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.001"/>
+  <testcase name="logFactAction logs with empty details" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.003"/>
+  <testcase name="e logs error without throwable" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.001"/>
+  <testcase name="w logs warning with throwable" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <testcase name="logSyncEvent logs with empty details" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.001"/>
+  <testcase name="i logs info message" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <testcase name="d logs debug message" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <testcase name="logError logs with empty context" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <testcase name="logSyncEvent logs with details" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.001"/>
+  <testcase name="logFactAction logs with details" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <testcase name="logNetworkRequest logs request details" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.004"/>
+  <testcase name="logNetworkRequest logs null status code" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <testcase name="Logger default parameters are invocable" classname="com.catfact.app.core.logging.TimberLoggerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.core.database.mapper.CatFactMapperTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:23.970Z" hostname="bb-system-3781-1.home" time="0.014">
+  <properties/>
+  <testcase name="entity with invalid syncStatus defaults to SYNCED" classname="com.catfact.app.core.database.mapper.CatFactMapperTest" time="0.005"/>
+  <testcase name="domain toEntity maps all fields correctly" classname="com.catfact.app.core.database.mapper.CatFactMapperTest" time="0.0"/>
+  <testcase name="entity toDomain maps all fields correctly" classname="com.catfact.app.core.database.mapper.CatFactMapperTest" time="0.0"/>
+  <testcase name="round trip preserves data" classname="com.catfact.app.core.database.mapper.CatFactMapperTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">
+  <!-- Extracted from Loading Cat Lottie animation (preloader_cat) -->
+  <!-- Colors: body #F5A623, outline #1B1617, belly #F4F4F4 -->
+
+  <!-- Left ear outline -->
+  <polygon points="30,42 32,12 48,38" fill="#1B1617"/>
+  <!-- Right ear outline -->
+  <polygon points="60,38 76,12 78,42" fill="#1B1617"/>
+
+  <!-- Left ear fill -->
+  <polygon points="32,40 33,16 47,37" fill="#F5A623"/>
+  <!-- Right ear fill -->
+  <polygon points="61,37 75,16 76,40" fill="#F5A623"/>
+
+  <!-- Left inner ear -->
+  <polygon points="34,38 35,22 44,36" fill="#E8941E"/>
+  <!-- Right inner ear -->
+  <polygon points="64,36 73,22 74,38" fill="#E8941E"/>
+
+  <!-- Head outline -->
+  <circle cx="54" cy="52" r="26" fill="#1B1617"/>
+  <!-- Head fill -->
+  <circle cx="54" cy="52" r="24" fill="#F5A623"/>
+
+  <!-- Muzzle -->
+  <ellipse cx="54" cy="58" rx="12" ry="9" fill="#FBCE7A"/>
+
+  <!-- Left eye -->
+  <circle cx="44" cy="46" r="2.5" fill="#1B1617"/>
+  <!-- Right eye -->
+  <circle cx="64" cy="46" r="2.5" fill="#1B1617"/>
+
+  <!-- Left eye highlight -->
+  <circle cx="44.8" cy="44.8" r="1" fill="#FFFFFF"/>
+  <!-- Right eye highlight -->
+  <circle cx="64.8" cy="44.8" r="1" fill="#FFFFFF"/>
+
+  <!-- Nose -->
+  <polygon points="52,54 54,57 56,54" fill="#1B1617"/>
+
+  <!-- Mouth -->
+  <path d="M48,60 Q51,64 54,59 Q57,64 60,60" fill="none" stroke="#1B1617" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

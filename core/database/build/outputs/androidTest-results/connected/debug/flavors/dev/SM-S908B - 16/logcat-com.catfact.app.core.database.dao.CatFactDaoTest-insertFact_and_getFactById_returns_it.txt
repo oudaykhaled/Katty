@@ -1,0 +1,18 @@
+04-15 09:52:58.189 18326 18340 I TestRunner: started: insertFact_and_getFactById_returns_it(com.catfact.app.core.database.dao.CatFactDaoTest)
+04-15 09:52:58.191 10618 10618 I Routine@Core[4.9.04.13]: RoutineEngineService: onCreate
+04-15 09:52:58.191 10618 10618 I Routine@Core[4.9.04.13]: RoutineEngineService: onSpecificConditionStateChanged: instancedId=1582284991533042394
+04-15 09:52:58.193 10618 18350 I Routine@Core[4.9.04.13]: ProcessUtils: setProcessImportant: needForeground=true, reason=ENGINE_COORDINATOR
+04-15 09:52:58.197 10618 18350 I Routine@Core[4.9.04.13]: COORD/CoordinatorRequestHandler: onCallReceive: method=specific_condition_state_changed
+04-15 09:52:58.197 10618 18350 I Routine@Core[4.9.04.13]: COORD/CoordinatorRequestHandler: onCallReceive: wait until notify... method=specific_condition_state_changed
+04-15 09:52:58.197 10618 11038 I Routine@Core[4.9.04.13]: COORD/CoordinatorRequestHandler: messageHandler.handleMessage: message=SPECIFIC_CONDITION_STATE_CHANGED
+04-15 09:52:58.198 10618 10831 I Routine@Core[4.9.04.13]: COORD/BasicConditionController: evaluateTriggerStatus: conditions.size=1
+04-15 09:52:58.198 10618 10831 I Routine@Core[4.9.04.13]: COORD/BasicConditionController: evaluateTriggerStatus: condition=RoutineCondition(meta=ConditionMeta(id=40, tag=manual_execute, packageName=com.samsung.android.app.routines, componentName=null, componentType=v3, labelResourceId=2131887315, subLabelResourceId=-1, enabledLabelResourceId=0, negativeEnabledLabelResourceId=0, _isSupportNegative=0, descriptionResourceId=0, iconResourceId=2131231565, configActivity=null, category=null, defaultParameter=null, defaultParameterLabel=null, uri=null, correctParam=null, parameterSpecSet=null, supportState=1, attributes=display_description, version=1, defaultLabel=Start manually), _instance=ConditionInstance(id=2, uuid=1582284991533042394, routineId=2, parameterRepresentation=null, param={}, isNegative=0, timestamp=0, validState=1, extra=, _triggerStatus=0))
+04-15 09:52:58.201 10618 11425 I Routine@Core[4.9.04.13]: WearNodeManagerImpl: getConnectedNodeIdByCapability nodeId:null
+04-15 09:52:58.202 10618 11425 I Routine@Core[4.9.04.13]: WearCommonDataStore: getLastConnectedNodeId: null
+04-15 09:52:58.202 10618 11425 I Routine@Core[4.9.04.13]: WEAR/WearRoutineHostSenderImpl: requestToUpdateMetas: nodeId is null
+04-15 09:52:58.204 10618 10831 I Routine@Core[4.9.04.13]: TASKD/ConditionTaskAdapterFactoryImpl: getAdapter - metaId=manual_execute(id=40)
+04-15 09:52:58.204 10618 10831 E Routine@Core[4.9.04.13]: ResultCode.FailCustomCode: fromValidState: failed to parse. validState=0x1
+04-15 09:52:58.204 10618 10831 I Routine@Core[4.9.04.13]: TASKD/ConditionTaskAdapterFactoryImpl: getAdapter - metaId=manual_execute(id=40)
+04-15 09:52:58.205 10618 10831 I Routine@Core[4.9.04.13]: ManualExecutionConditionHandler: isSatisfied: tag=manual_execute, result=NOT_SATISFIED
+04-15 09:52:58.205 10618 10831 I Routine@Core[4.9.04.13]: COORD/BasicConditionController: evaluateTriggerStatus: isSatisfied=false (conditionId=manual_execute(id=2, uuid=158228, routineId=2))
+04-15 09:52:58.205 18326 18340 I TestRunner: finished: insertFact_and_getFactById_returns_it(com.catfact.app.core.database.dao.CatFactDaoTest)

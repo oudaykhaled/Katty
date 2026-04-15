@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:34.283Z" hostname="bb-system-3781-1.home" time="0.375">
+  <properties/>
+  <testcase name="fetchRandomFact updates random fact" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.237"/>
+  <testcase name="fetchRandomFact error emits ShowSnackbar" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.037"/>
+  <testcase name="toggle bookmark adds fact id to loading ids then removes" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.062"/>
+  <testcase name="search updates searchInput immediately and searchQuery after debounce" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.003"/>
+  <testcase name="initial state has empty facts before coroutines run" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.0"/>
+  <testcase name="loadNextPage calls refreshFacts and increments page" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.005"/>
+  <testcase name="refresh error sets error state" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.004"/>
+  <testcase name="toggle bookmark error emits ShowSnackbar" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.004"/>
+  <testcase name="observes facts from repository" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.003"/>
+  <testcase name="loadNextPage error emits ShowSnackbar" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.004"/>
+  <testcase name="dismiss error clears error" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.002"/>
+  <testcase name="factClicked emits NavigateToDetail" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.005"/>
+  <testcase name="loadNextPage sets hasMorePages false on last page" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.003"/>
+  <testcase name="loadInitial failure is silently caught" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.002"/>
+  <testcase name="refresh success updates random fact" classname="com.catfact.app.feature.facts.viewmodel.FactsViewModelTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

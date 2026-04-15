@@ -1,0 +1,891 @@
+04-15 09:53:25.354 19294 19315 I TestRunner: started: backButtonDispatchesNavigateBack(com.catfact.app.feature.factdetail.presentation.DetailScreenTest)
+04-15 09:53:25.377 19294 19315 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+04-15 09:53:25.383 19294 19315 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@287ad10]
+04-15 09:53:25.389 19294 19315 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+04-15 09:53:25.398  1542  2484 I SemDvfsHyPerManager: acquire hyper - AMS_APP_SWITCH/1542@28, type = -999
+04-15 09:53:25.399  1151  2758 I SurfaceFlinger: id=18497 createSurf, flag=24004, Task=3872#18497
+04-15 09:53:25.401  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1233263  [1542 / 28]    HINT : AMS_APP_SWITCH    list :
+04-15 09:53:25.402  1059  1180 I HYPER-HAL: [ResourceManager.cpp]updateResource(): [CPULittleMinFreq] UpdateResource Request ID : 1233263    Value : 1824000
+04-15 09:53:25.403  3963  3963 I SemDvfsHyPerManager: acquire hyper - APP_START_SHORT/3963@17, type = -999
+04-15 09:53:25.403  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 7922207  [3963 / 17]    HINT : APP_START    list : [TIMEOUT / 1500]
+04-15 09:53:25.404  1151  2758 I SurfaceFlinger: id=18498 createSurf, flag=84004, ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498
+04-15 09:53:25.404  1059  1180 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 7866564
+04-15 09:53:25.408  1542  1821 I SemDvfsHyPerManager: acquire hyper - AMS_APP_LAUNCH/1542@21, type = -999
+04-15 09:53:25.408  3152  3152 E pageboostd: Received HALT command code 2
+04-15 09:53:25.409  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1222287  [1542 / 21]    HINT : AMS_APP_LAUNCH    list :
+04-15 09:53:25.409  2000  2120 D ViewRootImpl: desktopMode is false
+04-15 09:53:25.409  2000  2105 D ShellDesktopMode: handleRequest: TransitionRequestInfo {type=1, tid=3872, debugId=1652}
+04-15 09:53:25.409  2000  2120 I ViewRootImpl: dVRR is disabled
+04-15 09:53:25.409  1059  1180 I HYPER-HAL: [ResourceManager.cpp]updateResource(): [CPULittleMinFreq] UpdateResource Request ID : 1222287    Value : 1824000
+04-15 09:53:25.409  2000  2196 D NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+04-15 09:53:25.412  2461 30001 I HoneySpace.RecentTasks: onRecentTasksChanged
+04-15 09:53:25.413  2461  2584 I HoneySpace.TopTaskSource: onTaskMovedToFront : taskId = 3872, displayId = 0
+04-15 09:53:25.413  2461  2586 I HoneySpace.TopTaskUseCase: topTasks 3872 ComponentInfo{com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity}[displayId=0]
+04-15 09:53:25.413  3963  3963 I SemDvfsHyPerManager: acquire hyper - APP_START/3963@19, type = -999
+04-15 09:53:25.413  1542  3827 D InputTransport: Input channel constructed: '93f24f4', fd=1041
+04-15 09:53:25.413  1542  3827 D InputTransport: Input channel constructed: '93f24f4', fd=1263
+04-15 09:53:25.413  1542  3827 D InputTransport: Input channel constructed: '93f24f4', fd=1281
+04-15 09:53:25.413  1542  3827 D InputTransport: Input channel destroyed: '93f24f4', fd=1263
+04-15 09:53:25.413  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 7930172  [3963 / 19]    HINT : APP_START    list :
+04-15 09:53:25.414  1151  1378 I SurfaceFlinger: id=18499 createSurf, flag=84004, 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499
+04-15 09:53:25.414  1218  1218 I CameraService: onUidStateChanged: uid=10048, procState is changed. (0 -> 1)
+04-15 09:53:25.415  1542  3827 D InputTransport: Input channel destroyed: '93f24f4', fd=1281
+04-15 09:53:25.416  2000  2120 D InputTransport: Input channel constructed: '93f24f4', fd=674
+04-15 09:53:25.416  2000  2120 I InsetsController: onStateChanged: host=Splash Screen com.catfact.app.feature.factdetail.test, from=android.view.ViewRootImpl.onInsetsStateChanged:3026, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1544), mDisplayCutout=DisplayCutout{insets=Rect(0, 50 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(341, 0 - 379, 50), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1544 physicalDisplayWidth=720 physicalDisplayHeight=1544 density={1.875} cutoutSpec={M 0,0 H -10 V 26.66666666666667 H 10 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=8, center=Point(8, 8)}, RoundedCorner{position=TopRight, radius=8, center=Point(712, 8)}, RoundedCorner{position=BottomRight, radius=8, center=Point(712, 1536)}, RoundedCorner{position=BottomLeft, radius=8, center=Point(8, 1536)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1544), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 50) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=720 displayHeight=1544 physicalPixelDisplaySizeRatio=0.5 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {ec730001 mType=navigationBars mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {ec730005 mType=mandatorySystemGestures mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730006 mType=tappableElement mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950000 mType=statusBars mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950005 mType=mandatorySystemGestures mFrame=[0,0][720,73] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950006 mType=tappableElement mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null} }
+04-15 09:53:25.416  2000  2120 I VRI[test]@1f6b6c5: onActiveControlsChanged, removed=false, mAdded=true, caller=android.view.ViewRootImpl.handleInsetsControlChanged:3002 android.view.ViewRootImpl.setView:2014 android.view.WindowManagerGlobal.addView:604 com.android.wm.shell.startingsurface.SplashscreenWindowCreator.addWindow:38 com.android.wm.shell.startingsurface.StartingWindowController$$ExternalSyntheticLambda4.run:1365
+04-15 09:53:25.416  2000  2120 I VRI[test]@1f6b6c5: synced displayState. AttachInfo displayState=2
+04-15 09:53:25.416  2000  2120 I VRI[test]@1f6b6c5: setView = android.widget.FrameLayout@b10fa41 IsHRR=false mFlingFrameRateChange=0 TM=true
+04-15 09:53:25.416  2000  2196 D HWUI    : HWUI - treat SMPTE_170M as sRGB
+04-15 09:53:25.418  1542  3827 D InputDispatcher: Focused application(0): ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}
+04-15 09:53:25.420  1542  3827 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.420  1542  3827 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.420  1542  1821 D GraphicsStatsService: requestRenderEngineFor(com.catfact.app.feature.factdetail.test)
+04-15 09:53:25.421  1542  1906 D SemWifiTransportLayerMonitor.TcpMonitorHandler: MSG_SAVE_PACKAGE_INFO
+04-15 09:53:25.421  1542  1906 D SemWifiTransportLayerFileManager: saveWifiPackageInfoToFile
+04-15 09:53:25.421  1542  1906 D SemWifiTransportLayerFileManager: writeWifiPackageInfoList
+04-15 09:53:25.421  1542  1825 D AS.MultiSoundManager: mForegroundUid = 10748
+04-15 09:53:25.421 19294 19294 D HWUI    : HWUI - treat SMPTE_170M as sRGB
+04-15 09:53:25.423  1542  1582 D PkgPredictorService-SecIpmManagerServiceImpl: onForegroundActivitiesChanged pid:19294 uid:10748
+04-15 09:53:25.424  1542  1582 D NetworkPolicy: already checked 10748
+04-15 09:53:25.424 19294 19332 D HWUI    : CacheManager constructor. deviceInfo=(1080, 1920)
+04-15 09:53:25.424  1542  2944 V PkgPredictorService-SecIpmManagerServiceImpl: discard foreground app:com.catfact.app.feature.factdetail.test 1|true
+04-15 09:53:25.424 19294 19332 D vulkan  : searching for layers in '/data/app/~~HsWhxSv57QAYca99gBcQ1g==/com.catfact.app.feature.factdetail.test-tKgfS4iqg8hJvs0dKVxapA==/lib/arm64'
+04-15 09:53:25.424 19294 19332 D vulkan  : searching for layers in '/data/app/~~HsWhxSv57QAYca99gBcQ1g==/com.catfact.app.feature.factdetail.test-tKgfS4iqg8hJvs0dKVxapA==/base.apk!/lib/arm64-v8a'
+04-15 09:53:25.425 19294 19332 V XGL     : ----------------------------------------------------------------------
+04-15 09:53:25.425 19294 19332 V XGL     : SUMD version compiled date     = 2025-06-11 14:47 - KST
+04-15 09:53:25.425 19294 19332 V XGL     : SUMD version revision number   = 1fc295b0d2
+04-15 09:53:25.425 19294 19332 V XGL     : SUMD version info              = Driver version: 24.0.545, git hash: 1fc295b0d2
+04-15 09:53:25.425 19294 19332 V XGL     : ----------------------------------------------------------------------
+04-15 09:53:25.425 19294 19332 V XGL     : Entering: Create
+04-15 09:53:25.429 18525 18790 I Rubin   : [146] M.c0.k(Unknown Source) : Notify com.samsung.android.rubin.inferenceengine.contextanalytics.engine.loggers.AppUsageLogger's database is updated.
+04-15 09:53:25.429  2461  2584 I HoneySpace.TopTaskSource: onTaskFocusChanged(): taskId = 3872
+04-15 09:53:25.432  2000  2000 I {OngoingActivityController}: onTaskFocusChanged but OA data is empty
+04-15 09:53:25.432  2461  2461 I HoneySpace.EdgePanel.CocktailHostRepositoryImpl: onNoteResume
+04-15 09:53:25.432  2461  2461 I HoneySpace.EdgePanel.EdgePanelContainerViewModel: cocktailHostRepository.edgePanelOperation NoteResumeComponent(componentName=ComponentInfo{com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity})
+04-15 09:53:25.432  2461  2461 I HoneySpace.EdgePanel.ActivityUtils: HomePackage : com.sec.android.app.launcher, resumePackageName : com.catfact.app.feature.factdetail.test, className : androidx.activity.ComponentActivity
+04-15 09:53:25.434 19294 19332 V XGL     : Exiting: Create
+04-15 09:53:25.434  3723 26412 I [AirCmd]_ActivitySwitchDetector: onTaskFocusChanged : taskId=3872, componentName=ComponentInfo{com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity}
+04-15 09:53:25.434  3723 26412 I [AirCmd]_ActivitySwitchDetector: onTaskFocusChanged :mTopMostActivity = ComponentInfo{com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity}
+04-15 09:53:25.435  3723 26412 I [AirCmd]_CallbackRepeater: stopRepeat : isWorking=false
+04-15 09:53:25.435  3723 26412 I [AirCmd]_MediaControlStateMonitor: isForegroundAppSupportsMediaButton : mediaSession is empty
+04-15 09:53:25.436 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@c7bbd79 in: PRE_ON_CREATE
+04-15 09:53:25.436 19294 19294 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+04-15 09:53:25.438  3723 26412 E [AirCmd]_MediaControlStateMonitor: getActiveNotificationPackageName : notification service monitor is null
+04-15 09:53:25.438  3723 26412 I [AirCmd]_ButtonEventDetectionThread: enableDoubleClickDetection: enabled= true, doubleClickWaitInterval=300
+04-15 09:53:25.440  1151  1151 I SurfaceFlinger: [Display 0 name="Built-in Screen"#49] setFrameRateCategory: High
+04-15 09:53:25.441  1151  1151 I SurfaceFlinger: [Task=3872#18497] attach to parent LayerHierarchy{RequestedLayerState{DefaultTaskDisplayArea_d0#10 parentId=9} 16 children}
+04-15 09:53:25.441  1151  1151 I SurfaceFlinger: [ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498] attach to parent LayerHierarchy{RequestedLayerState{Task=3872#18497 parentId=10} 1 children}
+04-15 09:53:25.441  1151  1151 I SurfaceFlinger: [93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499] attach to parent LayerHierarchy{RequestedLayerState{ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 parentId=18497} 1 children}
+04-15 09:53:25.442  1542  1677 I WindowManager: Relayout Window{93f24f4 u0 Splash Screen com.catfact.app.feature.factdetail.test}: viewVisibility=0 req=720x1544 ty=3 d0
+04-15 09:53:25.443  1151  1151 D DisplayModeController: setDesiredMode 4633128672291735999 {mode={fps=120.00 Hz, modePtr={id=14, vsyncRate=120.00 Hz, peakRefreshRate=120.00 Hz}}, emitEvent=true, force=false}
+04-15 09:53:25.443  1151  1378 I SurfaceFlinger: id=18500 createSurf, flag=44004, Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500
+04-15 09:53:25.443 19294 19294 D CompatChangeReporter: Compat change id reported: 377864165; UID 10748; state: ENABLED
+04-15 09:53:25.443  1151  1151 I LayerHistory: NavigationBar0$_2000#98 voted ExplicitCategory with category: High
+04-15 09:53:25.443  1151  1151 I LayerHistory: com.sec.android.app.launcher/com.samsung.app.honeyspace.edge.edgepanel.app.CocktailBarService$_2461#16495 voted ExplicitCategory with category: High
+04-15 09:53:25.443  1151  1151 I LayerHistory: StatusBar$_2000#102 voted ExplicitCategory with category: High
+04-15 09:53:25.443  1151  1151 I LayerHistory: com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490 voted ExplicitCategory with category: High
+04-15 09:53:25.443  1151  1151 I SurfaceFlinger: All layers Category Highscored - choose 120.00 Hz
+04-15 09:53:25.443  1151  1151 I HWComposer: [4633128672291735999] ActiveConfigToHWC, ID : 21
+04-15 09:53:25.444 19294 19294 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+04-15 09:53:25.444  1542  1677 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.444  1542  1677 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.445  1047  1047 D display : setActiveConfigWithConstraints:: PrimaryDisplay config(21)
+04-15 09:53:25.445  1542  1677 I WindowManager: Relayout hash=93f24f4, pid=2000, syncId=-1: mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=APPLICATION_STARTING fmt=TRANSLUCENT wanim=0x1030317
+04-15 09:53:25.445  1542  1677 I WindowManager:   fl=81030118
+04-15 09:53:25.445  1542  1677 I WindowManager:   pfl=10000810
+04-15 09:53:25.445  1542  1677 I WindowManager:   apr=18
+04-15 09:53:25.445  1542  1677 I WindowManager:   bhv=1
+04-15 09:53:25.445  1542  1677 I WindowManager:   fitSides=0
+04-15 09:53:25.445  1542  1677 I WindowManager:   frameRateBoostOnTouch=true
+04-15 09:53:25.445  1542  1677 I WindowManager:   dvrrWindowFrameRateHint=true naviIconColor=0}
+04-15 09:53:25.445  1047  1047 I display : Current VRR MODE is 1
+04-15 09:53:25.445  1047  1047 I display : setActiveConfigWithConstraints:: HFR match - config: 21, base: 21, try: 0
+04-15 09:53:25.445  1047  1047 I display : setActiveConfigWithConstraints::update 720x1544@120hs
+04-15 09:53:25.445  1047  1047 I display : commit modeset : 720x1544@120hs
+04-15 09:53:25.445  2000  2120 I InsetsController: onStateChanged: host=Splash Screen com.catfact.app.feature.factdetail.test, from=android.view.ViewRootImpl.onInsetsStateChanged:3026, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1544), mDisplayCutout=DisplayCutout{insets=Rect(0, 50 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(341, 0 - 379, 50), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1544 physicalDisplayWidth=720 physicalDisplayHeight=1544 density={1.875} cutoutSpec={M 0,0 H -10 V 26.66666666666667 H 10 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=8, center=Point(8, 8)}, RoundedCorner{position=TopRight, radius=8, center=Point(712, 8)}, RoundedCorner{position=BottomRight, radius=8, center=Point(712, 1536)}, RoundedCorner{position=BottomLeft, radius=8, center=Point(8, 1536)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1544), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 50) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=720 displayHeight=1544 physicalPixelDisplaySizeRatio=0.5 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {ec730001 mType=navigationBars mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {ec730005 mType=mandatorySystemGestures mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730006 mType=tappableElement mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950000 mType=statusBars mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950005 mType=mandatorySystemGestures mFrame=[0,0][720,73] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950006 mType=tappableElement mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null} }
+04-15 09:53:25.445  2000  2120 I VRI[test]@1f6b6c5: onActiveControlsChanged, removed=false, mAdded=true, caller=android.view.ViewRootImpl.handleInsetsControlChanged:3002 android.view.ViewRootImpl.relayoutWindow:11629 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903
+04-15 09:53:25.446  2000  2000 D DisplayLifecycle: updateDisplay id = 0
+04-15 09:53:25.446 19294 19294 I DecorView: setWindowBackground: isPopOver=false color=fffafafa d=android.graphics.drawable.ColorDrawable@b92a2b1
+04-15 09:53:25.446  2000  2120 I BLASTBufferQueue_Java: new BLASTBufferQueue, mName= VRI[test]@1f6b6c5 mNativeObject= 0xb40000741c5b6cc0 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3585 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910 android.view.Choreographer.doCallbacks:1367 android.view.Choreographer.doFrame:1292 android.view.Choreographer$FrameDisplayEventReceiver.run:1870
+04-15 09:53:25.446  2000  2120 I BLASTBufferQueue_Java: update, w= 720 h= 1544 mName = VRI[test]@1f6b6c5 mNativeObject= 0xb40000741c5b6cc0 sc.mNativeObject= 0xb40000751c53ded0 format= -3 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3590 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901
+04-15 09:53:25.446  2000  2125 D StackScroller: onDisplayChanged for predraw skip to 2
+04-15 09:53:25.446  2000  2120 I VRI[test]@1f6b6c5: Relayout returned: old=(0,0,720,1544) new=(0,0,720,1544) relayoutAsync=false req=(720,1544)0 dur=5 res=0x3 s={true 0xb40000748c5404a0} ch=true seqId=0
+04-15 09:53:25.447  2000  2120 I VRI[test]@1f6b6c5: performConfigurationChange setNightDimText nightDimLevel=0
+04-15 09:53:25.447  2000  2120 D VRI[test]@1f6b6c5: mThreadedRenderer.initialize() mSurface={isValid=true 0xb40000748c5404a0} hwInitialized=true
+04-15 09:53:25.447  2000  2120 D VRI[test]@1f6b6c5: reportNextDraw android.view.ViewRootImpl.performTraversals:5443 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910
+04-15 09:53:25.447  2000  2120 D VRI[test]@1f6b6c5: Setup new sync=wmsSync-VRI[test]@1f6b6c5#70
+04-15 09:53:25.447  2000  2120 I VRI[test]@1f6b6c5: Creating new active sync group VRI[test]@1f6b6c5#71
+04-15 09:53:25.447  2000  2120 D VRI[test]@1f6b6c5: registerCallbacksForSync syncBuffer=false
+04-15 09:53:25.448  2000  2194 D VRI[test]@1f6b6c5: Received frameDrawingCallback syncResult=0 frameNum=1.
+04-15 09:53:25.448  2000  2194 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc5154d0 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 1 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$12.onFrameDraw:15441 android.view.ThreadedRenderer$1.onFrameDraw:718 <bottom of call stack>
+04-15 09:53:25.448  2000  2194 I VRI[test]@1f6b6c5: Setting up sync and frameCommitCallback
+04-15 09:53:25.448  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.448 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@c7bbd79 in: CREATED
+04-15 09:53:25.448 19294 19294 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@c7bbd79
+04-15 09:53:25.449  2461  4179 I HoneySpace.Memory-Monitor: current state = 2, didTrim = false
+04-15 09:53:25.449 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@c7bbd79 in: STARTED
+04-15 09:53:25.449 19294 19294 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@c7bbd79
+04-15 09:53:25.450  2000  2196 I BLASTBufferQueue: [VRI[test]@1f6b6c5#837](f:0,a:0,s:0) onFrameAvailable the first frame is available
+04-15 09:53:25.450  2000  2196 I VRI[test]@1f6b6c5: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+04-15 09:53:25.450  1151  1378 I SurfaceFlinger: [Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500] setTransactionState with the first frame. bufferData(ID: 8589934655799, frameNumber: 1)
+04-15 09:53:25.450  2000  2196 D HWUI    : CFMS:: SetUp Pid : 2000    Tid : 2196
+04-15 09:53:25.450  2000  2120 D VRI[test]@1f6b6c5: reportDrawFinished seqId=0
+04-15 09:53:25.451  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.452  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.452  1151  1378 I SurfaceFlinger: id=18501 createSurf, flag=84004, Transition Root: Task=3872#18501
+04-15 09:53:25.454  1542  1585 I SurfaceControlRegistry: show, t=StartTransaction_SyncId<1652> sc=ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.server.wm.Transition.onTransactionReady:2048 com.android.server.wm.BLASTSyncEngine$SyncGroup.finishNow:240 com.android.server.wm.BLASTSyncEngine.onSurfacePlacement:263 com.android.server.wm.RootWindowContainer.performSurfacePlacementNoTrace:1083 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement:166
+04-15 09:53:25.454  1542  1585 D SurfaceComposerClient: setCornerRadius ## Task=3801#16292 cornerRadius=0.000000
+04-15 09:53:25.454  1542  1585 D SurfaceComposerClient: setCornerRadius ## Task=3872#18497 cornerRadius=0.000000
+04-15 09:53:25.455  1542  1585 D ScreenCapture: [Capture_TEST] : setIsScreenShotBySystem false
+04-15 09:53:25.455  1542  1585 I SurfaceComposerClient: captureLayers:childrenOnly:1, sync:1
+04-15 09:53:25.455 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@c7bbd79 in: RESUMED
+04-15 09:53:25.456  2000  2105 I SurfaceControlRegistry: hide, t=FinishTransaction_SyncId<1652> sc=Task=3801, caller=android.view.SurfaceControl$Transaction.hide:3583 com.android.wm.shell.transition.Transitions.dispatchReady:1263 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103
+04-15 09:53:25.456  2000  2105 I SurfaceControlRegistry: show, t=StartTransaction_SyncId<1652> sc=Task=3872, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.wm.shell.transition.Transitions.dispatchReady:1279 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103
+04-15 09:53:25.456  2000  2105 I SurfaceControlRegistry: show, t=FinishTransaction_SyncId<1652> sc=Task=3872, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.wm.shell.transition.Transitions.dispatchReady:1330 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103
+04-15 09:53:25.456  2000  2105 I SurfaceControlRegistry: show, t=StartTransaction_SyncId<1652> sc=Transition Root: Task=3872, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.wm.shell.transition.Transitions.playTransition:79 com.android.wm.shell.transition.Transitions.processReadyQueue:239 com.android.wm.shell.transition.Transitions.dispatchReady:1352 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13
+04-15 09:53:25.457  1047  1047 W display : deliverWinConfigData:: commit modeset time (11 ms)
+04-15 09:53:25.457  1047  1137 I display : [compareVsyncPeriod] set the lowest(mode:0) vsync 83 of display(0)
+04-15 09:53:25.457  1047  1137 I display : getFpsForPerformance, performance table found using table(key:120, cpu:255)
+04-15 09:53:25.457  1047  1137 I display : Set m2mMPP capacity(4) for fps(120)
+04-15 09:53:25.457  1047  1137 I display : getFpsForPerformance, performance table found using table(key:120, cpu:255)
+04-15 09:53:25.457  1047  1137 I display : Set Affinity config for fps(120) : cpuIDs : 255
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 0
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 1
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 2
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 3
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 4
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 5
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 6
+04-15 09:53:25.457  1047  1137 I display : Set Affinity CPU ID : 7
+04-15 09:53:25.457  1047  1137 I display : Set affinity HWC : 1047
+04-15 09:53:25.457  1047  1137 I display : CPU set : Cluster(0), min_clock(0)
+04-15 09:53:25.457  1047  1137 I display : CPU set : Cluster(1), min_clock(0)
+04-15 09:53:25.457  1047  1137 I display : CPU set : Cluster(2), min_clock(0)
+04-15 09:53:25.458 19294 19294 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@c7bbd79
+04-15 09:53:25.461  1151  2479 I SurfaceFlinger: Capture layer list: 	 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490(seamlessTransition:0)
+04-15 09:53:25.461  1151  2479 I CompositionEngine: [setDisplaySize] size=(720, 1544)
+04-15 09:53:25.462  1151  1206 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1494, Rendering layer ScreenCaptureFillLayer at index 0
+04-15 09:53:25.462  1151  1206 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1494, Rendering layer com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490 at index 1
+04-15 09:53:25.465  1151  1292 I VSyncReactor: Current= 24, Period= 120, hwcPeriod= 120
+04-15 09:53:25.467  2000  2105 D SurfaceComposerClient: [Task=3801#16292] setEdgeExtension Right
+04-15 09:53:25.468 19294 19294 D ViewRootImpl: desktopMode is false
+04-15 09:53:25.468  1151  2479 I SurfaceFlinger: id=18502 createSurf, flag=20004, DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502
+04-15 09:53:25.469  2000  2105 I SurfaceControlRegistry: show, t=StartTransaction_SyncId<1652> sc=DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.wm.shell.transition.DefaultTransitionHandler.startAnimation:2931 com.android.wm.shell.transition.Transitions.dispatchTransition:90 com.android.wm.shell.transition.Transitions.playTransition:774 com.android.wm.shell.transition.Transitions.processReadyQueue:239 com.android.wm.shell.transition.Transitions.dispatchReady:1352
+04-15 09:53:25.469 19294 19294 I ViewRootImpl: dVRR is disabled
+04-15 09:53:25.469  2000  2105 I SurfaceControlRegistry: apply, t=StartTransaction_SyncId<1652>, caller=android.view.SurfaceControl$Transaction.apply:3459 android.view.SurfaceControl$Transaction.apply:3447 android.view.SurfaceControl$Transaction.apply:3397 com.android.wm.shell.transition.DefaultTransitionHandler.startAnimation:3387 com.android.wm.shell.transition.Transitions.dispatchTransition:90 com.android.wm.shell.transition.Transitions.playTransition:774
+04-15 09:53:25.470 19294 19294 D HardwareRenderer: onDisplayChanged. displayId=0 current wxh=720x1544 mLargest wxh=0x0
+04-15 09:53:25.470 19294 19294 D HardwareRenderer: Set largestWidth and largestHeight as logical resolution. (720x1544)
+04-15 09:53:25.470 19294 19332 D HWUI    : setMaxSurfaceArea requested wxh=(720,1544) requestedSurfaceArea(1111680) is smaller than defaultSurfaceArea(2073600). Use default.
+04-15 09:53:25.471 19294 19332 D NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+04-15 09:53:25.472 19294 19345 I factdetail.test: [HIDL_FETCH_IMapper] android.hardware.graphics.mapper@4.0: Loaded Mapper successfully.
+04-15 09:53:25.474  1542  2161 D InputTransport: Input channel constructed: 'f6d7816', fd=1280
+04-15 09:53:25.474  1542  2161 D InputTransport: Input channel constructed: 'f6d7816', fd=1281
+04-15 09:53:25.474  1542  2161 D InputTransport: Input channel constructed: 'f6d7816', fd=1306
+04-15 09:53:25.474  1542  2161 D InputTransport: Input channel destroyed: 'f6d7816', fd=1281
+04-15 09:53:25.474  1151  2479 I SurfaceFlinger: id=18503 createSurf, flag=84004, f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503
+04-15 09:53:25.476  1542  2161 D InputTransport: Input channel destroyed: 'f6d7816', fd=1306
+04-15 09:53:25.476 19294 19294 D InputTransport: Input channel constructed: 'f6d7816', fd=124
+04-15 09:53:25.477 19294 19294 I InsetsController: onStateChanged: host=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity, from=android.view.ViewRootImpl.onInsetsStateChanged:3026, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1544), mDisplayCutout=DisplayCutout{insets=Rect(0, 50 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(341, 0 - 379, 50), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1544 physicalDisplayWidth=720 physicalDisplayHeight=1544 density={1.875} cutoutSpec={M 0,0 H -10 V 26.66666666666667 H 10 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=8, center=Point(8, 8)}, RoundedCorner{position=TopRight, radius=8, center=Point(712, 8)}, RoundedCorner{position=BottomRight, radius=8, center=Point(712, 1536)}, RoundedCorner{position=BottomLeft, radius=8, center=Point(8, 1536)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1544), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 50) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=720 displayHeight=1544 physicalPixelDisplaySizeRatio=0.5 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {ec730001 mType=navigationBars mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {ec730005 mType=mandatorySystemGestures mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730006 mType=tappableElement mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950000 mType=statusBars mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950005 mType=mandatorySystemGestures mFrame=[0,0][720,73] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950006 mType=tappableElement mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null} }
+04-15 09:53:25.477 19294 19294 I VRI[ComponentActivity]@18998d2: synced displayState. AttachInfo displayState=2
+04-15 09:53:25.478 19294 19294 I VRI[ComponentActivity]@18998d2: setView = com.android.internal.policy.DecorView@444701e IsHRR=false mFlingFrameRateChange=0 TM=true
+04-15 09:53:25.478 19294 19294 I IDS_TAG : Starting IDS observe window
+04-15 09:53:25.478 19294 19294 I IDS_TAG : Getting Shared Preference for android.app.Application@da6e11a uid = 10748
+04-15 09:53:25.479 19294 19294 I IDS_TAG : App android.app.Application@da6e11a has not finished training
+04-15 09:53:25.480 19294 19332 D HWUI    : HWUI - treat SMPTE_170M as sRGB
+04-15 09:53:25.480 19294 19294 I IDS_TAG : Closing IDS observe window
+04-15 09:53:25.480 19294 19294 I IDS_TAG : Getting Shared Preference for android.app.Application@da6e11a uid = 10748
+04-15 09:53:25.480 19294 19294 I IDS_TAG : IDS count updated to 1 for android.app.Application@da6e11a
+04-15 09:53:25.482  1151  1151 I SurfaceFlinger: finalizeDisplayModeChange 4633128672291735999
+04-15 09:53:25.482  1151  2479 I SurfaceFlinger: id=18504 createSurf, flag=84000, 3427c83 ActivityRecordInputSink com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18504
+04-15 09:53:25.482  1151  1151 I SurfaceFlinger: RequestedLayer [93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.482  1151  1151 I SurfaceFlinger: RequestedLayer [Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.482  1151  1151 I SurfaceFlinger: RequestedLayer [Task=3872#18497] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.482  1151  1151 E SurfaceFlinger: alpha changed 1.000 -> 0.000 - Task=3872#18497
+04-15 09:53:25.482  1151  1151 I SurfaceFlinger: RequestedLayer [Transition Root: Task=3872#18501] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: RequestedLayer [ActivityRecord{166590009 u0 com.catf[...]ivity.ComponentActivity t3872}#18498] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: RequestedLayer [DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.483  1151  1151 E SurfaceFlinger: alpha changed 1.000 -> 0.000 - DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502
+04-15 09:53:25.483  1151  1151 E SurfaceFlinger: alpha changed 0.000 -> 1.000 - Task=3872#18497
+04-15 09:53:25.483  1151  1151 E SurfaceFlinger: alpha changed 0.000 -> 0.000 - DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{ImeContainer#15 parentId=16293 relativeParentId=16293 z=1} 1 children}] RelativeParent to null
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Task=3801#16292 parentId=18501 z=2} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Transition Root: Task=3872#18501 parentId=10 z=13} 1 children}
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Task=3872#18497 parentId=18501 z=5} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Transition Root: Task=3872#18501 parentId=10 z=13} 2 children}
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: [Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500] attach to parent LayerHierarchy{RequestedLayerState{93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 parentId=18498 z=2147483647} 1 children}
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: [Transition Root: Task=3872#18501] attach to parent LayerHierarchy{RequestedLayerState{DefaultTaskDisplayArea_d0#10 parentId=9} 15 children}
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: [DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502] attach to parent LayerHierarchy{RequestedLayerState{Transition Root: Task=3872#18501 parentId=10 z=13} 3 children}
+04-15 09:53:25.483  1151  1151 I SurfaceFlinger: [f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503] attach to parent LayerHierarchy{RequestedLayerState{ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 parentId=18497} 2 children}
+04-15 09:53:25.483  1542  1542 D MotionRecognitionService: [DisplayListener] getRefreshRate 120.00001
+04-15 09:53:25.483  1542  1542 D AODManagerService: requestReCalToTSP IsSingleTouchMode = falserequestedReCalToTSP = false / previousDisplayState = ON
+04-15 09:53:25.483  1542  3037 D LiftUpHandler: [LTW] Stopped already.
+04-15 09:53:25.484  3756  3756 I HBD     : DeX h DeX mode state change in non-main thread
+04-15 09:53:25.484  3756  3756 I HBD     : DeX h DeX mode state change: 3
+04-15 09:53:25.484  3756  3756 I SPenContext: virtual void SPen::Context::SetDisplayRefreshRate(float) framerate=120
+04-15 09:53:25.484  3756  3756 I LatencyConfiguration: void SPen::LatencyConfiguration::UpdateRefreshRate(float) RefreshRate=120.000008
+04-15 09:53:25.484  3756  3756 I LatencyConfiguration: void SPen::LatencyConfiguration::UpdateRefreshRate(float) RefreshRateCallback 0xb4000074fc51b890
+04-15 09:53:25.484  3756  3756 I spe_log : virtual void SPen::FbrDrawPad::SetRefreshRate(float) = 120.000
+04-15 09:53:25.484  3756  3756 I spe_log : virtual void SPen::FbrDrawPad::SetRefreshRate(float) mFrameDurationNano=8333333, mDisplayRefreshDurationNano: 8333333
+04-15 09:53:25.484  3756  3756 I spe_log : virtual void SPen::LowLatencyStrokeView::SetRefreshRate(float) refresh rate=120.000
+04-15 09:53:25.485  1151  2479 I SurfaceFlinger: id=18505 createSurf, flag=24000, Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18505
+04-15 09:53:25.485  1140 10107 D AudioFlinger: setParameters: filtered dev setParameters keyvalue screen_state=on
+04-15 09:53:25.485  1041  1606 D audio_hw_primary: device-adev_set_parameters: enter
+04-15 09:53:25.485  1041  1606 I audio_hw_proxy2: proxy-proxy_set_parameters: set Screen-state 1
+04-15 09:53:25.485  1041  1606 D audio_hw_primary: device-adev_set_parameters: param (screen_state=on)
+04-15 09:53:25.485  1542  1776 D MotionRecognitionService: Inject RefreshRate: 120
+04-15 09:53:25.485  1542  1776 D SensorService: setSContextDataLocked ints length 3 , byte length 8
+04-15 09:53:25.486  1542  1776 D SensorService: setSContextDataLocked 100048c1
+04-15 09:53:25.486  1041  1606 I Audio_a2dpsink_hw: adev_set_parameters: kevpairs=[screen_state=on]
+04-15 09:53:25.486  1542  1825 D AS.DesktopModeHelper: onDisplayChanged: #Id=0
+04-15 09:53:25.486  1151  1378 I SurfaceFlinger: id=18506 createSurf, flag=24000, Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18506
+04-15 09:53:25.487  2461  4179 I HoneySpace.RecentTasks: onRunningTaskAppeared
+04-15 09:53:25.487  2461  4179 I HoneySpace.RecentTasks: onRecentTasksChanged
+04-15 09:53:25.487  2000  2000 D DisplayLifecycle: updateDisplay id = 0
+04-15 09:53:25.487  2000  2125 D StackScroller: onDisplayChanged for predraw skip to 2
+04-15 09:53:25.488  1542  1582 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.488  1542  1582 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.488  1054  1054 D Sensors : c1 48 00 10 78 00 00 00
+04-15 09:53:25.488  1054  1054 E Sensors : inject_scontext_data: New ssp_data_injection_fd(45)
+04-15 09:53:25.489  2000  2000 D SamsungLightBarControlHelper: updateStatusBar (BLACK icon) numStacks:1, StatusBarMode:MODE_TRANSPARENT, lightBarBounds:[Rect(0, 0 - 720, 1544)], StatusBarState:SHADE, packageName:, isWhiteKeyguardStatusBar:false
+04-15 09:53:25.489  2000  2000 D SamsungLightBarControlHelper: onStatusBarAppearanceChanged() -  sbModeChanged:false, statusBarMode:0, barState:MODE_TRANSPARENT, isKeyguardShowing:false, navbarColorManagedByIme:false, (AppearanceRegion{LIGHT_STATUS_BARS bounds=[0,0][720,1544]}, )
+04-15 09:53:25.489  2000  2000 D NavigationBar: onSystemBarAttributesChanged() -  displayId:0, appearance:24, packageName: com.catfact.app.feature.factdetail.test (APPEARANCE_LIGHT_STATUS_BARS APPEARANCE_LIGHT_NAVIGATION_BARS ), navbarColorManagedByIme:false
+04-15 09:53:25.489  2000  2000 D SamsungLightBarControlHelper: updateNavigationBar (BLACK button) isLightOpaque:false, hasLightNavigationBarFlag:true, packageName:com.catfact.app.feature.factdetail.test, DirectReplying:false, NavBarColorMangedByIme:false, ForceDarkForScrim:false, ForceLightForScrim:false, QsCustomizing:false, QsExpanded:false
+04-15 09:53:25.489  1151  1151 D SurfaceFlinger: GPIS:: requestGpisForSFSluggish
+04-15 09:53:25.489  1542  1677 I WindowManager: Relayout Window{f6d7816 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity}: viewVisibility=0 req=720x1544 ty=1 d0
+04-15 09:53:25.489  1151  2910 D NativeSemDvfsManager: acquire:: timeout = 2000 mIsAcquired = 1  mTagName : SurfaceFlinger
+04-15 09:53:25.489  1054  1054 D Sensors : SContext Data Injection return 8
+04-15 09:53:25.490  1151  1338 D SurfaceFlinger: [input] setFocusedWindow: <null>
+04-15 09:53:25.490  1151  2479 I SurfaceFlinger: id=18507 createSurf, flag=44004, com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507
+04-15 09:53:25.490  1151  2910 E NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::acquire()
+04-15 09:53:25.490  1542  2101 D InputDispatcher: Once focus requested (0): <null>
+04-15 09:53:25.490  1542  2101 D InputDispatcher: Focus request (0): <null> but waiting because NO_WINDOW
+04-15 09:53:25.490  1542  2101 D InputDispatcher: Focus left window (0): b6a7246 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity
+04-15 09:53:25.490  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 2315476  [1151 / 1000]    HINT : SF_GPU_MINLOCK    list : [TIMEOUT / 2000]
+04-15 09:53:25.490  1151  1292 I VSyncReactor: Current= 120, Period= 120, Distance= 0
+04-15 09:53:25.491  1542  1677 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.491  1542  1677 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.491  1151  1151 I SurfaceFlinger: RequestedLayer [f6d7816 com.catfact.app.feature.fact[...]idx.activity.ComponentActivity#18503] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.491  3979  3979 I ImeFocusController: onPreWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+04-15 09:53:25.491  1151  1151 I SurfaceFlinger: [3427c83 ActivityRecordInputSink com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18504] attach to parent LayerHierarchy{RequestedLayerState{ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 parentId=18497} 3 children}
+04-15 09:53:25.491  1151  1151 I SurfaceFlinger: [Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18505] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{7a8fc4f type=2000 android.os.BinderProxy@a9d7329}#94 parentId=17} 2 children}
+04-15 09:53:25.491  1151  1151 I SurfaceFlinger: [Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18506] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{fc018e2 type=2019 android.os.BinderProxy@bda3ac4}#90 parentId=34} 2 children}
+04-15 09:53:25.491  1542  1677 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.491  1151  1151 I SurfaceFlinger: [com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507] attach to parent LayerHierarchy{RequestedLayerState{f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 parentId=18498} 1 children}
+04-15 09:53:25.491  1542  1677 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.491  2461  4179 I HoneySpace.RefreshRateSource: singleFrameMs 8
+04-15 09:53:25.491  3979  3979 I ImeFocusController: onPostWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+04-15 09:53:25.492  1151  1378 I SurfaceFlinger: id=18508 createSurf, flag=24000, Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508
+04-15 09:53:25.493  1151  1151 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-15 09:53:25.493  2461  4179 I HoneySpace.Memory-Monitor: current state = 2, didTrim = false
+04-15 09:53:25.494  1151  2479 I SurfaceFlinger: id=18509 createSurf, flag=24000, Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509
+04-15 09:53:25.495  1542  1677 I SystemKeyManager: requested systemKeyInfo size=1 focusedWindow=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:25.495  1542  1677 I SystemKeyManager: requested systemKeyInfo size=1 focusedWindow=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:25.495  1542  1677 I WindowManager: Relayout hash=f6d7816, pid=19294, syncId=-1: mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030317
+04-15 09:53:25.495  1542  1677 I WindowManager:   fl=81810100
+04-15 09:53:25.495  1542  1677 I WindowManager:   pfl=100088c0
+04-15 09:53:25.495  1542  1677 I WindowManager:   apr=210
+04-15 09:53:25.495  1542  1677 I WindowManager:   bhv=1
+04-15 09:53:25.495  1542  1677 I WindowManager:   fitSides=0
+04-15 09:53:25.495  1542  1677 I WindowManager:   frameRateBoostOnTouch=true
+04-15 09:53:25.495  1542  1677 I WindowManager:   dvrrWindowFrameRateHint=true naviIconColor=0}
+04-15 09:53:25.497 19294 19294 I BLASTBufferQueue_Java: new BLASTBufferQueue, mName= VRI[ComponentActivity]@18998d2 mNativeObject= 0xb40000741c54e640 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3585 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910 android.view.Choreographer.doCallbacks:1367 android.view.Choreographer.doFrame:1292 android.view.Choreographer$FrameDisplayEventReceiver.run:1870
+04-15 09:53:25.497 19294 19294 I BLASTBufferQueue_Java: update, w= 720 h= 1544 mName = VRI[ComponentActivity]@18998d2 mNativeObject= 0xb40000741c54e640 sc.mNativeObject= 0xb40000751c4e8910 format= -1 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3590 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901
+04-15 09:53:25.498 19294 19294 I VRI[ComponentActivity]@18998d2: Relayout returned: old=(0,0,720,1544) new=(0,0,720,1544) relayoutAsync=false req=(720,1544)0 dur=7 res=0x3 s={true 0xb40000748c509f90} ch=true seqId=0
+04-15 09:53:25.498  1151  2479 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10748 pid=0
+04-15 09:53:25.498  1151  2479 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10748 => denied (191 us)
+04-15 09:53:25.498  1151  2479 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10748 pid=0
+04-15 09:53:25.498  1151  2479 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10748 => denied (125 us)
+04-15 09:53:25.498  1151  2758 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10748 pid=19294
+04-15 09:53:25.498  1151  2758 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10748 => denied (110 us)
+04-15 09:53:25.498  1151  2479 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10748 pid=0
+04-15 09:53:25.498  1151  2479 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10748 => denied (127 us)
+04-15 09:53:25.498  1151  2758 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10748 pid=19294
+04-15 09:53:25.498  1151  2758 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10748 => denied (312 us)
+04-15 09:53:25.498  1151  1292 I VSyncReactor: Current= 120, Period= 120, Distance= 121
+04-15 09:53:25.498 19294 19294 I VRI[ComponentActivity]@18998d2: performConfigurationChange setNightDimText nightDimLevel=0
+04-15 09:53:25.499  1151  1151 I SurfaceFlinger: [Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{7a8fc4f type=2000 android.os.BinderProxy@a9d7329}#94 parentId=17} 3 children}
+04-15 09:53:25.499  1151  1151 I SurfaceFlinger: [Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{fc018e2 type=2019 android.os.BinderProxy@bda3ac4}#90 parentId=34} 3 children}
+04-15 09:53:25.499 19294 19294 D VRI[ComponentActivity]@18998d2: mThreadedRenderer.initialize() mSurface={isValid=true 0xb40000748c509f90} hwInitialized=true
+04-15 09:53:25.499 19294 19294 D VRI[ComponentActivity]@18998d2: reportNextDraw android.view.ViewRootImpl.performTraversals:5443 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910
+04-15 09:53:25.500 19294 19294 D VRI[ComponentActivity]@18998d2: Setup new sync=wmsSync-VRI[ComponentActivity]@18998d2#0
+04-15 09:53:25.500 19294 19294 I VRI[ComponentActivity]@18998d2: Creating new active sync group VRI[ComponentActivity]@18998d2#1
+04-15 09:53:25.500 19294 19294 D VRI[ComponentActivity]@18998d2: registerCallbacksForSync syncBuffer=false
+04-15 09:53:25.501 19294 19346 D VRI[ComponentActivity]@18998d2: Received frameDrawingCallback syncResult=0 frameNum=1.
+04-15 09:53:25.501 19294 19346 I VRI[ComponentActivity]@18998d2: mWNT: t=0xb4000074fc50e150 mBlastBufferQueue=0xb40000741c54e640 fn= 1 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$12.onFrameDraw:15441 android.view.ThreadedRenderer$1.onFrameDraw:718 <bottom of call stack>
+04-15 09:53:25.501 19294 19346 I VRI[ComponentActivity]@18998d2: Setting up sync and frameCommitCallback
+04-15 09:53:25.513 19294 19332 I GSC     : SID[0] : fe6ff4e467193f9c, Kind: 1, time : 7.823 ms
+04-15 09:53:25.517 19294 19332 I GSC     : SID[1] : 9fb7104710fc7e74, Kind: 0, time : 3.530 ms
+04-15 09:53:25.518 19294 19332 I BLASTBufferQueue: [VRI[ComponentActivity]@18998d2#0](f:0,a:0,s:0) onFrameAvailable the first frame is available
+04-15 09:53:25.518  2000  2000 D NavigationBar: onSystemBarAttributesChanged() -  displayId:0, appearance:528, packageName: com.catfact.app.feature.factdetail.test (APPEARANCE_LIGHT_NAVIGATION_BARS ), navbarColorManagedByIme:false
+04-15 09:53:25.518 19294 19332 I VRI[ComponentActivity]@18998d2: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+04-15 09:53:25.519  1151  2758 I SurfaceFlinger: [com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507] setTransactionState with the first frame. bufferData(ID: 82867099009025, frameNumber: 1)
+04-15 09:53:25.519 19294 19332 D HWUI    : CFMS:: SetUp Pid : 19294    Tid : 19332
+04-15 09:53:25.519 19294 19294 D VRI[ComponentActivity]@18998d2: reportDrawFinished seqId=0
+04-15 09:53:25.519  1542  2161 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10748 pid=0
+04-15 09:53:25.519  1542  2161 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10748 => denied (116 us)
+04-15 09:53:25.520  1542  2161 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10748 pid=0
+04-15 09:53:25.520  1542  2161 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10748 => denied (32 us)
+04-15 09:53:25.520  1542  2161 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10748 pid=0
+04-15 09:53:25.520  1542  2161 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10748 => denied (22 us)
+04-15 09:53:25.520  1542  1821 I SemDvfsHyPerManager: acquire hyper - AMS_RESUME_TAIL/1542@22, type = -999
+04-15 09:53:25.520  1542  1821 I SemDvfsHyPerManager: acquire hyper - AMS_ACT_LAZY/1542@23, type = -999
+04-15 09:53:25.520  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1223852  [1542 / 22]    HINT : AMS_RESUME_TAIL    list :
+04-15 09:53:25.521  1059  1180 I HYPER-HAL: [ResourceManager.cpp]removeResource(): [CPULittleMinFreq] RemoveResource Request ID : 1233263
+04-15 09:53:25.521  2461  4179 I HoneySpace.RecentTasks: onRecentTasksChanged
+04-15 09:53:25.521  1059  1180 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 1233263
+04-15 09:53:25.522  3963  4335 I SemDvfsHyPerManager: acquire hyper - BaseTABoost/3963@25, type = -999
+04-15 09:53:25.522  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.522  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.522  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 7954091  [3963 / 25]    HINT :      list : [TABoost / 1]
+04-15 09:53:25.522  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.523  1151  2758 I SurfaceFlinger: id=18510 createSurf, flag=24000, Surface(name=f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity)/@0x86e0fa - animation-leash of starting_reveal#18510
+04-15 09:53:25.524  1151  1151 I SurfaceFlinger: [Surface(name=f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity)/@0x86e0fa - animation-leash of starting_reveal#18510] attach to parent LayerHierarchy{RequestedLayerState{ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 parentId=18497} 4 children}
+04-15 09:53:25.525  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.525  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.525  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.525  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.525  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.528  3723  3374 I [AirCmd]_ActivitySwitchDetector: onTaskStackChanged : componentName - ComponentInfo{com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity}
+04-15 09:53:25.528  2000  2105 D ShellTaskOrganizer: removeStartingWindow, removalInfo=StartingWindowRemovalInfo{taskId=3872 frame=Rect(0, 0 - 720, 1544) playRevealAnimation=true roundedCornerRadius=0.0 deferRemoveMode=0 windowlessSurface=false removeImmediately=false}
+04-15 09:53:25.528  1542  1581 I PkgPredictorService-SecIpmManagerServiceImpl: reportToNAP uid:10748 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity thisTime:130
+04-15 09:53:25.528  1542  1581 D PkgPredictorService-SecIpmManagerServiceImpl: reportToNAP: mHeavyLaunchCounter is false
+04-15 09:53:25.528  1542  2944 D PkgPredictorService-SecIpmManagerServiceImpl: ACTION_FOREGROUND_FINISH_EVENT sCurForegroundApp :com.catfact.app.feature.factdetail.test
+04-15 09:53:25.531  1542  1581 I ActivityTaskManager: Displayed com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity for user 0: +130ms
+04-15 09:53:25.531  3152  3152 E pageboostd: Received HALT command code 2
+04-15 09:53:25.532  1542  3015 I NSLocationMonitor: getGPSUsingApps() called
+04-15 09:53:25.532  1151  1151 I SurfaceFlinger: RequestedLayer [com.catfact.app.feature.factdetail.t[...]ivity.ComponentActivity$_19294#18507] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.533  1151  1151 E SurfaceFlinger: alpha changed 0.000 -> 0.010 - DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{8c5cec7 NavigationBar0#91 parentId=18509} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509 parentId=90} 1 children}
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{3edafdc StatusBar#95 parentId=18508} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508 parentId=94} 1 children}
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18491} no children}] reparent to OffscreenRoot
+04-15 09:53:25.533  2000  2195 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc59f8d0 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 2 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:100 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:73 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18491} no children}] RelativeParent to null
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18492} no children}] reparent to OffscreenRoot
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18492} no children}] RelativeParent to null
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 parentId=18510} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Surface(name=f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity)/@0x86e0fa - animation-leash of starting_reveal#18510 parentId=18498} 1 children}
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18505} no children}] reparent to OffscreenRoot
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18505} no children}] RelativeParent to null
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18506} no children}] reparent to OffscreenRoot
+04-15 09:53:25.533  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18506} no children}] RelativeParent to null
+04-15 09:53:25.533  2000  2195 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc562850 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 2 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:100 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:73 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0
+04-15 09:53:25.534  2982  6680 I NSLocationManager_FLP: getGPSUsingApps, No change
+04-15 09:53:25.535  1151  2479 I SurfaceFlinger: id=18505 Removed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18505 (170)
+04-15 09:53:25.535  1151  2479 I SurfaceFlinger: id=18506 Removed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18506 (170)
+04-15 09:53:25.536  1542  3015 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+04-15 09:53:25.536  1542  3015 W Binder  : java.lang.Throwable
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.os.BinderProxy.transact(BinderProxy.java:566)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.bluetooth.IBluetoothGatt$Stub$Proxy.getAdvertisingSetUids(IBluetoothGatt.java:1678)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.bluetooth.BluetoothAdapter.getAdvertisingSetUids(BluetoothAdapter.java:8476)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.bluetooth.BluetoothAdapter.getHWUsingApps(BluetoothAdapter.java:1342)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at com.android.server.am.mars.filter.filter.BlueToothConnectedFilter.updateBTUsingPackages(qb/106579837 41bd6649a5bb053b68d2b16c1bbb7c9198eb32665b636c0bbec506912035f7b6:22)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at com.android.server.am.FreecessController.freeze(qb/106579837 41bd6649a5bb053b68d2b16c1bbb7c9198eb32665b636c0bbec506912035f7b6:117)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at com.android.server.am.FreecessHandler$MainHandler.handleLcdOnFreeze(qb/106579837 41bd6649a5bb053b68d2b16c1bbb7c9198eb32665b636c0bbec506912035f7b6:55)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at com.android.server.am.FreecessHandler$MainHandler.handleMessage(qb/106579837 41bd6649a5bb053b68d2b16c1bbb7c9198eb32665b636c0bbec506912035f7b6:793)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.os.Handler.dispatchMessage(Handler.java:110)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.os.Looper.loopOnce(Looper.java:273)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.os.Looper.loop(Looper.java:363)
+04-15 09:53:25.536  1542  3015 W Binder  : 	at android.os.HandlerThread.run(HandlerThread.java:85)
+04-15 09:53:25.536  1151  2479 I SurfaceFlinger: id=18491 Removed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18491 (170)
+04-15 09:53:25.536  1151  2479 I SurfaceFlinger: id=18492 Removed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18492 (170)
+04-15 09:53:25.537  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.537  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.537 19294 19294 I InsetsSourceConsumer: applyRequestedVisibilityToControl: visible=true, type=statusBars, host=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:25.537 19294 19294 I InsetsSourceConsumer: applyRequestedVisibilityToControl: visible=true, type=navigationBars, host=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:25.539  1542  3015 I NSLocationMonitor: getGPSUsingApps() called
+04-15 09:53:25.540  2982  6680 I NSLocationManager_FLP: getGPSUsingApps, No change
+04-15 09:53:25.541  2000  2194 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc53ef90 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 3 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:100 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:73 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger: Display 4633128672291735999 HWC layers:
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:        CLIENT |           17089674871017 | 00002102 | RGBA_8888    |   10.0    0.0  720.0 1544.0 |    0    0  720 1544 | com.google.android.calendar/com.goog[...]AllInOneCalendarActivity$_3979#18490 (135)
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:   SOLID_COLOR |                        0 | 00000000 | N/A          |    0.0    0.0    0.0    0.0 |    0    0  720 1544 | DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502 (0)
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:        DEVICE |           82867099009025 | 00002102 | RGBA_8888    |    0.0    0.0   33.0 1544.0 |  687    0  720 1544 | com.catfact.app.feature.factdetail.t[...]ivity.ComponentActivity$_19294#18507 (1)
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:        DEVICE |            8589934655799 | 00002100 | RGBA_8888    |    0.0    0.0   33.0 1544.0 |  687    0  720 1544 | Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500 (1)
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:        DEVICE |            8589934654742 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   50.0 |    0    0  720   50 | StatusBar$_2000#102 (26152)
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:        DEVICE |           10569914518889 | 000
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger: 02100 | RGBA_8888    |    0.0    0.0   67.0  353.0 |  653  192  720  545 | com.sec.android.app.launcher/com.sam[...]l.app.CocktailBarService$_2461#16495 (1)
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:        DEVICE |            8589934654691 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   90.0 |    0 1454  720 1544 | NavigationBar0$_2000#98 (16949)
+04-15 09:53:25.541  1151  1151 D SurfaceFlinger:
+04-15 09:53:25.541  1151  1338 D SurfaceFlinger: [input] setFocusedWindow: f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:25.542  1542  2161 D InputDispatcher: Once focus requested (0): f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:25.542  1542  2161 D InputDispatcher: Focus request (0): f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity but waiting because NO_WINDOW
+04-15 09:53:25.542  1542  1821 D InputDispatcher: Focus entered window (0): f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:25.542  1151  1151 I SurfaceFlinger: destroyed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18491
+04-15 09:53:25.542  1151  1151 I SurfaceFlinger: destroyed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18492
+04-15 09:53:25.542  1151  1151 I SurfaceFlinger: destroyed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18505
+04-15 09:53:25.542  1151  1151 I SurfaceFlinger: destroyed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18506
+04-15 09:53:25.542 19294 19294 D VRI[ComponentActivity]@18998d2: mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb40000748c509f90}
+04-15 09:53:25.543 19294 19294 D InputMethodManagerUtils: startInputInner - Id : 0
+04-15 09:53:25.543 19294 19294 I InputMethodManager: startInputInner - IInputMethodManagerGlobalInvoker.startInputOrWindowGainedFocus
+04-15 09:53:25.543  1151  1151 I Layer   : id=18491 Destroyed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18491
+04-15 09:53:25.544  1151  1151 I Layer   : id=18492 Destroyed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18492
+04-15 09:53:25.544  1151  1151 I Layer   : id=18505 Destroyed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18505
+04-15 09:53:25.544  1151  1151 I Layer   : id=18506 Destroyed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18506
+04-15 09:53:25.546  1542  3015 I NSLocationMonitor: getGPSUsingApps() called
+04-15 09:53:25.546  1542  1750 I ImeTracker: com.catfact.app.feature.factdetail.test:8275641: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+04-15 09:53:25.546  2982  6680 I NSLocationManager_FLP: getGPSUsingApps, No change
+04-15 09:53:25.547  1542  1750 D InputTransport: Input channel constructed: 'ClientS', fd=1281
+04-15 09:53:25.547  1542  1750 D InputTransport: Input channel constructed: 'ClientS', fd=1306
+04-15 09:53:25.547 19294 19294 I InputMethodManager: handleMessage: setImeVisibility visible=false
+04-15 09:53:25.547 19294 19294 D InsetsController: hide(ime(), fromIme=false)
+04-15 09:53:25.547  3979  3979 D InputTransport: Input channel destroyed: 'ClientS', fd=219
+04-15 09:53:25.547  1542  1750 D InputTransport: Input channel destroyed: 'ClientS', fd=1306
+04-15 09:53:25.547 19294 19294 I ImeTracker: com.catfact.app.feature.factdetail.test:8275641: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+04-15 09:53:25.549  1542  2161 D InputTransport: Input channel constructed: 'ClientS', fd=1306
+04-15 09:53:25.549  1542  2161 D InputTransport: Input channel destroyed: 'ClientS', fd=1306
+04-15 09:53:25.549  3756  3756 I HBD     : HoneyBoardService onFinishInput
+04-15 09:53:25.549  3756  3756 I HBD     : a IC have been unbinding,  RemoteInputConnection{idHash=#e6ff610}
+04-15 09:53:25.549  3756  3756 I HBD     : HoneyBoardService [PF_CL][onFinishInput]  0 ms
+04-15 09:53:25.549  3756  3756 I HBD     : HoneyBoardService [IMI] onStartInput - caller pid : 19294 , caller uid : 10748
+04-15 09:53:25.549  3756  3756 I HBD     : k updateConfigs
+04-15 09:53:25.550  3756  3756 I HBD     : k isEnabledNightMode : true
+04-15 09:53:25.550  3756  3756 I HBD     : a IC have been binding, RemoteInputConnection{idHash=#8a5c727}
+04-15 09:53:25.550  3756  3756 I HBD     : h [EditorInputType]setPrivateImeOptionsToTable privateImeOptions ( null )
+04-15 09:53:25.550  3756  3756 I HBD     : b incognitoMode : false
+04-15 09:53:25.550  3756  3756 I HBD     : c needOff = true , isForceOff = false, isNullInputClass : true
+04-15 09:53:25.550  3756  3756 I HBD     : h getDefaultInputRange : UNKNOWN
+04-15 09:53:25.550  3756  3756 I HBD     : h getDefaultInputRange : UNKNOWN
+04-15 09:53:25.550  3756  3756 I HBD     : h getDefaultInputRange : UNKNOWN
+04-15 09:53:25.550 19294 19310 D InputTransport: Input channel constructed: 'ClientS', fd=139
+04-15 09:53:25.550  2000  2195 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc5da650 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 4 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:100 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:73 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0
+04-15 09:53:25.550  2000  2120 I VRI[test]@1f6b6c5: onActiveControlsChanged, removed=false, mAdded=true, caller=android.view.ViewRootImpl.handleInsetsControlChanged:3002 android.view.ViewRootImpl$ViewRootHandler.handleMessageImpl:8352 android.view.ViewRootImpl$ViewRootHandler.handleMessage:8301 android.os.Handler.dispatchMessage:110 android.os.Looper.loopOnce:273
+04-15 09:53:25.551  3756  3756 I HBD     : c needOff = true , isForceOff = false, isNullInputClass : true
+04-15 09:53:25.551  3756  3756 I HBD     : c update cached prediction status : false
+04-15 09:53:25.551  3756  3756 I HBD     : h getDefaultInputRange : UNKNOWN
+04-15 09:53:25.551  3756  3756 I HBD     : a currentState : 0
+04-15 09:53:25.551  3756  3756 I HBD     : a [UpdatePolicy] [post] a: 0 cl: 65538 kit: [0/0] vt: 0 ir: 1
+04-15 09:53:25.552  1151  1378 I SurfaceFlinger: id=18511 createSurf, flag=24004, Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511
+04-15 09:53:25.552  3756  3756 I HBD     : a [NRIC] resetNoResponseState
+04-15 09:53:25.553  3756  3756 I HBD     : c needOff = true , isForceOff = false, isNullInputClass : true
+04-15 09:53:25.553  3756  3756 I HBD     : c update cached prediction status : false
+04-15 09:53:25.553  3756  3756 I HBD     : b [AiWriter] setContact : com.catfact.app.feature.factdetail.test
+04-15 09:53:25.553  3756  3756 I HBD     : a [AiWriter] setContact : com.catfact.app.feature.factdetail.test
+04-15 09:53:25.553  3756  3756 I HBD     : o0 EBD si S 0
+04-15 09:53:25.553  3756  3756 I HBD     : r updateContactDBLanguage : 0
+04-15 09:53:25.553  3756  3756 I HBD     : a [UpdatePolicy] [post] a: 31 cl: 65538 kit: [0/0] vt: 0 ir: 1
+04-15 09:53:25.553  3756  3756 I HBD     : HoneyBoardService [PF_OP][onStartInput]  4 ms
+04-15 09:53:25.553  3756  3756 I HBD     : [DirectWriting] DirectWriting emitInputConnection : RemoteInputConnection{idHash=#8a5c727}
+04-15 09:53:25.554  1542  1821 I ImeTracker: system_server:103d1ccc: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+04-15 09:53:25.554  1542  1585 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.554  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.555  1542  1584 I ImeTracker: system_server:103d1ccc: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-15 09:53:25.557  1542  3015 W LocationManagerService: onFreezeStateChanged, uid[10337]=true
+04-15 09:53:25.558  2000  2194 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc5a6fd0 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 5 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:100 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:73 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0
+04-15 09:53:25.559  1151  1151 I SurfaceFlinger: [Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{d080c22 type=2011 android.os.Binder@459a5ed}#120 parentId=15} 2 children}
+04-15 09:53:25.562  3756  2073 I HBD     : a [SKE_SPECIFIC] specific model[com.catfact.app.feature.factdetail.test] loaded, 3926679 ns
+04-15 09:53:25.566  2000  2195 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc501f10 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 6 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:100 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:73 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0
+04-15 09:53:25.567  1151  1151 I SurfaceFlinger: RequestedLayer [Surface(name=1d7a05f InputMethod)/@0[...]tion-leash of insets_animation#18511] hidden!! flag  from(1) --> to(0)
+04-15 09:53:25.567  1151  1151 E SurfaceFlinger: alpha changed 1.000 -> 0.000 - Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511
+04-15 09:53:25.567  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{ImeContainer#15 parentId=18498 relativeParentId=18498 z=3} 1 children}] reparent to LayerHierarchy{RequestedLayerState{ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 parentId=18497} 4 children}
+04-15 09:53:25.567  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{ImeContainer#15 parentId=18498 relativeParentId=18498 z=3} 1 children}] RelativeParent to null
+04-15 09:53:25.567  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{1d7a05f InputMethod#134 parentId=18511} no children}] reparent to LayerHierarchy{RequestedLayerState{Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511 parentId=120} 1 children}
+04-15 09:53:25.568  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18494} no children}] reparent to OffscreenRoot
+04-15 09:53:25.568  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18494} no children}] RelativeParent to null
+04-15 09:53:25.569  1151  1378 I SurfaceFlinger: id=18494 Removed Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18494 (167)
+04-15 09:53:25.571  3756  3756 I InputMethodService: scheduleImeSurfaceRemoval: removeImeSurface is posted.
+04-15 09:53:25.574  2000  2194 I VRI[test]@1f6b6c5: mWNT: t=0xb4000074fc50b3d0 mBlastBufferQueue=0xb40000741c5b6cc0 fn= 7 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:100 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:73 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0
+04-15 09:53:25.575  1151  1151 I SurfaceFlinger: destroyed Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18494
+04-15 09:53:25.576  1151  1151 I Layer   : id=18494 Destroyed Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18494
+04-15 09:53:25.583  1542  1821 I WindowManager: Relayout Window{93f24f4 u0 Splash Screen com.catfact.app.feature.factdetail.test}: viewVisibility=8 req=720x1544 ty=3 d0
+04-15 09:53:25.583  1542  1821 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.583  1542  1821 D SurfaceComposerClient: setCornerRadius ## 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 cornerRadius=0.000000
+04-15 09:53:25.583  1542  1821 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.584  1542  1821 I WindowManager: Relayout hash=93f24f4, pid=2000, syncId=-1: mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=APPLICATION_STARTING fmt=TRANSLUCENT wanim=0x1030317
+04-15 09:53:25.584  1542  1821 I WindowManager:   fl=81030118
+04-15 09:53:25.584  1542  1821 I WindowManager:   pfl=10000810
+04-15 09:53:25.584  1542  1821 I WindowManager:   apr=18
+04-15 09:53:25.584  1542  1821 I WindowManager:   bhv=1
+04-15 09:53:25.584  1542  1821 I WindowManager:   fitSides=0
+04-15 09:53:25.584  1542  1821 I WindowManager:   frameRateBoostOnTouch=true
+04-15 09:53:25.584  1542  1821 I WindowManager:   dvrrWindowFrameRateHint=true naviIconColor=0}
+04-15 09:53:25.585  2000  2120 I VRI[test]@1f6b6c5: onActiveControlsChanged, removed=false, mAdded=true, caller=android.view.ViewRootImpl.handleInsetsControlChanged:3002 android.view.ViewRootImpl.relayoutWindow:11629 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903
+04-15 09:53:25.585  2000  2120 I VRI[test]@1f6b6c5: Relayout returned: old=(0,0,720,1544) new=(0,0,720,1544) relayoutAsync=false req=(720,1544)8 dur=2 res=0x2 s={false 0x0} ch=true seqId=0
+04-15 09:53:25.585  2000  2120 D VRI[test]@1f6b6c5: Not drawing due to not visible. Reason=View.GONE
+04-15 09:53:25.585  2000  2120 I VRI[test]@1f6b6c5: dispatchDetachedFromWindow
+04-15 09:53:25.586  1218  6568 I CameraService: onUidStateChanged: uid=10048, procState is changed. (1 -> 0)
+04-15 09:53:25.586  1542  2161 D InputTransport: Input channel destroyed: '93f24f4', fd=1041
+04-15 09:53:25.586  1542  2161 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.587  1542  2161 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.587  2000  2120 D InputTransport: Input channel destroyed: '93f24f4', fd=674
+04-15 09:53:25.587  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.591  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.593  2000  2000 D SystemUIService: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:25.593  2000  2000 D CentralSurfaces: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:25.593  2000  2196 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:25.598  1144  1154 E HeatmapThread: ECT Thread time in milliseconds: 1776239605
+04-15 09:53:25.599  1144  1154 D HeatmapThread: !@ batteryplugType : 0
+04-15 09:53:25.599  1144  1154 D HeatmapThread: !@ batteryLevel : 0  batteryTemperature : 0
+04-15 09:53:25.599  1144  1154 D HeatmapThread: !@ Heatmap currtime: 29603993
+04-15 09:53:25.599  1144  1154 D HeatmapThread: !@ Heatmap prevtime: 29603990
+04-15 09:53:25.599  1144  1154 D HeatmapThread: !@ Heatmap plugstarttime: 35791394
+04-15 09:53:25.599  1144  1154 D HeatmapThread: !@ Heatmap prevv_dsoh_update_time: 29597770
+04-15 09:53:25.600  1144  1154 E HeatmapThread: !@Could not open '/efs/FactoryApp/bsoh', errno = 13
+04-15 09:53:25.600  1144  1154 E HeatmapThread: !@ CAM Could not access BSOH EFS
+04-15 09:53:25.600  1144  1154 E HeatmapThread: !@ CAM New BSOH: 0
+04-15 09:53:25.600  1151  1151 I SurfaceFlinger: RequestedLayer [Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500] hidden!! flag  from(0) --> to(1)
+04-15 09:53:25.600  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity)/@0x86e0fa - animation-leash of starting_reveal#18510} 1 children}] reparent to OffscreenRoot
+04-15 09:53:25.600  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity)/@0x86e0fa - animation-leash of starting_reveal#18510} 1 children}] RelativeParent to null
+04-15 09:53:25.600  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 parentId=18498} 1 children}] reparent to LayerHierarchy{RequestedLayerState{ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 parentId=18497} 4 children}
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger: Display 4633128672291735999 HWC layers:
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger:        CLIENT |           17089674871017 | 00002102 | RGBA_8888    |  131.0    0.0  720.0 1544.0 |    0    0  720 1544 | com.google.android.calendar/com.goog[...]AllInOneCalendarActivity$_3979#18490 (135)
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger:   SOLID_COLOR |                        0 | 00000000 | N/A          |    0.0    0.0    0.0    0.0 |    0    0  720 1544 | DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502 (0)
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger:        DEVICE |           82867099009025 | 00002102 | RGBA_8888    |    0.0    0.0  419.0 1544.0 |  301    0  720 1544 | com.catfact.app.feature.factdetail.t[...]ivity.ComponentActivity$_19294#18507 (1)
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger:        DEVICE |            8589934654742 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   50.0 |    0    0  720   50 | StatusBar$_2000#102 (26160)
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger:        DEVICE |           10569914518889 | 00002100 | RGBA_8888    |    0.0    0.0   67.0  353.0 |  653  192  720  545 | com.sec.android.app.launcher/com.sam[...]l.app.CocktailBarService$_2461#16495 (1)
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger:        DEVICE |            8589934
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger: 654691 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   90.0 |    0 1454  720 1544 | NavigationBar0$_2000#98 (16957)
+04-15 09:53:25.608  1151  1151 D SurfaceFlinger:
+04-15 09:53:25.614 19294 19301 I factdetail.test: Compiler allocated 5066KB to compile void android.view.ViewRootImpl.performTraversals()
+04-15 09:53:25.640  2000  2000 D QSClock : onDarkChanged tint=DARK
+04-15 09:53:25.733  2461  2461 I HoneySpace.EdgePanel.EdgeVisibilityRepository: getComputedTrayVisible : keyguardState = 1
+04-15 09:53:25.733  2461  2461 I HoneySpace.EdgePanel.EdgeVisibilityRepository: updateTrayVisible: State = 0x1, visible = true, current containerState = 0, specificMode = 0
+04-15 09:53:25.733  2461  2461 I HoneySpace.EdgePanel.EdgeVisibilityRepository: Same container state 0
+04-15 09:53:25.821  1059 19353 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 1223852
+04-15 09:53:25.883  2000  2115 E FrameTracker: force finish cuj, time out: J<DEFAULT_TASK_TO_TASK_ANIMATION>
+04-15 09:53:25.963  1542  1598 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/cpuctl/foreground-boost/cgroup.procs: No such file or directory
+04-15 09:53:25.964  1542  1598 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/cpuctl/foreground-boost/cgroup.procs: No such file or directory
+04-15 09:53:25.966  6698  6941 I FontLog : (REDACTED) Received query %s, URI %s
+04-15 09:53:25.966  6698  6941 I FontLog : (REDACTED) Query [%s] resolved to %s
+04-15 09:53:25.966  1151  1151 D SurfaceFlinger: Display 4633128672291735999 HWC layers:
+04-15 09:53:25.966  1151  1151 D SurfaceFlinger:        DEVICE |           82867099009025 | 00002102 | RGBA_8888    |    0.0    0.0  720.0 1544.0 |    0    0  720 1544 | com.catfact.app.feature.factdetail.t[...]ivity.ComponentActivity$_19294#18507 (1)
+04-15 09:53:25.966  1151  1151 D SurfaceFlinger:        DEVICE |            8589934654704 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   50.0 |    0    0  720   50 | StatusBar$_2000#102 (26167)
+04-15 09:53:25.966  1151  1151 D SurfaceFlinger:        DEVICE |           10569914518889 | 00002100 | RGBA_8888    |    0.0    0.0   67.0  353.0 |  653  192  720  545 | com.sec.android.app.launcher/com.sam[...]l.app.CocktailBarService$_2461#16495 (1)
+04-15 09:53:25.966  1151  1151 D SurfaceFlinger:        DEVICE |            8589934654693 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   90.0 |    0 1454  720 1544 | NavigationBar0$_2000#98 (16963)
+04-15 09:53:25.966  1151  1151 D SurfaceFlinger:
+04-15 09:53:25.967  6698  6941 I FontLog : (REDACTED) Fetch %s end status %s
+04-15 09:53:25.969  6698  6941 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+04-15 09:53:25.971  6698  6941 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+04-15 09:53:25.974  2000  2105 I SurfaceControlRegistry: apply, t=FinishTransaction_SyncId<1652>, caller=android.view.SurfaceControl$Transaction.apply:3459 android.view.SurfaceControl$Transaction.apply:3447 android.view.SurfaceControl$Transaction.apply:3397 com.android.wm.shell.transition.Transitions.onFinish:315 com.android.wm.shell.transition.Transitions$$ExternalSyntheticLambda7.onTransitionFinished:12 com.android.wm.shell.transition.DefaultTransitionHandler$$ExternalSyntheticLambda2.run:36
+04-15 09:53:25.976  3979  3979 I VRI[AllInOneCalendarActivity]@65809d: handleAppVisibility mAppVisible = true visible = false
+04-15 09:53:25.976  3979  3979 D VRI[AllInOneCalendarActivity]@65809d: visibilityChanged oldVisibility=true newVisibility=false
+04-15 09:53:25.977  1542  2101 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.977  1542  2101 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.979  2000  2000 D SamsungLightBarControlHelper: updateStatusBar (WHITE icon) numStacks:1, StatusBarMode:MODE_TRANSPARENT, lightBarBounds:[], StatusBarState:SHADE, packageName:, isWhiteKeyguardStatusBar:false
+04-15 09:53:25.979  2000  2000 D SamsungLightBarControlHelper: onStatusBarAppearanceChanged() -  sbModeChanged:false, statusBarMode:0, barState:MODE_TRANSPARENT, isKeyguardShowing:false, navbarColorManagedByIme:false, (AppearanceRegion{ bounds=[0,0][720,1544]}, )
+04-15 09:53:25.980  3979  4094 D Choreographer: BBA2 receive callback when in bg : 4
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: RequestedLayer [Task=3801#16292] hidden!! flag  from(0) --> to(1)
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: [Display 0 name="Built-in Screen"#49] setFrameRateCategory: Default
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Task=3801#16292 parentId=10 z=12} 1 children}] reparent to LayerHierarchy{RequestedLayerState{DefaultTaskDisplayArea_d0#10 parentId=9} 16 children}
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Task=3872#18497 parentId=10 z=13} 2 children}] reparent to LayerHierarchy{RequestedLayerState{DefaultTaskDisplayArea_d0#10 parentId=9} 17 children}
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Transition Root: Task=3872#18501 z=13} 1 children}] reparent to OffscreenRoot
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Transition Root: Task=3872#18501 z=13} 1 children}] RelativeParent to null
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502 z=-1} no children}] reparent to OffscreenRoot
+04-15 09:53:25.983  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502 z=-1} no children}] RelativeParent to null
+04-15 09:53:25.985  1151  1151 I SurfaceFlinger: id=18502 Removed DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502 (166)
+04-15 09:53:25.985  1151  1151 I SurfaceFlinger: id=18501 Removed Transition Root: Task=3872#18501 (166)
+04-15 09:53:25.986  3979  4808 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:25.986  2000  2000 D SystemUIService: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:25.986  2000  2000 D CentralSurfaces: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:25.987  2000  2196 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:25.988  1542  2161 I WindowManager: Relayout Window{b6a7246 u0 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity}: viewVisibility=8 req=720x1544 ty=1 d0
+04-15 09:53:25.988  1542  2161 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.988  1542  2161 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.989  1542  2161 I WindowManager: Relayout hash=b6a7246, pid=3979, syncId=-1: mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030317
+04-15 09:53:25.989  1542  2161 I WindowManager:   fl=81810100
+04-15 09:53:25.989  1542  2161 I WindowManager:   pfl=100088c0
+04-15 09:53:25.989  1542  2161 I WindowManager:   vsysui=700
+04-15 09:53:25.989  1542  2161 I WindowManager:   bhv=1
+04-15 09:53:25.989  1542  2161 I WindowManager:   fitSides=0
+04-15 09:53:25.989  1542  2161 I WindowManager:   frameRateBoostOnTouch=true
+04-15 09:53:25.989  1542  2161 I WindowManager:   dvrrWindowFrameRateHint=true naviIconColor=0}
+04-15 09:53:25.990  1542  1585 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:25.990  2000  2125 D StackScroller: onDisplayChanged for predraw skip to 2
+04-15 09:53:25.991  2461  4179 I HoneySpace.Memory-Monitor: current state = 2, didTrim = false
+04-15 09:53:25.991  2000  2000 D DisplayLifecycle: updateDisplay id = 0
+04-15 09:53:25.991  1151  1151 I SurfaceFlinger: RequestedLayer [com.google.android.calendar/com.goog[...]AllInOneCalendarActivity$_3979#18490] hidden!! flag  from(0) --> to(1)
+04-15 09:53:25.991  1151  1151 I SurfaceFlinger: RequestedLayer [ActivityRecord{243114305 u0 com.goog[...]llInOneCalendarActivity t3801}#16293] hidden!! flag  from(0) --> to(1)
+04-15 09:53:25.992  1151  1151 I SurfaceFlinger: destroyed Transition Root: Task=3872#18501
+04-15 09:53:25.992  1151  1151 I SurfaceFlinger: destroyed DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502
+04-15 09:53:25.992  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{ImeContainer#15 parentId=18498 relativeParentId=18503 z=1} 1 children}] RelativeParent to LayerHierarchy{RequestedLayerState{f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 parentId=18498} 2 children}
+04-15 09:53:25.992  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 z=2147483647} 1 children}] reparent to OffscreenRoot
+04-15 09:53:25.992  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 z=2147483647} 1 children}] RelativeParent to null
+04-15 09:53:25.992  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500} no children}] reparent to OffscreenRoot
+04-15 09:53:25.992  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500} no children}] RelativeParent to null
+04-15 09:53:25.992  3979  3979 I VRI[AllInOneCalendarActivity]@65809d: Relayout returned: old=(0,0,720,1544) new=(0,0,720,1544) relayoutAsync=false req=(720,1544)8 dur=3 res=0x2 s={false 0x0} ch=true seqId=0
+04-15 09:53:25.993  1151  1151 I Layer   : id=18501 Destroyed Transition Root: Task=3872#18501
+04-15 09:53:25.993  3979  3979 D VRI[AllInOneCalendarActivity]@65809d: Not drawing due to not visible. Reason=!mAppVisible && !mForceDecorViewVisibility
+04-15 09:53:25.993  1151  1151 I Layer   : id=18502 Destroyed DimTransitionLayer for Surface(name=Task=3872)/@0x19a5940#18502
+04-15 09:53:25.993  1151  1151 I SurfaceFlinger: id=18499 Removed 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499 (164)
+04-15 09:53:25.993  1151  1151 I SurfaceFlinger: id=18500 Removed Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500 (164)
+04-15 09:53:25.994  3979  4808 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:25.995  3979  3979 I VRI[AllInOneCalendarActivity]@65809d: stopped(true) old = false
+04-15 09:53:25.995  3979  3979 D VRI[AllInOneCalendarActivity]@65809d: WindowStopped on com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity set to true
+04-15 09:53:25.995  3979  4808 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:25.999  1151  1151 I SurfaceFlinger: destroyed 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499
+04-15 09:53:25.999  1151  1151 I SurfaceFlinger: destroyed Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500
+04-15 09:53:26.000  1151  1151 I Layer   : id=18499 Destroyed 93f24f4 Splash Screen com.catfact.app.feature.factdetail.test#18499
+04-15 09:53:26.000  1151  1151 I Layer   : id=18500 Destroyed Splash Screen com.catfact.app.feature.factdetail.test$_2000#18500
+04-15 09:53:26.010  1542  1582 D PkgPredictorService-SecIpmManagerServiceImpl: bg information pid:3979 uid:10279 pkgName:com.google.android.calendar
+04-15 09:53:26.016  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490} no children}] reparent to OffscreenRoot
+04-15 09:53:26.016  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490} no children}] RelativeParent to null
+04-15 09:53:26.016  3979  3979 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@19e8999
+04-15 09:53:26.018  1151  1151 I SurfaceFlinger: id=18490 Removed com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490 (162)
+04-15 09:53:26.020  3979  4808 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:26.021  3979  3979 D ViewRootImpl: Skipping stats log for color mode
+04-15 09:53:26.021  3979  3979 I VRI[AllInOneCalendarActivity]@65809d: dispatchDetachedFromWindow
+04-15 09:53:26.021  1542  1821 D InputTransport: Input channel destroyed: 'b6a7246', fd=1248
+04-15 09:53:26.022  1542  1821 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:26.022  1542  1821 D SurfaceComposerClient: setCornerRadius ## f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 cornerRadius=0.000000
+04-15 09:53:26.022  3979  3979 D InputTransport: Input channel destroyed: 'b6a7246', fd=170
+04-15 09:53:26.023  3979  3979 D BBA2    : setIsFg isFg = false; delayValue 3999ms
+04-15 09:53:26.025  1151  1151 I SurfaceFlinger: destroyed com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490
+04-15 09:53:26.025  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{b6a7246 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity#18489} no children}] reparent to OffscreenRoot
+04-15 09:53:26.025  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{b6a7246 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity#18489} no children}] RelativeParent to null
+04-15 09:53:26.026  1151  1151 I Layer   : id=18490 Destroyed com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity$_3979#18490
+04-15 09:53:26.028  1151  1151 I SurfaceFlinger: id=18489 Removed b6a7246 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity#18489 (161)
+04-15 09:53:26.032  1151  1151 I SurfaceFlinger: destroyed b6a7246 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity#18489
+04-15 09:53:26.033  1151  1151 I Layer   : id=18489 Destroyed b6a7246 com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity#18489
+04-15 09:53:26.053 19294 19294 I factdetail.test: hiddenapi: Accessing hidden method Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/compose/ui/platform/AndroidComposeView$Companion; (domain=app, TargetSdkVersion=36) using reflection: allowed
+04-15 09:53:26.072  3756  3756 I InputMethodService: removeImeSurface
+04-15 09:53:26.072  3756  3756 I InputMethodService: cancelImeSurfaceRemoval: removeCallbacks
+04-15 09:53:26.098  2000  2000 D QSClock : onDarkChanged tint=WHITE
+04-15 09:53:26.199 18219 18292 I DigitalKey: [GmsCarKeyFwWorker] runCheckComponentAvailability interval count = 29
+04-15 09:53:26.200 18219 18292 I DigitalKey: [GmsCarKeyFwWorker] runCheckComponentAvailability disabled yet (count=29)
+04-15 09:53:26.202 18219 18292 I DigitalKey: [GmsCarKeyFwWorker] runCheckComponentAvailability interval count = 29
+04-15 09:53:26.202 18219 18292 I DigitalKey: [GmsCarKeyFwWorker] runCheckComponentAvailability disabled yet (count=29)
+04-15 09:53:26.203 18219 18292 I DigitalKey: [GmsCarKeyFwWorker] runCheckComponentAvailability interval count = 29
+04-15 09:53:26.203 18219 18292 I DigitalKey: [GmsCarKeyFwWorker] runCheckComponentAvailability disabled yet (count=29)
+04-15 09:53:26.203  8561  8654 I SCS@AiSearch user 0: (AppsDataWorker) [androidx.work-1] entering in doWork():
+04-15 09:53:26.204  8561  8654 I SCS@AiSearch user 0: (AppsDataObserver) [androidx.work-1] entering in execute():
+04-15 09:53:26.204  8561  8654 I SCS@AiSearch user 0: (AppsDataObserver-CMD_UPDATE_LIST) changed package count: 1
+04-15 09:53:26.206  8561  8654 I SCS@AiSearch user 0: (AppsDataObserver) [androidx.work-1] leaving from execute():  result is true
+04-15 09:53:26.206  8561  8654 I SCS@AiSearch user 0: (AppsDataWorker) [androidx.work-1] leaving from doWork():
+04-15 09:53:26.206  8561  8602 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=a528d789-2675-4d4e-a0c9-0b54b6ae7be9, tags={ com.samsung.android.scs.ai.search.data.apps.AppsDataWorker, CMD_UPDATE_LIST } ]
+04-15 09:53:26.226 19294 19294 I View    : setRequestedFrameRate frameRate=0.0, this=androidx.compose.ui.platform.AndroidComposeView{f82e871 VFED..... ......I. 0,0-720,1544 aid=1073741824}, caller=android.view.ViewGroup.setRequestedFrameRate:9952 androidx.compose.ui.platform.Api35Impl.setRequestedFrameRate:3822 androidx.compose.ui.platform.AndroidComposeView.dispatchDraw:2114 android.view.View.draw:26345 android.view.View.updateDisplayListIfDirty:25175
+04-15 09:53:26.226 19294 19294 I View    : setRequestedFrameRate frameRate=-4.0, this=android.view.View{c271f16 V.ED..... ......I. 0,0-0,0}, caller=androidx.compose.ui.platform.Api35Impl.setRequestedFrameRate:3822 androidx.compose.ui.platform.AndroidComposeView.dispatchDraw:2115 android.view.View.draw:26345 android.view.View.updateDisplayListIfDirty:25175 android.view.View.draw:26072
+04-15 09:53:26.233 19294 19294 I View    : setRequestedFrameRate frameRate=NaN, this=androidx.compose.ui.platform.AndroidComposeView{f82e871 VFED..... ........ 0,0-720,1544 aid=1073741824}, caller=android.view.ViewGroup.setRequestedFrameRate:9952 androidx.compose.ui.platform.Api35Impl.setRequestedFrameRate:3822 androidx.compose.ui.platform.AndroidComposeView.dispatchDraw:2114 android.view.View.draw:26345 android.view.View.updateDisplayListIfDirty:25175
+04-15 09:53:26.233 19294 19294 I View    : setRequestedFrameRate frameRate=-4.0, this=android.view.View{c271f16 V.ED..... ........ 0,0-0,0}, caller=androidx.compose.ui.platform.Api35Impl.setRequestedFrameRate:3822 androidx.compose.ui.platform.AndroidComposeView.dispatchDraw:2115 android.view.View.draw:26345 android.view.View.updateDisplayListIfDirty:25175 android.view.View.draw:26072
+04-15 09:53:26.234 19294 19332 I GSC     : SID[2] : f63a2158e89a0558, Kind: 1, time : 3.118 ms
+04-15 09:53:26.238 19294 19332 I GSC     : SID[3] : a5d43e0d6582489f, Kind: 0, time : 3.927 ms
+04-15 09:53:26.242 19294 19332 I GSC     : SID[4] : 8be787c94791c0d0, Kind: 1, time : 2.351 ms
+04-15 09:53:26.246 19294 19332 I GSC     : SID[5] : 4549be712cc9690d, Kind: 0, time : 3.527 ms
+04-15 09:53:26.250 19294 19332 I GSC     : SID[6] : b0da60527cf2974b, Kind: 1, time : 2.600 ms
+04-15 09:53:26.253 19294 19332 I GSC     : SID[7] : 6b14dbf9508248c1, Kind: 0, time : 3.300 ms
+04-15 09:53:26.301 19294 19294 I View    : setRequestedFrameRate frameRate=NaN, this=androidx.compose.ui.platform.AndroidComposeView{f82e871 VFED..... ........ 0,0-720,1544 aid=1073741824}, caller=android.view.ViewGroup.setRequestedFrameRate:9952 androidx.compose.ui.platform.Api35Impl.setRequestedFrameRate:3822 androidx.compose.ui.platform.AndroidComposeView.dispatchDraw:2114 android.view.View.draw:26345 android.view.View.updateDisplayListIfDirty:25175
+04-15 09:53:26.301 19294 19294 I View    : setRequestedFrameRate frameRate=NaN, this=android.view.View{c271f16 V.ED..... ........ 0,0-0,0}, caller=androidx.compose.ui.platform.Api35Impl.setRequestedFrameRate:3822 androidx.compose.ui.platform.AndroidComposeView.dispatchDraw:2115 android.view.View.draw:26345 android.view.View.updateDisplayListIfDirty:25175 android.view.ViewGroup.recreateChildDisplayList:4794
+04-15 09:53:26.306  1542  1821 I SemDvfsHyPerManager: acquire hyper - AMS_ACT_START/1542@20, type = -999
+04-15 09:53:26.306  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1220723  [1542 / 20]    HINT : AMS_ACT_START    list :
+04-15 09:53:26.308  1151  2758 I SurfaceFlinger: id=18512 createSurf, flag=84004, ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512
+04-15 09:53:26.312 19294 19332 I GSC     : SID[8] : 5541629e65e81fc7, Kind: 1, time : 2.138 ms
+04-15 09:53:26.313  3152  3152 E pageboostd: Received HALT command code 2
+04-15 09:53:26.313  2000  2105 D ShellDesktopMode: handleRequest: TransitionRequestInfo {type=1, tid=3872, debugId=1653}
+04-15 09:53:26.314 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@c7bbd79 in: PAUSED
+04-15 09:53:26.314 19294 19294 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@c7bbd79
+04-15 09:53:26.315  1542  1821 D InputDispatcher: Focused application(0): ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}
+04-15 09:53:26.315 19294 19332 I GSC     : SID[9] : a5d43e0d6582489f, Kind: 0, time : 3.215 ms
+04-15 09:53:26.317  1542  1821 D GraphicsStatsService: requestRenderEngineFor(com.catfact.app.feature.factdetail.test)
+04-15 09:53:26.319 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab in: PRE_ON_CREATE
+04-15 09:53:26.319 19294 19294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 xflg=0x4 cmp=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab
+04-15 09:53:26.320  2461  2461 I HoneySpace.EdgePanel.CocktailHostRepositoryImpl: onNoteResume
+04-15 09:53:26.320  2461  2461 I HoneySpace.EdgePanel.EdgePanelContainerViewModel: cocktailHostRepository.edgePanelOperation NoteResumeComponent(componentName=ComponentInfo{com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity})
+04-15 09:53:26.321  2461  2461 I HoneySpace.EdgePanel.ActivityUtils: HomePackage : com.sec.android.app.launcher, resumePackageName : com.catfact.app.feature.factdetail.test, className : androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.322 19294 19294 I DecorView: setWindowBackground: isPopOver=false color=ffffffff d=android.graphics.drawable.ColorDrawable@c54a8dd
+04-15 09:53:26.322 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab in: CREATED
+04-15 09:53:26.322 19294 19294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 xflg=0x4 cmp=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab
+04-15 09:53:26.323 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab in: STARTED
+04-15 09:53:26.323 19294 19294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 xflg=0x4 cmp=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab
+04-15 09:53:26.323 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab in: RESUMED
+04-15 09:53:26.324 19294 19294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 xflg=0x4 cmp=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab
+04-15 09:53:26.324  1151  1151 I SurfaceFlinger: [Display 0 name="Built-in Screen"#49] setFrameRateCategory: High
+04-15 09:53:26.324  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{ImeContainer#15 parentId=18498 relativeParentId=18498 z=1} 1 children}] RelativeParent to null
+04-15 09:53:26.324 19294 19294 D ViewRootImpl: desktopMode is false
+04-15 09:53:26.324  1151  1151 I SurfaceFlinger: [ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512] attach to parent LayerHierarchy{RequestedLayerState{Task=3872#18497 parentId=10 z=13} 2 children}
+04-15 09:53:26.324 19294 19294 I ViewRootImpl: dVRR is disabled
+04-15 09:53:26.324 19294 19332 D NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+04-15 09:53:26.326  1542  3827 D InputTransport: Input channel constructed: '20d54a4', fd=1041
+04-15 09:53:26.326  1542  3827 D InputTransport: Input channel constructed: '20d54a4', fd=1248
+04-15 09:53:26.326  1542  3827 D InputTransport: Input channel constructed: '20d54a4', fd=1306
+04-15 09:53:26.326  1542  3827 D InputTransport: Input channel destroyed: '20d54a4', fd=1248
+04-15 09:53:26.326  1151  1200 I SurfaceFlinger: id=18513 createSurf, flag=84004, 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513
+04-15 09:53:26.327  1542  3827 D InputTransport: Input channel destroyed: '20d54a4', fd=1306
+04-15 09:53:26.328 19294 19294 D InputTransport: Input channel constructed: '20d54a4', fd=154
+04-15 09:53:26.328  2000  2000 D DisplayLifecycle: updateDisplay id = 0
+04-15 09:53:26.328  2000  2125 D StackScroller: onDisplayChanged for predraw skip to 2
+04-15 09:53:26.328 19294 19294 I InsetsController: onStateChanged: host=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity, from=android.view.ViewRootImpl.onInsetsStateChanged:3026, state=InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1544), mDisplayCutout=DisplayCutout{insets=Rect(0, 50 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(341, 0 - 379, 50), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1544 physicalDisplayWidth=720 physicalDisplayHeight=1544 density={1.875} cutoutSpec={M 0,0 H -10 V 26.66666666666667 H 10 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}} sideOverrides={}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=8, center=Point(8, 8)}, RoundedCorner{position=TopRight, radius=8, center=Point(712, 8)}, RoundedCorner{position=BottomRight, radius=8, center=Point(712, 1536)}, RoundedCorner{position=BottomLeft, radius=8, center=Point(8, 1536)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1544), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 50) rotation=0}, mDisplayShape=DisplayShape{ spec=-311912193 displayWidth=720 displayHeight=1544 physicalPixelDisplaySizeRatio=0.5 rotation=0 offsetX=0 offsetY=0 scale=1.0}, mSources= { InsetsSource: {ec730001 mType=navigationBars mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730004 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {ec730005 mType=mandatorySystemGestures mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730006 mType=tappableElement mFrame=[0,1454][720,1544] mVisible=true mFlags= mSideHint=BOTTOM mBoundingRects=null}, InsetsSource: {ec730024 mType=systemGestures mFrame=[0,0][0,0] mVisible=true mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {3 mType=ime mFrame=[0,0][0,0] mVisible=false mFlags= mSideHint=NONE mBoundingRects=null}, InsetsSource: {27 mType=displayCutout mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950000 mType=statusBars mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950005 mType=mandatorySystemGestures mFrame=[0,0][720,73] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null}, InsetsSource: {43950006 mType=tappableElement mFrame=[0,0][720,50] mVisible=true mFlags= mSideHint=TOP mBoundingRects=null} }
+04-15 09:53:26.328 19294 19294 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: synced displayState. AttachInfo displayState=2
+04-15 09:53:26.329 19294 19294 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: setView = com.android.internal.policy.DecorView@ac6767f IsHRR=false mFlingFrameRateChange=0 TM=true
+04-15 09:53:26.329  2461  4179 I HoneySpace.Memory-Monitor: current state = 2, didTrim = false
+04-15 09:53:26.329  1542  1585 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.330  1542  3827 I WindowManager: Relayout Window{20d54a4 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity}: viewVisibility=0 req=720x1544 ty=1 d0
+04-15 09:53:26.330  1151  1200 I SurfaceFlinger: id=18514 createSurf, flag=44004, com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity$_19294#18514
+04-15 09:53:26.331  1542  3827 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.331  1542  3827 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.332  1151  1151 I SurfaceFlinger: [20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513] attach to parent LayerHierarchy{RequestedLayerState{ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512 parentId=18497} 1 children}
+04-15 09:53:26.332  1151  1151 I SurfaceFlinger: [com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity$_19294#18514] attach to parent LayerHierarchy{RequestedLayerState{20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 parentId=18512} 1 children}
+04-15 09:53:26.332  1151  1200 I SurfaceFlinger: id=18515 createSurf, flag=24000, Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18515
+04-15 09:53:26.332  1151  1151 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+04-15 09:53:26.333  1151  1200 I SurfaceFlinger: id=18516 createSurf, flag=24000, Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18516
+04-15 09:53:26.334  1151  1338 D SurfaceFlinger: [input] setFocusedWindow: <null>
+04-15 09:53:26.334  1542  2161 D InputDispatcher: Focus left window (0): f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity
+04-15 09:53:26.334  1542  3827 I SystemKeyManager: requested systemKeyInfo size=1 focusedWindow=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.334  1542  3827 I SystemKeyManager: requested systemKeyInfo size=1 focusedWindow=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.334  1542  1821 D InputDispatcher: Once focus requested (0): <null>
+04-15 09:53:26.334  1542  3827 I WindowManager: Relayout hash=20d54a4, pid=19294, syncId=-1: mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION
+04-15 09:53:26.334  1542  3827 I WindowManager:   fl=81810100
+04-15 09:53:26.334  1542  3827 I WindowManager:   pfl=100088c0
+04-15 09:53:26.334  1542  3827 I WindowManager:   bhv=1
+04-15 09:53:26.334  1542  3827 I WindowManager:   fitSides=0
+04-15 09:53:26.334  1542  3827 I WindowManager:   frameRateBoostOnTouch=true
+04-15 09:53:26.334  1542  3827 I WindowManager:   dvrrWindowFrameRateHint=true naviIconColor=0}
+04-15 09:53:26.335  2000  2000 D NavigationBar: onSystemBarAttributesChanged() -  displayId:0, appearance:16, packageName: com.catfact.app.feature.factdetail.test (APPEARANCE_LIGHT_NAVIGATION_BARS ), navbarColorManagedByIme:false
+04-15 09:53:26.335 19294 19294 I BLASTBufferQueue_Java: new BLASTBufferQueue, mName= VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820 mNativeObject= 0xb40000741c5cee40 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3585 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910 android.view.Choreographer.doCallbacks:1367 android.view.Choreographer.doFrame:1292 android.view.Choreographer$FrameDisplayEventReceiver.run:1870
+04-15 09:53:26.335 19294 19294 I BLASTBufferQueue_Java: update, w= 720 h= 1544 mName = VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820 mNativeObject= 0xb40000741c5cee40 sc.mNativeObject= 0xb40000751c4f3e90 format= -1 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3590 android.view.ViewRootImpl.relayoutWindow:11685 android.view.ViewRootImpl.performTraversals:4804 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901
+04-15 09:53:26.336 19294 19294 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: Relayout returned: old=(0,0,720,1544) new=(0,0,720,1544) relayoutAsync=false req=(720,1544)0 dur=5 res=0x3 s={true 0xb40000748c528f40} ch=true seqId=0
+04-15 09:53:26.336 19294 19294 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: performConfigurationChange setNightDimText nightDimLevel=0
+04-15 09:53:26.336 19294 19294 D VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: mThreadedRenderer.initialize() mSurface={isValid=true 0xb40000748c528f40} hwInitialized=true
+04-15 09:53:26.337 19294 19294 D VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: reportNextDraw android.view.ViewRootImpl.performTraversals:5443 android.view.ViewRootImpl.doTraversal:3924 android.view.ViewRootImpl$TraversalRunnable.run:12903 android.view.Choreographer$CallbackRecord.run:1901 android.view.Choreographer$CallbackRecord.run:1910
+04-15 09:53:26.337 19294 19294 D VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: Setup new sync=wmsSync-VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820#2
+04-15 09:53:26.337 19294 19294 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: Creating new active sync group VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820#3
+04-15 09:53:26.337 19294 19294 D VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: registerCallbacksForSync syncBuffer=false
+04-15 09:53:26.337 19294 19345 D VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: Received frameDrawingCallback syncResult=0 frameNum=1.
+04-15 09:53:26.337 19294 19345 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: mWNT: t=0xb4000074fc51ba50 mBlastBufferQueue=0xb40000741c5cee40 fn= 1 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$12.onFrameDraw:15441 android.view.ThreadedRenderer$1.onFrameDraw:718 <bottom of call stack>
+04-15 09:53:26.337 19294 19345 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: Setting up sync and frameCommitCallback
+04-15 09:53:26.338 19294 19332 I BLASTBufferQueue: [VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820#1](f:0,a:0,s:0) onFrameAvailable the first frame is available
+04-15 09:53:26.338 19294 19332 I VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+04-15 09:53:26.338  1151  1378 I SurfaceFlinger: [com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity$_19294#18514] setTransactionState with the first frame. bufferData(ID: 82867099009028, frameNumber: 1)
+04-15 09:53:26.338 19294 19332 D HWUI    : CFMS:: SetUp Pid : 19294    Tid : 19332
+04-15 09:53:26.338 19294 19294 D VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: reportDrawFinished seqId=0
+04-15 09:53:26.339 19294 19332 D HWUI    : HWUI - treat SMPTE_170M as sRGB
+04-15 09:53:26.339  1542  1585 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.339  1542  1585 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.339  1542  1585 I SemDvfsHyPerManager: acquire hyper - AMS_RESUME_TAIL/1542@22, type = -999
+04-15 09:53:26.339  1542  1585 I SemDvfsHyPerManager: acquire hyper - AMS_ACT_LAZY/1542@23, type = -999
+04-15 09:53:26.339  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1223852  [1542 / 22]    HINT : AMS_RESUME_TAIL    list :
+04-15 09:53:26.340  1151  1378 I SurfaceFlinger: id=18517 createSurf, flag=84004, Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517
+04-15 09:53:26.340 19294 19294 I ImeFocusController: onPreWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+04-15 09:53:26.340 19294 19294 I ImeFocusController: onPostWindowFocus: skipped hasWindowFocus=false mHasImeFocus=true
+04-15 09:53:26.341  1059  1180 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 1220723
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{8c5cec7 NavigationBar0#91 parentId=18516} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18516 parentId=90} 1 children}
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{3edafdc StatusBar#95 parentId=18515} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18515 parentId=94} 1 children}
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508} no children}] reparent to OffscreenRoot
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508} no children}] RelativeParent to null
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509} no children}] reparent to OffscreenRoot
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509} no children}] RelativeParent to null
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18515] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{7a8fc4f type=2000 android.os.BinderProxy@a9d7329}#94 parentId=17} 1 children}
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18516] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{fc018e2 type=2019 android.os.BinderProxy@bda3ac4}#90 parentId=34} 1 children}
+04-15 09:53:26.341  1151  1151 I SurfaceFlinger: [Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517] attach to parent LayerHierarchy{RequestedLayerState{Task=3872#18497 parentId=10 z=13} 3 children}
+04-15 09:53:26.342  1542  1585 I SurfaceControlRegistry: show, t=StartTransaction_SyncId<1653> sc=ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.server.wm.Transition.onTransactionReady:2048 com.android.server.wm.BLASTSyncEngine$SyncGroup.finishNow:240 com.android.server.wm.BLASTSyncEngine.onSurfacePlacement:263 com.android.server.wm.RootWindowContainer.performSurfacePlacementNoTrace:1083 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement:166
+04-15 09:53:26.342  1542  1585 D SurfaceComposerClient: setCornerRadius ## ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 cornerRadius=0.000000
+04-15 09:53:26.342  1542  1585 D SurfaceComposerClient: setCornerRadius ## ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512 cornerRadius=0.000000
+04-15 09:53:26.342  1542  1585 D ScreenCapture: [Capture_TEST] : setIsScreenShotBySystem false
+04-15 09:53:26.342  1542  1585 I SurfaceComposerClient: captureLayers:childrenOnly:1, sync:1
+04-15 09:53:26.343  1542  1581 I ActivityTaskManager: Displayed com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +35ms
+04-15 09:53:26.343  3152  3152 E pageboostd: Received HALT command code 2
+04-15 09:53:26.344  2000  2105 I SurfaceControlRegistry: hide, t=FinishTransaction_SyncId<1653> sc=ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}, caller=android.view.SurfaceControl$Transaction.hide:3583 com.android.wm.shell.transition.Transitions.dispatchReady:1263 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103
+04-15 09:53:26.344  2000  2105 I SurfaceControlRegistry: show, t=StartTransaction_SyncId<1653> sc=ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.wm.shell.transition.Transitions.dispatchReady:1279 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103
+04-15 09:53:26.344  2000  2105 I SurfaceControlRegistry: show, t=FinishTransaction_SyncId<1653> sc=ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.wm.shell.transition.Transitions.dispatchReady:1330 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13 android.os.Handler.handleCallback:995 android.os.Handler.dispatchMessage:103
+04-15 09:53:26.344  2000  2105 I SurfaceControlRegistry: show, t=StartTransaction_SyncId<1653> sc=Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}, caller=android.view.SurfaceControl$Transaction.show:3557 com.android.wm.shell.transition.Transitions.playTransition:79 com.android.wm.shell.transition.Transitions.processReadyQueue:239 com.android.wm.shell.transition.Transitions.dispatchReady:1352 com.android.wm.shell.transition.Transitions.onTransitionReady:251 com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0.run:13
+04-15 09:53:26.344  2000  2105 I SurfaceControlRegistry: apply, t=StartTransaction_SyncId<1653>, caller=android.view.SurfaceControl$Transaction.apply:3459 android.view.SurfaceControl$Transaction.apply:3447 android.view.SurfaceControl$Transaction.apply:3397 com.android.wm.shell.transition.DefaultTransitionHandler.startAnimation:3387 com.android.wm.shell.transition.Transitions.dispatchTransition:90 com.android.wm.shell.transition.Transitions.playTransition:774
+04-15 09:53:26.345  2000  2105 I SurfaceControlRegistry: apply, t=FinishTransaction_SyncId<1653>, caller=android.view.SurfaceControl$Transaction.apply:3459 android.view.SurfaceControl$Transaction.apply:3447 android.view.SurfaceControl$Transaction.apply:3397 com.android.wm.shell.transition.Transitions.onFinish:315 com.android.wm.shell.transition.Transitions$$ExternalSyntheticLambda7.onTransitionFinished:12 com.android.wm.shell.transition.DefaultTransitionHandler$$ExternalSyntheticLambda2.run:36
+04-15 09:53:26.345  1151  1338 D SurfaceFlinger: [input] setFocusedWindow: 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.345  1542  2101 D InputDispatcher: Once focus requested (0): 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.345  1542  2101 D InputDispatcher: Focus request (0): 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity but waiting because NOT_VISIBLE
+04-15 09:53:26.346 19294 19332 I GSC     : SID[10] : e0e6a6990a1a5e2d, Kind: 1, time : 2.611 ms
+04-15 09:53:26.346  1151  1378 I SurfaceFlinger: Capture layer list: 	 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507(seamlessTransition:0)
+04-15 09:53:26.346  1151  1378 I CompositionEngine: [setDisplaySize] size=(720, 1544)
+04-15 09:53:26.347  1151  1206 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1494, Rendering layer ScreenCaptureFillLayer at index 0
+04-15 09:53:26.347  1151  1206 D RenderEngine: [SEC_SF_EFFECTS] drawLayersInternal,1494, Rendering layer com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507 at index 1
+04-15 09:53:26.348  1542  1585 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: RequestedLayer [ActivityRecord{126535651 u0 com.catf[...]tyInvoker$EmptyActivity t3872}#18512] hidden!! flag  from(1) --> to(0)
+04-15 09:53:26.349  1151  1151 E SurfaceFlinger: alpha changed 1.000 -> 0.000 - ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: RequestedLayer [20d54a4 com.catfact.app.feature.fact[...]nActivityInvoker$EmptyActivity#18513] hidden!! flag  from(1) --> to(0)
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: RequestedLayer [com.catfact.app.feature.factdetail.t[...]tyInvoker$EmptyActivity$_19294#18514] hidden!! flag  from(1) --> to(0)
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: RequestedLayer [Transition Root: ActivityRecord{1265[...]tyInvoker$EmptyActivity t3872}#18517] hidden!! flag  from(1) --> to(0)
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: RequestedLayer [ActivityRecord{166590009 u0 com.catf[...]ivity.ComponentActivity t3872}#18498] hidden!! flag  from(0) --> to(1)
+04-15 09:53:26.349  1151  1151 E SurfaceFlinger: alpha changed 0.000 -> 1.000 - ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512
+04-15 09:53:26.349 19294 19332 I GSC     : SID[11] : a5d43e0d6582489f, Kind: 0, time : 2.740 ms
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{ActivityRecord{166590009 u0 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity t3872}#18498 parentId=18497} 3 children}] reparent to LayerHierarchy{RequestedLayerState{Task=3872#18497 parentId=10 z=13} 3 children}
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512 parentId=18497 z=1} 1 children}] reparent to LayerHierarchy{RequestedLayerState{Task=3872#18497 parentId=10 z=13} 3 children}
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517 z=1} no children}] reparent to OffscreenRoot
+04-15 09:53:26.349  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517 z=1} no children}] RelativeParent to null
+04-15 09:53:26.349  1542  1585 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.349  2000  2000 D NavigationBar: onSystemBarAttributesChanged() -  displayId:0, appearance:0, packageName: com.catfact.app.feature.factdetail.test, navbarColorManagedByIme:false
+04-15 09:53:26.350  2000  2000 D SamsungLightBarControlHelper: updateNavigationBar (WHITE button) isLightOpaque:false, hasLightNavigationBarFlag:false, packageName:com.catfact.app.feature.factdetail.test, DirectReplying:false, NavBarColorMangedByIme:false, ForceDarkForScrim:false, ForceLightForScrim:false, QsCustomizing:false, QsExpanded:false
+04-15 09:53:26.351  1151  2758 I SurfaceFlinger: id=18518 createSurf, flag=84000, ef0279d ActivityRecordInputSink com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18518
+04-15 09:53:26.354  1151  1151 D SurfaceFlinger: Display 4633128672291735999 HWC layers:
+04-15 09:53:26.354  1151  1151 D SurfaceFlinger:        DEVICE |           82867099009028 | 00002102 | RGBA_8888    |    0.0    0.0  720.0 1544.0 |    0    0  720 1544 | com.catfact.app.feature.factdetail.t[...]tyInvoker$EmptyActivity$_19294#18514 (1)
+04-15 09:53:26.354  1151  1151 D SurfaceFlinger:        DEVICE |            8589934654704 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   50.0 |    0    0  720   50 | StatusBar$_2000#102 (26183)
+04-15 09:53:26.354  1151  1151 D SurfaceFlinger:        DEVICE |           10569914518889 | 00002100 | RGBA_8888    |    0.0    0.0   67.0  353.0 |  653  192  720  545 | com.sec.android.app.launcher/com.sam[...]l.app.CocktailBarService$_2461#16495 (1)
+04-15 09:53:26.354  1151  1151 D SurfaceFlinger:        DEVICE |            8589934654693 | 00002100 | RGBA_8888    |    0.0    0.0  720.0   90.0 |    0 1454  720 1544 | NavigationBar0$_2000#98 (16963)
+04-15 09:53:26.354  1151  1151 D SurfaceFlinger:
+04-15 09:53:26.354 19294 19294 I VRI[ComponentActivity]@18998d2: handleAppVisibility mAppVisible = true visible = false
+04-15 09:53:26.354 19294 19294 D VRI[ComponentActivity]@18998d2: visibilityChanged oldVisibility=true newVisibility=false
+04-15 09:53:26.354  1542  3827 D InputDispatcher: Focus entered window (0): 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.354 19294 19294 I VRI[ComponentActivity]@18998d2: stopped(true) old = false
+04-15 09:53:26.354 19294 19294 D VRI[ComponentActivity]@18998d2: WindowStopped on com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity set to true
+04-15 09:53:26.356 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@c7bbd79 in: STOPPED
+04-15 09:53:26.356 19294 19294 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@c7bbd79
+04-15 09:53:26.357  1151  1151 I SurfaceFlinger: [Display 0 name="Built-in Screen"#49] setFrameRateCategory: Default
+04-15 09:53:26.357  1151  1151 I SurfaceFlinger: RequestedLayer [com.catfact.app.feature.factdetail.t[...]ivity.ComponentActivity$_19294#18507] hidden!! flag  from(0) --> to(1)
+04-15 09:53:26.358  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517 z=1} no children}] reparent to OffscreenRoot
+04-15 09:53:26.358  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517 z=1} no children}] RelativeParent to null
+04-15 09:53:26.358  1151  1151 I SurfaceFlinger: [ef0279d ActivityRecordInputSink com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18518] attach to parent LayerHierarchy{RequestedLayerState{ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18512 parentId=18497 z=1} 2 children}
+04-15 09:53:26.358  2000  2000 D SystemUIService: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:26.358  2000  2000 D CentralSurfaces: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:26.358  2000  2000 D SystemUIService: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:26.358  2000  2000 D CentralSurfaces: SYSUI_RAM_OPTIMIZATION onTrimMemory=20
+04-15 09:53:26.359  2000  2196 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:26.359  1151  1151 I SurfaceFlinger: id=18517 Removed Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517 (167)
+04-15 09:53:26.360  2000  2196 D HWUI    : CacheManager::trimMemory(20)
+04-15 09:53:26.362  2461  4179 I HoneySpace.Memory-Monitor: current state = 2, didTrim = false
+04-15 09:53:26.363  1542  1585 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.364  2000  2125 D StackScroller: onDisplayChanged for predraw skip to 2
+04-15 09:53:26.365  2000  2000 D DisplayLifecycle: updateDisplay id = 0
+04-15 09:53:26.366  1151  1151 I SurfaceFlinger: destroyed Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517
+04-15 09:53:26.367  1151  1151 I Layer   : id=18517 Destroyed Transition Root: ActivityRecord{126535651 u0 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t3872}#18517
+04-15 09:53:26.369 19294 19294 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@743702a
+04-15 09:53:26.369 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@c7bbd79 in: DESTROYED
+04-15 09:53:26.369 19294 19294 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+04-15 09:53:26.371 19294 19332 D HWUI    : endAllActiveAnimators on 0xb40000748c524870 (UnprojectedRipple) with handle 0xb40000755c539e00
+04-15 09:53:26.371 19294 19294 D ViewRootImpl: Skipping stats log for color mode
+04-15 09:53:26.371 19294 19294 I VRI[ComponentActivity]@18998d2: dispatchDetachedFromWindow
+04-15 09:53:26.372  1542  1821 D InputTransport: Input channel destroyed: 'f6d7816', fd=1280
+04-15 09:53:26.372  1151  1378 I SurfaceFlinger: id=18519 createSurf, flag=24004, Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18519
+04-15 09:53:26.374  1151  1151 I SurfaceFlinger: [Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18519] attach to parent LayerHierarchy{RequestedLayerState{WindowToken{d080c22 type=2011 android.os.Binder@459a5ed}#120 parentId=15} 2 children}
+04-15 09:53:26.374  1542  1821 I ImeTracker: system_server:1607ddf5: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+04-15 09:53:26.374  1542  1821 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.374  1542  1584 I ImeTracker: system_server:1607ddf5: onCancelled at PHASE_SERVER_SHOULD_HIDE
+04-15 09:53:26.374  1542  1821 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.375 19294 19294 D InputTransport: Input channel destroyed: 'f6d7816', fd=124
+04-15 09:53:26.375  1542  1585 D SurfaceComposerClient: setCornerRadius ## 20d54a4 com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity#18513 cornerRadius=0.000000
+04-15 09:53:26.375  1151  1378 I SurfaceFlinger: id=18508 Removed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508 (167)
+04-15 09:53:26.375 19294 19294 I InsetsSourceConsumer: applyRequestedVisibilityToControl: visible=true, type=statusBars, host=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.375  1151  2758 I SurfaceFlinger: id=18509 Removed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509 (167)
+04-15 09:53:26.376 19294 19294 I InsetsSourceConsumer: applyRequestedVisibilityToControl: visible=true, type=navigationBars, host=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity
+04-15 09:53:26.376  1151  2758 I SurfaceFlinger: id=18504 Removed 3427c83 ActivityRecordInputSink com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18504 (167)
+04-15 09:53:26.379 19294 19294 D VRI[InstrumentationActivityInvoker$EmptyActivity]@ecad820: mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb40000748c528f40}
+04-15 09:53:26.379 19294 19294 D InputMethodManagerUtils: startInputInner - Id : 0
+04-15 09:53:26.379 19294 19294 I InputMethodManager: startInputInner - IInputMethodManagerGlobalInvoker.startInputOrWindowGainedFocus
+04-15 09:53:26.380 19294 19294 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab in: PAUSED
+04-15 09:53:26.380 19294 19294 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 xflg=0x4 cmp=com.catfact.app.feature.factdetail.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@5f951ab
+04-15 09:53:26.381  1542  2101 I SemDvfsHyPerManager: acquire hyper - AMS_ACT_RESUME/1542@19, type = -999
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: RequestedLayer [Surface(name=1d7a05f InputMethod)/@0[...]tion-leash of insets_animation#18519] hidden!! flag  from(1) --> to(0)
+04-15 09:53:26.382  1151  1151 E SurfaceFlinger: alpha changed 1.000 -> 0.000 - Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18519
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: destroyed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: destroyed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{1d7a05f InputMethod#134 parentId=18519} no children}] reparent to LayerHierarchy{RequestedLayerState{Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18519 parentId=120} 1 children}
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507} no children}] reparent to OffscreenRoot
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507} no children}] RelativeParent to null
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511} no children}] reparent to OffscreenRoot
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511} no children}] RelativeParent to null
+04-15 09:53:26.382  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503} no children}] reparent to OffscreenRoot
+04-15 09:53:26.383  1151  1151 I SurfaceFlinger: [LayerHierarchy{RequestedLayerState{f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503} no children}] RelativeParent to null
+04-15 09:53:26.383  2461 30001 I HoneySpace.RecentTasks: onRecentTasksChanged
+04-15 09:53:26.384  1151  1151 I Layer   : id=18508 Destroyed Surface(name=3edafdc StatusBar)/@0x3b919ed - animation-leash of insets_animation#18508
+04-15 09:53:26.384  1151  1151 I Layer   : id=18509 Destroyed Surface(name=8c5cec7 NavigationBar0)/@0xa68870 - animation-leash of insets_animation#18509
+04-15 09:53:26.384  2461  2584 I HoneySpace.TopTaskSource: onTaskMovedToFront : taskId = 3514, displayId = 0
+04-15 09:53:26.385  1151  1378 I SurfaceFlinger: id=18503 Removed f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503 (165)
+04-15 09:53:26.385  1151  1378 I SurfaceFlinger: id=18511 Removed Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511 (165)
+04-15 09:53:26.385  1151  1378 I SurfaceFlinger: id=18507 Removed com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507 (165)
+04-15 09:53:26.385  2000  2105 D ShellDesktopMode: handleRequest: TransitionRequestInfo {type=2, tid=3872, debugId=1654}
+04-15 09:53:26.385  1542  2101 D InputDispatcher: Focused application(0): ActivityRecord{243114305 u0 com.google.android.calendar/.allinone.AllInOneCalendarActivity t3801}
+04-15 09:53:26.387  1059  1180 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1219160  [1542 / 19]    HINT : AMS_ACT_RESUME    list :
+04-15 09:53:26.388  1542  1825 D AS.MultiSoundManager: mForegroundUid = 10279
+04-15 09:53:26.388  2461  2584 I HoneySpace.TopTaskSource: onTaskMovedToFront : taskId = 3801, displayId = 0
+04-15 09:53:26.389  2461  2586 I HoneySpace.TopTaskUseCase: topTasks 3514 ComponentInfo{com.sec.android.app.launcher/com.sec.android.app.launcher.Launcher}[displayId=0]
+04-15 09:53:26.389  2461  2586 I HoneySpace.TopTaskUseCase: topTasks 3801 ComponentInfo{com.google.android.calendar/com.google.android.calendar.allinone.AllInOneCalendarActivity}[displayId=0]
+04-15 09:53:26.390  1151  1151 I SurfaceFlinger: destroyed com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507
+04-15 09:53:26.390  1151  1151 I SurfaceFlinger: destroyed Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511
+04-15 09:53:26.390  1151  1151 I SurfaceFlinger: destroyed f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503
+04-15 09:53:26.391 19294 19315 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@287ad10]
+04-15 09:53:26.392  1542  3827 D GraphicsStatsService: requestRenderEngineFor(com.google.android.calendar)
+04-15 09:53:26.392  1151  1151 I Layer   : id=18507 Destroyed com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity$_19294#18507
+04-15 09:53:26.392  1151  1151 I Layer   : id=18511 Destroyed Surface(name=1d7a05f InputMethod)/@0x5f77a9d - animation-leash of insets_animation#18511
+04-15 09:53:26.392  1151  1151 I Layer   : id=18503 Destroyed f6d7816 com.catfact.app.feature.factdetail.test/androidx.activity.ComponentActivity#18503
+04-15 09:53:26.392 19294 19315 I TestRunner: finished: backButtonDispatchesNavigateBack(com.catfact.app.feature.factdetail.presentation.DetailScreenTest)

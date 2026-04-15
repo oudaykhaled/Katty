@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catfact.app.feature.favorites.viewmodel.FavoritesViewModelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-04-15T07:52:31.372Z" hostname="bb-system-3781-1.home" time="0.305">
+  <properties/>
+  <testcase name="initial state has empty favorites" classname="com.catfact.app.feature.favorites.viewmodel.FavoritesViewModelTest" time="0.128"/>
+  <testcase name="removeBookmark error emits ShowSnackbar" classname="com.catfact.app.feature.favorites.viewmodel.FavoritesViewModelTest" time="0.149"/>
+  <testcase name="remove bookmark sends toggle to repository" classname="com.catfact.app.feature.favorites.viewmodel.FavoritesViewModelTest" time="0.005"/>
+  <testcase name="fact clicked emits navigate side effect" classname="com.catfact.app.feature.favorites.viewmodel.FavoritesViewModelTest" time="0.007"/>
+  <testcase name="observes bookmarked facts" classname="com.catfact.app.feature.favorites.viewmodel.FavoritesViewModelTest" time="0.009"/>
+  <testcase name="dismiss error clears error state" classname="com.catfact.app.feature.favorites.viewmodel.FavoritesViewModelTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

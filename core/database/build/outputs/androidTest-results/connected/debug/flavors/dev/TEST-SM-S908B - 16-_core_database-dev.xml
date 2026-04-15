@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="11" failures="0" errors="0" skipped="0" time="1.251" timestamp="2026-04-15T07:52:59" hostname="localhost">
+  <testsuite name="com.catfact.app.core.database.dao.CatFactDaoTest" tests="11" failures="0" errors="0" skipped="0" time="0.186" timestamp="2026-04-15T07:52:59" hostname="localhost">
+    <properties>
+      <property name="device" value="SM-S908B - 16" />
+      <property name="flavor" value="dev" />
+      <property name="project" value=":core:database" />
+    </properties>
+    <testcase name="replaceAllFacts_preserves_pending_items" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.039" />
+    <testcase name="insertFact_and_getFactById_returns_it" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.001" />
+    <testcase name="getFactById_returns_null_for_missing_id" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.026" />
+    <testcase name="getPendingFactIds_returns_pending_and_failed" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.0" />
+    <testcase name="searchFacts_returns_matching_facts" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.027" />
+    <testcase name="updateBookmark_toggles_flag_and_sets_syncStatus" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.001" />
+    <testcase name="updateNote_persists_note_and_syncStatus" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.029" />
+    <testcase name="observeFavorites_returns_only_bookmarked" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.002" />
+    <testcase name="replaceAllFacts_also_preserves_failed_items" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.028" />
+    <testcase name="insertFact_with_same_id_replaces_existing" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.032" />
+    <testcase name="insertFacts_batch_and_observeAll_emits_ordered_by_cachedAt" classname="com.catfact.app.core.database.dao.CatFactDaoTest" time="0.001" />
+  </testsuite>
+</testsuites>

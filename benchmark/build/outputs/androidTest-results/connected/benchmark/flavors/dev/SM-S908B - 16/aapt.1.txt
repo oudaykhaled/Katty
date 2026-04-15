@@ -1,0 +1,9 @@
+EXECUTING: /Users/oudaykhaled/Library/Android/sdk/build-tools/36.0.0/aapt dump badging /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/apk/dev/benchmark/app-dev-benchmark.apk
+CURRENT_WORKING_DIRECTORY: /Users/oudaykhaled/.gradle/daemon/9.3.1
+START_TIME: 2026-04-15 10:49:10.993
+START_TIME-NANOS: 2026-04-15 10:49:10.993430000
+ENVIRONMENT:
+
+*****************************************
+STDOUT/STDERR BELOW
+===================

@@ -1,0 +1,10 @@
+com.catfact.app.feature.facts-dev-0 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/generated/res/pngs/dev/release
+com.catfact.app.feature.facts-updated_navigation_xml-1 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/generated/updated_navigation_xml/devRelease
+com.catfact.app.feature.facts-mergeDevReleaseResources-2 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/intermediates/incremental/devRelease/mergeDevReleaseResources/merged.dir
+com.catfact.app.feature.facts-mergeDevReleaseResources-3 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/intermediates/incremental/devRelease/mergeDevReleaseResources/stripped.dir
+com.catfact.app.feature.facts-devRelease-4 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/intermediates/merged_res/devRelease/mergeDevReleaseResources
+com.catfact.app.feature.facts-devRelease-5 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/intermediates/packaged_res/devRelease/packageDevReleaseResources
+com.catfact.app.feature.facts-dev-6 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/src/dev/res
+com.catfact.app.feature.facts-devRelease-7 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/src/devRelease/res
+com.catfact.app.feature.facts-main-8 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/src/main/res
+com.catfact.app.feature.facts-release-9 /Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/src/release/res
