@@ -15,7 +15,7 @@ data class FactsUiState(
     val error: UiText? = null,
     val searchInput: String = "",
     val searchQuery: String = "",
-    val currentPage: Int = 1,
-    val hasMorePages: Boolean = true,
+    val currentPage: Int = 0,
+    val hasMorePages: Boolean = false,
     val bookmarkLoadingIds: ImmutableList<String> = persistentListOf()
 )

@@ -5,10 +5,13 @@ import com.catfact.app.core.domain.usecase.FetchRandomFactUseCase
 import com.catfact.app.core.domain.usecase.GetFactsUseCase
 import com.catfact.app.core.domain.usecase.RefreshFactsUseCase
 import com.catfact.app.core.domain.usecase.ToggleBookmarkUseCase
+import com.catfact.app.core.domain.model.PageResult
+import com.catfact.app.core.domain.repository.CatFactRepository
 import com.catfact.app.core.telemetry.NoOpEventTracker
 import com.catfact.app.core.testing.FakeCatFactRepository
 import com.catfact.app.core.testing.TestFixtures
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceTimeBy
@@ -43,7 +46,7 @@ class FactsViewModelTest {
         Dispatchers.resetMain()
     }
 
-    private fun createViewModel() = FactsViewModel(
+    private fun createViewModel(repository: CatFactRepository = this.repository) = FactsViewModel(
         getFactsUseCase = GetFactsUseCase(repository),
         fetchRandomFactUseCase = FetchRandomFactUseCase(repository),
         toggleBookmarkUseCase = ToggleBookmarkUseCase(repository),
@@ -65,7 +68,7 @@ class FactsViewModelTest {
 
         viewModel.state.test {
             val state = awaitItem()
-            assertEquals(4, state.facts.size)
+            assertEquals(3, state.facts.size)
         }
     }
 
@@ -149,7 +152,7 @@ class FactsViewModelTest {
 
     @Test
     fun `refresh error sets error state`() = runTest {
-        repository.failFetchRandom = true
+        repository.failRefresh = true
         val viewModel = createViewModel()
         advanceUntilIdle()
 
@@ -190,9 +193,10 @@ class FactsViewModelTest {
 
     @Test
     fun `loadNextPage error emits ShowSnackbar`() = runTest {
-        repository.failRefresh = true
+        repository.fakeLastPage = 5
         val viewModel = createViewModel()
         advanceUntilIdle()
+        repository.failRefresh = true
 
         viewModel.sideEffects.test {
             viewModel.onEvent(FactsEvent.LoadNextPage)
@@ -239,5 +243,116 @@ class FactsViewModelTest {
         assertNull(viewModel.state.value.randomFact)
         assertFalse(viewModel.state.value.isLoading)
         assertNull(viewModel.state.value.error)
+    }
+
+    @Test
+    fun `initial load fetches page one before any next page`() = runTest {
+        repository.fakeLastPage = 5
+        val requestedPages = mutableListOf<Int>()
+        val recordingRepository = object : CatFactRepository by repository {
+            override suspend fun refreshFacts(page: Int, limit: Int): PageResult {
+                requestedPages += page
+                return repository.refreshFacts(page, limit)
+            }
+        }
+        val viewModel = createViewModel(recordingRepository)
+        advanceUntilIdle()
+        viewModel.onEvent(FactsEvent.LoadNextPage)
+        advanceUntilIdle()
+
+        assertEquals(listOf(1, 2), requestedPages)
+    }
+
+    @Test
+    fun `initial page failure cannot advance directly to page two`() = runTest {
+        repository.failRefresh = true
+        val requestedPages = mutableListOf<Int>()
+        val recordingRepository = object : CatFactRepository by repository {
+            override suspend fun refreshFacts(page: Int, limit: Int): PageResult {
+                requestedPages += page
+                return repository.refreshFacts(page, limit)
+            }
+        }
+        val viewModel = createViewModel(recordingRepository)
+        advanceUntilIdle()
+        viewModel.onEvent(FactsEvent.LoadNextPage)
+        advanceUntilIdle()
+
+        assertEquals(listOf(1), requestedPages)
+        assertEquals(0, viewModel.state.value.currentPage)
+        assertFalse(viewModel.state.value.hasMorePages)
+    }
+
+    @Test
+    fun `pull to refresh fetches page one and resets pagination`() = runTest {
+        repository.fakeLastPage = 5
+        val requestedPages = mutableListOf<Int>()
+        val recordingRepository = object : CatFactRepository by repository {
+            override suspend fun refreshFacts(page: Int, limit: Int): PageResult {
+                requestedPages += page
+                return repository.refreshFacts(page, limit)
+            }
+        }
+        val viewModel = createViewModel(recordingRepository)
+        advanceUntilIdle()
+        viewModel.onEvent(FactsEvent.LoadNextPage)
+        advanceUntilIdle()
+        viewModel.onEvent(FactsEvent.Refresh)
+        advanceUntilIdle()
+        viewModel.onEvent(FactsEvent.LoadNextPage)
+        advanceUntilIdle()
+
+        assertEquals(listOf(1, 2, 1, 2), requestedPages)
+    }
+
+    @Test
+    fun `concurrent next page events launch only one request`() = runTest {
+        repository.fakeLastPage = 5
+        val pageTwoGate = CompletableDeferred<Unit>()
+        var pageTwoRequests = 0
+        val slowRepository = object : CatFactRepository by repository {
+            override suspend fun refreshFacts(page: Int, limit: Int): PageResult {
+                if (page == 2) {
+                    pageTwoRequests++
+                    pageTwoGate.await()
+                }
+                return repository.refreshFacts(page, limit)
+            }
+        }
+        val viewModel = createViewModel(slowRepository)
+        advanceUntilIdle()
+        viewModel.onEvent(FactsEvent.LoadNextPage)
+        viewModel.onEvent(FactsEvent.LoadNextPage)
+        advanceUntilIdle()
+        assertEquals(1, pageTwoRequests)
+        assertTrue(viewModel.state.value.isLoadingMore)
+
+        pageTwoGate.complete(Unit)
+        advanceUntilIdle()
+        assertEquals(2, viewModel.state.value.currentPage)
+        assertFalse(viewModel.state.value.isLoadingMore)
+    }
+
+    @Test
+    fun `refresh cancels stale pagination without emitting an error`() = runTest {
+        repository.fakeLastPage = 5
+        val pageTwoGate = CompletableDeferred<Unit>()
+        val slowRepository = object : CatFactRepository by repository {
+            override suspend fun refreshFacts(page: Int, limit: Int): PageResult {
+                if (page == 2) pageTwoGate.await()
+                return repository.refreshFacts(page, limit)
+            }
+        }
+        val viewModel = createViewModel(slowRepository)
+        advanceUntilIdle()
+        viewModel.onEvent(FactsEvent.LoadNextPage)
+        advanceUntilIdle()
+        viewModel.sideEffects.test {
+            viewModel.onEvent(FactsEvent.Refresh)
+            advanceUntilIdle()
+            assertEquals(1, viewModel.state.value.currentPage)
+            assertFalse(viewModel.state.value.isLoadingMore)
+            expectNoEvents()
+        }
     }
 }

@@ -10,6 +10,8 @@ interface CatFactRepository {
     suspend fun getFactById(id: String): CatFact?
     suspend fun fetchRandomFact(): CatFact
     suspend fun refreshFacts(page: Int, limit: Int): PageResult
+    /** Refreshes cached remote fields without changing the interactive feed or its page positions. */
+    suspend fun refreshCachedFacts(limit: Int): List<CatFact>
     suspend fun toggleBookmark(factId: String, isCurrentlyBookmarked: Boolean)
     suspend fun updateNote(factId: String, note: String)
     suspend fun searchFacts(query: String): Flow<List<CatFact>>

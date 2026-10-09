@@ -6,14 +6,13 @@ import com.catfact.app.core.database.mapper.toEntity
 import com.catfact.app.core.domain.model.CatFact
 import com.catfact.app.core.domain.model.PageResult
 import com.catfact.app.core.domain.model.ServerException
-import com.catfact.app.core.domain.model.SyncStatus
 import com.catfact.app.core.domain.repository.CatFactRepository
 import com.catfact.app.core.logging.Logger
 import com.catfact.app.core.network.api.CatFactApi
+import com.catfact.app.core.network.model.CatFactListResponse
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import retrofit2.HttpException
-import java.util.UUID
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -36,27 +35,41 @@ class CatFactRepositoryImpl @Inject constructor(
     override suspend fun fetchRandomFact(): CatFact {
         val start = System.currentTimeMillis()
         val response = wrapHttpException { catFactApi.getRandomFact() }
-        logger.logNetworkRequest("GET", "fact", System.currentTimeMillis() - start, 200)
-        val entity = response.toEntity(id = UUID.randomUUID().toString())
-        catFactDao.insertFact(entity)
-        return entity.toDomain()
+        logger.logNetworkRequest("GET", "fact", System.currentTimeMillis() - start, HTTP_OK)
+        return catFactDao.insertFact(response.toEntity()).toDomain()
     }
 
     override suspend fun refreshFacts(page: Int, limit: Int): PageResult {
-        val start = System.currentTimeMillis()
-        val response = wrapHttpException { catFactApi.getFacts(page = page, limit = limit) }
-        logger.logNetworkRequest("GET", "facts?page=$page&limit=$limit", System.currentTimeMillis() - start, 200)
-        val entities = response.data.map { it.toEntity() }
-        if (page == 1) {
+        val response = fetchPage(page, limit)
+        val offset = (page.toLong() - 1L) * limit
+        val entities = response.data.mapIndexed { index, fact ->
+            fact.toEntity().copy(feedPosition = offset + index)
+        }
+        val cachedEntities = if (page == 1) {
             catFactDao.replaceAllFacts(entities)
         } else {
             catFactDao.insertFacts(entities)
         }
         return PageResult(
-            facts = entities.map { it.toDomain() },
+            facts = cachedEntities.map { it.toDomain() },
             currentPage = response.currentPage,
             lastPage = response.lastPage
         )
+    }
+
+    override suspend fun refreshCachedFacts(limit: Int): List<CatFact> {
+        val response = fetchPage(page = 1, limit = limit)
+        // Null positions merge cached fields while leaving existing feed membership untouched.
+        return catFactDao.insertFacts(response.data.map { it.toEntity() }).map { it.toDomain() }
+    }
+
+    private suspend fun fetchPage(page: Int, limit: Int): CatFactListResponse {
+        require(page > 0) { "Page must be positive" }
+        require(limit > 0) { "Page size must be positive" }
+        val start = System.currentTimeMillis()
+        val response = wrapHttpException { catFactApi.getFacts(page = page, limit = limit) }
+        logger.logNetworkRequest("GET", "facts?page=$page&limit=$limit", System.currentTimeMillis() - start, HTTP_OK)
+        return response
     }
 
     private suspend fun <T> wrapHttpException(block: suspend () -> T): T =
@@ -64,25 +77,29 @@ class CatFactRepositoryImpl @Inject constructor(
             block()
         } catch (e: HttpException) {
             logger.logError("Repository", e, mapOf("httpCode" to e.code()))
-            throw ServerException(e.code(), e.message())
+            throw ServerException(e.code(), e.message(), e)
         }
 
     override suspend fun toggleBookmark(factId: String, isCurrentlyBookmarked: Boolean) {
-        catFactDao.updateBookmark(
+        val updatedRows = catFactDao.updateBookmark(
             factId = factId,
-            isBookmarked = !isCurrentlyBookmarked,
-            syncStatus = SyncStatus.SYNCED.name
+            isBookmarked = !isCurrentlyBookmarked
         )
+        check(updatedRows == 1) { "Fact is no longer available" }
     }
 
     override suspend fun updateNote(factId: String, note: String) {
-        catFactDao.updateNote(
+        val updatedRows = catFactDao.updateNote(
             factId = factId,
-            note = note,
-            syncStatus = SyncStatus.SYNCED.name
+            note = note
         )
+        check(updatedRows == 1) { "Fact is no longer available" }
     }
 
     override suspend fun searchFacts(query: String): Flow<List<CatFact>> =
         catFactDao.searchFacts(query).map { entities -> entities.map { it.toDomain() } }
+
+    private companion object {
+        const val HTTP_OK = 200
+    }
 }

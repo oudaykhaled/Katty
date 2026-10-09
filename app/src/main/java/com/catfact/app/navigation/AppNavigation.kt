@@ -28,7 +28,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
+import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
+import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import com.catfact.app.R
 import com.catfact.app.feature.factdetail.presentation.DetailRoute
 import com.catfact.app.feature.facts.presentation.FactsRoute
@@ -46,7 +48,8 @@ private enum class BottomTab(
 
 @Composable
 fun AppNavigation(
-    initialDeepLinkFactId: String? = null
+    initialDeepLinkFactId: String? = null,
+    onDeepLinkConsumed: () -> Unit = {}
 ) {
     val backStack = rememberNavBackStack(AppRoute.FactsRoute)
     var selectedTab by rememberSaveable { mutableIntStateOf(0) }
@@ -55,7 +58,9 @@ fun AppNavigation(
 
     LaunchedEffect(initialDeepLinkFactId) {
         if (initialDeepLinkFactId != null) {
-            backStack.add(AppRoute.FactDetailRoute(initialDeepLinkFactId))
+            val destination = AppRoute.FactDetailRoute(initialDeepLinkFactId)
+            if (backStack.lastOrNull() != destination) backStack.add(destination)
+            onDeepLinkConsumed()
         }
     }
 
@@ -66,73 +71,92 @@ fun AppNavigation(
     Column(modifier = Modifier.fillMaxSize()) {
         SnackbarHost(hostState = snackbarHostState)
 
-        NavDisplay(
-            backStack = backStack,
-            onBack = {
-                if (backStack.size > 1) {
-                    backStack.removeLastOrNull()
-                }
-            },
-            modifier = Modifier.weight(1f),
-            entryProvider = entryProvider {
-                entry<AppRoute.FactsRoute> {
-                    FactsRoute(
-                        onNavigateToDetail = { factId ->
-                            backStack.add(AppRoute.FactDetailRoute(factId))
-                        },
-                        onShowSnackbar = showSnackbar
-                    )
-                }
-                entry<AppRoute.FavoritesRoute> {
-                    FavoritesRoute(
-                        onNavigateToDetail = { factId ->
-                            backStack.add(AppRoute.FactDetailRoute(factId))
-                        },
-                        onShowSnackbar = showSnackbar
-                    )
-                }
-                entry<AppRoute.FactDetailRoute> { route ->
-                    DetailRoute(
-                        factId = route.factId,
-                        onNavigateBack = {
-                            if (backStack.size > 1) {
-                                backStack.removeLastOrNull()
-                            }
-                        },
-                        onShowSnackbar = showSnackbar
-                    )
-                }
-            }
-        )
+        DestinationDisplay(backStack, showSnackbar, Modifier.weight(1f))
 
-        NavigationBar(modifier = Modifier.testTag("bottom_navigation_bar")) {
-            BottomTab.entries.forEachIndexed { index, tab ->
-                NavigationBarItem(
-                    selected = selectedTab == index,
-                    onClick = {
-                        if (selectedTab != index) {
-                            selectedTab = index
-                            backStack.clear()
-                            backStack.add(tab.route)
-                        }
+        BottomNavigationBar(selectedTab = selectedTab) { index ->
+            val destination = BottomTab.entries[index].route
+            if (selectedTab != index || backStack.lastOrNull() != destination) {
+                selectedTab = index
+                backStack.clear()
+                backStack.add(destination)
+            }
+        }
+    }
+}
+
+@Composable
+private fun DestinationDisplay(
+    backStack: MutableList<NavKey>,
+    onShowSnackbar: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    NavDisplay(
+        backStack = backStack,
+        entryDecorators = listOf(
+            rememberSaveableStateHolderNavEntryDecorator(),
+            rememberViewModelStoreNavEntryDecorator()
+        ),
+        onBack = {
+            if (backStack.size > 1) {
+                backStack.removeLastOrNull()
+            }
+        },
+        modifier = modifier,
+        entryProvider = entryProvider {
+            entry<AppRoute.FactsRoute> {
+                FactsRoute(
+                    onNavigateToDetail = { factId ->
+                        backStack.add(AppRoute.FactDetailRoute(factId))
                     },
-                    icon = {
-                        Icon(
-                            imageVector = when (tab) {
-                                BottomTab.FACTS ->
-                                    if (selectedTab == index) Icons.AutoMirrored.Filled.List
-                                    else Icons.AutoMirrored.Outlined.List
-                                BottomTab.FAVORITES ->
-                                    if (selectedTab == index) Icons.Filled.Favorite
-                                    else Icons.Outlined.FavoriteBorder
-                            },
-                            contentDescription = stringResource(tab.labelRes)
-                        )
-                    },
-                    label = { Text(stringResource(tab.labelRes)) },
-                    modifier = Modifier.testTag(tab.testTag)
+                    onShowSnackbar = onShowSnackbar
                 )
             }
+            entry<AppRoute.FavoritesRoute> {
+                FavoritesRoute(
+                    onNavigateToDetail = { factId ->
+                        backStack.add(AppRoute.FactDetailRoute(factId))
+                    },
+                    onShowSnackbar = onShowSnackbar
+                )
+            }
+            entry<AppRoute.FactDetailRoute> { route ->
+                DetailRoute(
+                    factId = route.factId,
+                    onNavigateBack = {
+                        if (backStack.size > 1) {
+                            backStack.removeLastOrNull()
+                        }
+                    },
+                    onShowSnackbar = onShowSnackbar
+                )
+            }
+        }
+    )
+}
+
+@Composable
+private fun BottomNavigationBar(selectedTab: Int, onTabSelected: (Int) -> Unit) {
+    NavigationBar(modifier = Modifier.testTag("bottom_navigation_bar")) {
+        BottomTab.entries.forEachIndexed { index, tab ->
+            NavigationBarItem(
+                selected = selectedTab == index,
+                onClick = { onTabSelected(index) },
+                icon = {
+                    Icon(
+                        imageVector = when (tab) {
+                            BottomTab.FACTS ->
+                                if (selectedTab == index) Icons.AutoMirrored.Filled.List
+                                else Icons.AutoMirrored.Outlined.List
+                            BottomTab.FAVORITES ->
+                                if (selectedTab == index) Icons.Filled.Favorite
+                                else Icons.Outlined.FavoriteBorder
+                        },
+                        contentDescription = stringResource(tab.labelRes)
+                    )
+                },
+                label = { Text(stringResource(tab.labelRes)) },
+                modifier = Modifier.testTag(tab.testTag)
+            )
         }
     }
 }

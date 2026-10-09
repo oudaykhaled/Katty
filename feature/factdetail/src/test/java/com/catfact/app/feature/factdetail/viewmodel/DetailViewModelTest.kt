@@ -4,10 +4,12 @@ import androidx.lifecycle.SavedStateHandle
 import app.cash.turbine.test
 import com.catfact.app.core.domain.usecase.SaveNoteUseCase
 import com.catfact.app.core.domain.usecase.ToggleBookmarkUseCase
+import com.catfact.app.core.domain.repository.CatFactRepository
 import com.catfact.app.core.telemetry.NoOpEventTracker
 import com.catfact.app.core.testing.FakeCatFactRepository
 import com.catfact.app.core.testing.TestFixtures
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
@@ -45,7 +47,10 @@ class DetailViewModelTest {
         Dispatchers.resetMain()
     }
 
-    private fun createViewModel(factId: String = "fact-1") = DetailViewModel(
+    private fun createViewModel(
+        factId: String = "fact-1",
+        repository: CatFactRepository = this.repository
+    ) = DetailViewModel(
         savedStateHandle = savedStateHandle,
         factId = factId,
         repository = repository,
@@ -189,5 +194,56 @@ class DetailViewModelTest {
             assertTrue(message is UiText.Resource)
             assertEquals(R.string.error_note_save_failed, (message as UiText.Resource).resId)
         }
+    }
+
+    @Test
+    fun `edits made while saving remain an unsaved recoverable draft`() = runTest {
+        val saveGate = CompletableDeferred<Unit>()
+        val slowRepository = object : CatFactRepository by repository {
+            override suspend fun updateNote(factId: String, note: String) {
+                saveGate.await()
+                repository.updateNote(factId, note)
+            }
+        }
+        val viewModel = createViewModel(repository = slowRepository)
+        advanceUntilIdle()
+        viewModel.onEvent(DetailEvent.UpdateNote("Submitted version"))
+        viewModel.onEvent(DetailEvent.SaveNote)
+        advanceUntilIdle()
+        assertTrue(viewModel.state.value.isSavingNote)
+
+        viewModel.onEvent(DetailEvent.UpdateNote("New draft while saving"))
+        saveGate.complete(Unit)
+        advanceUntilIdle()
+
+        assertEquals("Submitted version", viewModel.state.value.fact?.personalNote)
+        assertEquals("New draft while saving", viewModel.state.value.editedNote)
+        assertEquals("New draft while saving", savedStateHandle.get<String>(DetailViewModel.DRAFT_NOTE_KEY))
+        assertTrue(viewModel.state.value.hasNoteChanges)
+        assertFalse(viewModel.state.value.isSavingNote)
+    }
+
+    @Test
+    fun `repeated save events persist only once while save is pending`() = runTest {
+        val saveGate = CompletableDeferred<Unit>()
+        var saves = 0
+        val slowRepository = object : CatFactRepository by repository {
+            override suspend fun updateNote(factId: String, note: String) {
+                saves++
+                saveGate.await()
+                repository.updateNote(factId, note)
+            }
+        }
+        val viewModel = createViewModel(repository = slowRepository)
+        advanceUntilIdle()
+        viewModel.onEvent(DetailEvent.UpdateNote("One save"))
+        viewModel.onEvent(DetailEvent.SaveNote)
+        viewModel.onEvent(DetailEvent.SaveNote)
+        advanceUntilIdle()
+        assertEquals(1, saves)
+        saveGate.complete(Unit)
+        advanceUntilIdle()
+        assertFalse(viewModel.state.value.hasNoteChanges)
+        assertNull(savedStateHandle.get<String>(DetailViewModel.DRAFT_NOTE_KEY))
     }
 }

@@ -2,6 +2,7 @@ package com.catfact.app.core.network.interceptor
 
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
@@ -97,10 +98,10 @@ class RetryInterceptorTest {
         assertEquals(200, response.code)
     }
 
-    @Test(expected = java.io.IOException::class)
-    fun `wraps non-IOException as IOException after retries exhausted`() {
-        val throwingInterceptor = okhttp3.Interceptor { chain ->
-            throw RuntimeException("Unexpected failure")
+    @Test(expected = IllegalStateException::class)
+    fun `programming failures propagate without retry`() {
+        val throwingInterceptor = okhttp3.Interceptor {
+            throw IllegalStateException("Unexpected failure")
         }
 
         val clientWithThrowingInterceptor = OkHttpClient.Builder()
@@ -111,6 +112,34 @@ class RetryInterceptorTest {
         clientWithThrowingInterceptor.newCall(
             Request.Builder().url(server.url("/")).build()
         ).execute()
+    }
+
+    @Test
+    fun `write requests are never automatically replayed`() {
+        server.enqueue(MockResponse().setResponseCode(503))
+        val request = Request.Builder().url(server.url("/"))
+            .post("payload".toRequestBody())
+            .build()
+
+        client.newCall(request).execute().use { response ->
+            assertEquals(503, response.code)
+        }
+        assertEquals(1, server.requestCount)
+    }
+
+    @Test
+    fun `cancelled requests are not retried`() {
+        var attempts = 0
+        val cancellingClient = client.newBuilder().addInterceptor { chain ->
+            attempts++
+            chain.call().cancel()
+            throw java.io.IOException("Cancelled")
+        }.build()
+
+        org.junit.Assert.assertThrows(java.io.IOException::class.java) {
+            cancellingClient.newCall(Request.Builder().url(server.url("/")).build()).execute()
+        }
+        assertEquals(1, attempts)
     }
 
     @Test(expected = java.io.IOException::class)

@@ -22,7 +22,7 @@ object DatabaseModule {
             context,
             CatFactDatabase::class.java,
             "catfact.db"
-        ).build()
+        ).addMigrations(CatFactDatabase.MIGRATION_1_2).build()
 
     @Provides
     @Singleton

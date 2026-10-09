@@ -72,7 +72,9 @@ class TimberLoggerTest {
     @Test
     fun `logFactAction logs with details`() {
         logger.logFactAction("fact-1", "bookmark", mapOf("source" to "list"))
-        assertTrue(logEntries.any { it.tag == "FactAction" && it.message.contains("fact-1") && it.message.contains("bookmark") })
+        assertTrue(logEntries.any {
+            it.tag == "FactAction" && it.message.contains("fact-1") && it.message.contains("bookmark")
+        })
     }
 
     @Test

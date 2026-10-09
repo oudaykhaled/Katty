@@ -9,6 +9,7 @@ data class DetailUiState(
     val fact: CatFact? = null,
     val editedNote: String = "",
     val hasNoteChanges: Boolean = false,
+    val isSavingNote: Boolean = false,
     val isLoading: Boolean = true,
     val error: UiText? = null
 )

@@ -14,6 +14,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -72,12 +73,18 @@ class FavoritesViewModel @Inject constructor(
         is ErrorKind.Unknown -> UiText.Resource(R.string.error_load_favorites_failed)
     }
 
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun removeBookmark(factId: String) {
         viewModelScope.launch {
             try {
                 toggleBookmarkUseCase(factId, isCurrentlyBookmarked = true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _sideEffects.send(FavoritesSideEffect.ShowSnackbar(UiText.Resource(R.string.error_remove_bookmark_failed)))
+                _sideEffects.send(
+                    FavoritesSideEffect.ShowSnackbar(UiText.Resource(R.string.error_remove_bookmark_failed))
+                )
             }
         }
     }

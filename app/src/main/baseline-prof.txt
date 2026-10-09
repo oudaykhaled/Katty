@@ -1,6 +1,6 @@
 # Baseline profile for CatFact app
 # Ensures critical paths are AOT-compiled at install time via ProfileInstaller.
-# Re-generate with BaselineProfileGenerator when AGP plugin supports AGP 9+.
+# Authored profile; regenerate with :app:generateDevReleaseBaselineProfile and review output before replacement.
 
 # ─── App startup & Activity ───────────────────────────────────────────────────
 HSPLcom/catfact/app/CatFactApplication;->onCreate()V

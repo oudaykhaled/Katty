@@ -16,6 +16,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -48,12 +50,14 @@ class FactsViewModel @Inject constructor(
     val sideEffects = _sideEffects.receiveAsFlow()
 
     private val searchQueryFlow = MutableStateFlow("")
+    private var refreshJob: Job? = null
+    private var nextPageJob: Job? = null
 
     init {
         eventTracker.trackScreenView("FactsScreen")
         observeFacts()
         setupSearchDebounce()
-        loadInitial()
+        refresh()
     }
 
     fun onEvent(event: FactsEvent) {
@@ -88,51 +92,62 @@ class FactsViewModel @Inject constructor(
             .launchIn(viewModelScope)
     }
 
-    private fun loadInitial() {
-        viewModelScope.launch {
-            _state.update { it.copy(isLoading = true) }
-            try {
-                fetchRandomFactUseCase().let { fact ->
-                    _state.update { it.copy(randomFact = fact) }
-                }
-            } catch (_: Exception) { /* Random fact is optional */ }
-            _state.update { it.copy(isLoading = false) }
-        }
-    }
-
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun refresh() {
-        viewModelScope.launch {
-            _state.update { it.copy(isLoading = true, error = null) }
+        if (refreshJob?.isActive == true) return
+        nextPageJob?.cancel()
+        _state.update { it.copy(isLoading = true, isLoadingMore = false, error = null) }
+        refreshJob = viewModelScope.launch {
             try {
-                fetchRandomFactUseCase().let { fact ->
-                    _state.update { it.copy(randomFact = fact) }
+                val result = refreshFactsUseCase(page = 1, limit = PAGE_SIZE)
+                _state.update {
+                    it.copy(currentPage = result.currentPage, hasMorePages = result.hasMorePages)
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.update { it.copy(error = e.toUiText()) }
             }
-            _state.update { it.copy(isLoading = false) }
+            try {
+                val fact = fetchRandomFactUseCase()
+                _state.update { it.copy(randomFact = fact) }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                // The optional hero must not prevent cached list content from loading.
+            } finally {
+                _state.update { it.copy(isLoading = false) }
+            }
         }
     }
 
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun loadNextPage() {
         val current = _state.value
-        if (current.isLoadingMore || !current.hasMorePages) return
+        if (current.isLoading || current.isLoadingMore || !current.hasMorePages) return
 
-        viewModelScope.launch {
-            _state.update { it.copy(isLoadingMore = true) }
+        _state.update { it.copy(isLoadingMore = true) }
+        nextPageJob = viewModelScope.launch {
             try {
                 val nextPage = current.currentPage + 1
                 val result = refreshFactsUseCase(nextPage, PAGE_SIZE)
                 _state.update {
-                    it.copy(currentPage = nextPage, hasMorePages = result.hasMorePages)
+                    it.copy(currentPage = result.currentPage, hasMorePages = result.hasMorePages)
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _sideEffects.send(FactsSideEffect.ShowSnackbar(UiText.Resource(R.string.error_load_failed)))
+            } finally {
+                _state.update { it.copy(isLoadingMore = false) }
             }
-            _state.update { it.copy(isLoadingMore = false) }
         }
     }
 
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun toggleBookmark(factId: String, isCurrentlyBookmarked: Boolean) {
         viewModelScope.launch {
             _state.update { state ->
@@ -143,6 +158,8 @@ class FactsViewModel @Inject constructor(
             try {
                 toggleBookmarkUseCase(factId, isCurrentlyBookmarked)
                 eventTracker.trackBookmarkToggled(factId, !isCurrentlyBookmarked)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _sideEffects.send(FactsSideEffect.ShowSnackbar(UiText.Resource(R.string.error_bookmark_failed)))
             }
@@ -159,11 +176,15 @@ class FactsViewModel @Inject constructor(
         searchQueryFlow.value = query
     }
 
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun fetchRandomFact() {
         viewModelScope.launch {
             try {
                 val fact = fetchRandomFactUseCase()
                 _state.update { it.copy(randomFact = fact) }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _sideEffects.send(FactsSideEffect.ShowSnackbar(UiText.Resource(R.string.error_fetch_failed)))
             }
