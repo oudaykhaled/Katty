@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.androidx.baselineprofile)
     jacoco
 }
 
@@ -17,7 +18,7 @@ val instrumentationCoverage: Boolean =
 android {
     namespace = "com.catfact.app"
 
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.catfact.app"
@@ -48,17 +49,11 @@ android {
                 "proguard-rules.pro"
             )
         }
-        create("benchmark") {
-            initWith(getByName("release"))
-            signingConfig = signingConfigs.getByName("debug")
-            matchingFallbacks += listOf("release")
-            isDebuggable = true
-        }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     buildFeatures {
@@ -93,7 +88,7 @@ android {
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 
@@ -103,7 +98,14 @@ composeCompiler {
     reportsDestination = layout.buildDirectory.dir("compose_reports")
 }
 
+baselineProfile {
+    automaticGenerationDuringBuild = false
+    // Generation writes a separate variant profile only after successful collection.
+    saveInSrc = true
+}
+
 dependencies {
+    baselineProfile(project(":benchmark"))
     implementation(project(":core:domain"))
     implementation(project(":core:database"))
     implementation(project(":core:network"))
@@ -132,6 +134,7 @@ dependencies {
 
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
+    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
     implementation(libs.kotlinx.serialization.core)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.collections.immutable)
@@ -153,7 +156,7 @@ dependencies {
     ksp(libs.hilt.android.compiler)
     kspAndroidTest(libs.hilt.android.compiler)
 
-    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.hilt.lifecycle.viewmodel.compose)
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
@@ -175,7 +178,7 @@ dependencies {
 }
 
 jacoco {
-    toolVersion = "0.8.12"
+    toolVersion = "0.8.15"
 }
 
 val withInstrumentation: Boolean =

@@ -19,6 +19,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+    private const val REQUEST_TIMEOUT_SECONDS = 30L
 
     @Provides
     @Singleton
@@ -31,9 +32,9 @@ object NetworkModule {
     @Singleton
     fun provideOkHttpClient(interceptors: Set<@JvmSuppressWildcards InterceptorEntry>): OkHttpClient {
         val builder = OkHttpClient.Builder()
-            .connectTimeout(30, TimeUnit.SECONDS)
-            .readTimeout(30, TimeUnit.SECONDS)
-            .writeTimeout(30, TimeUnit.SECONDS)
+            .connectTimeout(REQUEST_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+            .readTimeout(REQUEST_TIMEOUT_SECONDS, TimeUnit.SECONDS)
+            .writeTimeout(REQUEST_TIMEOUT_SECONDS, TimeUnit.SECONDS)
 
         val sorted = interceptors.sorted()
         sorted.filter { it.type == InterceptorType.APPLICATION }.forEach {

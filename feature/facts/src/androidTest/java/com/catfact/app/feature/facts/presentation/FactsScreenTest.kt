@@ -1,5 +1,8 @@
 package com.catfact.app.feature.facts.presentation
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -131,5 +134,23 @@ class FactsScreenTest {
         }
 
         composeRule.onNodeWithTag("facts_list").assertIsDisplayed()
+    }
+
+    @Test
+    fun failedPaginationDoesNotAutomaticallyRetryWithoutScrollOrRefresh() {
+        val events = mutableListOf<FactsEvent>()
+        var state by mutableStateOf(
+            FactsUiState(facts = persistentListOf(testFact()), currentPage = 1, hasMorePages = true)
+        )
+        composeRule.setContent {
+            CatFactTheme { FactsScreen(state = state, onEvent = { events.add(it) }) }
+        }
+        composeRule.waitUntil { events.count { it is FactsEvent.LoadNextPage } == 1 }
+        composeRule.runOnIdle { state = state.copy(isLoadingMore = true) }
+        composeRule.waitForIdle()
+        composeRule.runOnIdle { state = state.copy(isLoadingMore = false) }
+        composeRule.waitForIdle()
+
+        assertEquals(1, events.count { it is FactsEvent.LoadNextPage })
     }
 }

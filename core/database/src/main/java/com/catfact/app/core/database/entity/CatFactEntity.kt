@@ -11,5 +11,6 @@ data class CatFactEntity(
     val isBookmarked: Boolean = false,
     val personalNote: String = "",
     val syncStatus: String = "SYNCED",
-    val cachedAt: Long = System.currentTimeMillis()
+    val cachedAt: Long = System.currentTimeMillis(),
+    val feedPosition: Long? = null
 )

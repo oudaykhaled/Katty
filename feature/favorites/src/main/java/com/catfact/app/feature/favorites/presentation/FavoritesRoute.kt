@@ -4,10 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberUpdatedState
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.catfact.app.core.designsystem.util.UiText
+import com.catfact.app.core.designsystem.util.resolve
 import com.catfact.app.feature.favorites.viewmodel.FavoritesSideEffect
 import com.catfact.app.feature.favorites.viewmodel.FavoritesViewModel
 
@@ -20,18 +20,15 @@ fun FavoritesRoute(
     val state by viewModel.state.collectAsStateWithLifecycle()
     val currentOnNavigate by rememberUpdatedState(onNavigateToDetail)
     val currentOnSnackbar by rememberUpdatedState(onShowSnackbar)
-    val context = LocalContext.current
+    val resources = LocalResources.current
+    val currentResources by rememberUpdatedState(resources)
 
     LaunchedEffect(Unit) {
         viewModel.sideEffects.collect { effect ->
             when (effect) {
                 is FavoritesSideEffect.NavigateToDetail -> currentOnNavigate(effect.factId)
                 is FavoritesSideEffect.ShowSnackbar -> {
-                    val message = when (val msg = effect.message) {
-                        is UiText.Raw -> msg.value
-                        is UiText.Resource -> context.getString(msg.resId, *msg.args.toTypedArray())
-                    }
-                    currentOnSnackbar(message)
+                    currentOnSnackbar(effect.message.resolve(currentResources))
                 }
             }
         }

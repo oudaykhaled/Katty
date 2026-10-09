@@ -1,27 +1,9 @@
-# Engineering Standards
+# Engineering standards
 
-## Code Quality
-- **Detekt**: Zero tolerance (`maxIssues: 0`), Composable function naming exempted
-- **Lint**: All modules run lint with `--continue`
-- **Max line length**: 120 characters
-- **No wildcard imports**
-- **Magic numbers**: Excluded in test files only
+Changes should explain a concrete behavior, keep module responsibilities clear, and include tests for failure and recovery paths when they change. Use constructor-injected boundaries and deterministic coroutine tests. Room behavior needs database-backed tests; navigation and Compose interaction need device tests.
 
-## Testing Requirements
-- Every use case has at least one unit test
-- Every ViewModel has Turbine-based flow tests
-- Fakes over mocks: `FakeCatFactRepository` in `:core:testing`
-- `StandardTestDispatcher` for deterministic coroutine testing
-- MockWebServer for interceptor tests
-- Instrumentation tests verify Hilt DI graph, navigation flows, and accessibility
+The pull-request workflow builds the dev debug APK, runs Android lint, Detekt and JVM tests, enforces focused core coverage, and runs instrumented tests on an API 35 emulator. Checks fail on errors. Coverage scope and exclusions are explicit in the build; generated Android/DI code may be excluded, but Kotlin source files must not be removed wholesale from the denominator.
 
-## Architecture
-- MVI with sealed events, `@Immutable` state, Channel side effects
-- Offline-first: Room as SSOT, WorkManager sync
-- Dependency inversion: Interfaces in `:core:domain`, implementations in data modules
-- Convention plugins eliminate Gradle duplication
+Dependency changes use stable published artifacts and a documented compatible toolchain. Upgrade runtime and test families together. Keep the wrapper checksum, Room schemas, authored baseline profiles, and source under version control. Keep generated build output, local SDK paths, signing material, and IDE state out of Git.
 
-## CI/CD
-- 7-stage pipeline: Lint → Detekt → Unit Tests → Instrumented Tests → Coverage → Build → Maestro E2E
-- JaCoCo coverage aggregation across all modules
-- APK size reporting in build step
+Record executed commands and device/build details in verification notes. Do not describe a written test as passed, a debug benchmark as a release measurement, or configured tooling as a completed check. Android lint and Detekt are required CI checks. Narrow rule suppressions require a local explanation; no generated baseline conceals outstanding findings.

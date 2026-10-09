@@ -8,6 +8,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
@@ -24,10 +27,16 @@ fun parseDeepLinkUri(uri: Uri?): String? {
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    private var pendingDeepLinkFactId by mutableStateOf<String?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        val deepLinkFactId = parseDeepLinkUri(intent?.data)
+        pendingDeepLinkFactId = if (savedInstanceState == null) {
+            parseDeepLinkUri(intent?.data)
+        } else {
+            savedInstanceState.getString(PENDING_DEEP_LINK_KEY)
+        }
         setContent {
             CatFactTheme {
                 Box(
@@ -35,7 +44,10 @@ class MainActivity : ComponentActivity() {
                         .fillMaxSize()
                         .semantics { testTagsAsResourceId = true }
                 ) {
-                    AppNavigation(initialDeepLinkFactId = deepLinkFactId)
+                    AppNavigation(
+                        initialDeepLinkFactId = pendingDeepLinkFactId,
+                        onDeepLinkConsumed = { pendingDeepLinkFactId = null }
+                    )
                 }
             }
         }
@@ -43,6 +55,15 @@ class MainActivity : ComponentActivity() {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        setIntent(intent)
+        pendingDeepLinkFactId = parseDeepLinkUri(intent.data)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        pendingDeepLinkFactId?.let { outState.putString(PENDING_DEEP_LINK_KEY, it) }
+        super.onSaveInstanceState(outState)
+    }
+
+    private companion object {
+        const val PENDING_DEEP_LINK_KEY = "pending_deep_link_fact_id"
     }
 }

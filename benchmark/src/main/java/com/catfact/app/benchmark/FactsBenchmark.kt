@@ -19,7 +19,7 @@ import java.util.regex.Pattern
  * navigation, and idle-recomposition scenarios.
  *
  * Run with:
- *   ./gradlew :benchmark:connectedDevBenchmarkAndroidTest
+ *   ./gradlew :benchmark:connectedDevBenchmarkReleaseAndroidTest
  *
  * After each test, Macrobenchmark writes a .perfetto-trace file. Open in
  * [Perfetto UI](https://ui.perfetto.dev/) and look for:
@@ -30,6 +30,8 @@ import java.util.regex.Pattern
  * Each test isolates a user journey so regressions are attributable to a
  * specific interaction pattern.
  */
+// One discoverable JUnit class keeps the related benchmark scenarios in the same device suite.
+@Suppress("TooManyFunctions")
 class FactsBenchmark {
 
     @get:Rule
@@ -69,7 +71,7 @@ class FactsBenchmark {
     @Ignore("CompilationMode.Partial requires baseline profile broadcast; disabled until profiles are generated")
     fun coldStartupPartialCompilation() = startup(
         StartupMode.COLD,
-        CompilationMode.Partial(warmupIterations = 3)
+        CompilationMode.Partial(warmupIterations = WARMUP_ITERATIONS)
     )
 
     @Test
@@ -120,7 +122,7 @@ class FactsBenchmark {
         pressHome()
         startActivityAndWait()
         waitForContent()
-        Thread.sleep(2_000)
+        Thread.sleep(IDLE_BEFORE_SCROLL_MS)
         scrollListDownAndUp()
     }
 
@@ -154,10 +156,10 @@ class FactsBenchmark {
         waitForContent()
 
         val list = device.findObject(By.res("facts_list")) ?: return@measureRepeated
-        list.setGestureMargin(device.displayWidth / 5)
+        list.setGestureMargin(device.displayWidth / GESTURE_MARGIN_DIVISOR)
         list.fling(Direction.UP)
         device.waitForIdle()
-        Thread.sleep(1_000)
+        Thread.sleep(REFRESH_SETTLE_MS)
     }
 
     @Test
@@ -178,10 +180,10 @@ class FactsBenchmark {
             device.waitForIdle()
             searchField.text = "cat"
             device.waitForIdle()
-            Thread.sleep(500)
+            Thread.sleep(INTERACTION_SETTLE_MS)
             searchField.clear()
             device.waitForIdle()
-            Thread.sleep(500)
+            Thread.sleep(INTERACTION_SETTLE_MS)
         }
     }
 
@@ -200,11 +202,11 @@ class FactsBenchmark {
         waitForContent()
 
         navigateToFavorites()
-        Thread.sleep(500)
+        Thread.sleep(INTERACTION_SETTLE_MS)
         navigateToFacts()
-        Thread.sleep(500)
+        Thread.sleep(INTERACTION_SETTLE_MS)
         navigateToFavorites()
-        Thread.sleep(500)
+        Thread.sleep(INTERACTION_SETTLE_MS)
         navigateToFacts()
         device.waitForIdle()
     }
@@ -226,7 +228,7 @@ class FactsBenchmark {
             firstCard.click()
             device.wait(Until.hasObject(By.res("detail_screen")), CONTENT_TIMEOUT_MS)
             device.waitForIdle()
-            Thread.sleep(500)
+            Thread.sleep(INTERACTION_SETTLE_MS)
             device.pressBack()
             device.wait(Until.hasObject(By.res("facts_list")), CONTENT_TIMEOUT_MS)
             device.waitForIdle()
@@ -251,7 +253,7 @@ class FactsBenchmark {
         pressHome()
         startActivityAndWait()
         waitForContent()
-        Thread.sleep(5_000)
+        Thread.sleep(IDLE_CAPTURE_MS)
     }
 
     // ── Helpers ──────────────────────────────────────────────────────────────
@@ -262,14 +264,14 @@ class FactsBenchmark {
 
     private fun MacrobenchmarkScope.scrollListDownAndUp() {
         val list = device.findObject(By.res("facts_list")) ?: return
-        val margin = device.displayWidth / 5
+        val margin = device.displayWidth / GESTURE_MARGIN_DIVISOR
         list.setGestureMargin(margin)
 
-        repeat(5) {
+        repeat(SCROLL_DOWN_COUNT) {
             list.fling(Direction.DOWN)
             device.waitForIdle()
         }
-        repeat(3) {
+        repeat(SCROLL_UP_COUNT) {
             list.fling(Direction.UP)
             device.waitForIdle()
         }
@@ -277,19 +279,19 @@ class FactsBenchmark {
 
     private fun MacrobenchmarkScope.toggleBookmark(times: Int) {
         repeat(times) {
-            Thread.sleep(500)
+            Thread.sleep(INTERACTION_SETTLE_MS)
             device.waitForIdle()
             val addBookmark = device.findObject(By.desc("Add to favorites"))
             if (addBookmark != null) {
                 addBookmark.click()
-                Thread.sleep(800)
+                Thread.sleep(BOOKMARK_SETTLE_MS)
                 device.waitForIdle()
                 return@repeat
             }
             val removeBookmark = device.findObject(By.desc("Remove from favorites"))
             if (removeBookmark != null) {
                 removeBookmark.click()
-                Thread.sleep(800)
+                Thread.sleep(BOOKMARK_SETTLE_MS)
                 device.waitForIdle()
             }
         }
@@ -311,5 +313,14 @@ class FactsBenchmark {
         const val PACKAGE_NAME = "com.catfact.app"
         const val CONTENT_TIMEOUT_MS = 10_000L
         const val ITERATIONS = 3
+        const val WARMUP_ITERATIONS = 3
+        const val GESTURE_MARGIN_DIVISOR = 5
+        const val SCROLL_DOWN_COUNT = 5
+        const val SCROLL_UP_COUNT = 3
+        const val INTERACTION_SETTLE_MS = 500L
+        const val BOOKMARK_SETTLE_MS = 800L
+        const val REFRESH_SETTLE_MS = 1_000L
+        const val IDLE_BEFORE_SCROLL_MS = 2_000L
+        const val IDLE_CAPTURE_MS = 5_000L
     }
 }

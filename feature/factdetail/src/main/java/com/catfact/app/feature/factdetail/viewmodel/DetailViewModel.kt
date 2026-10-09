@@ -16,6 +16,7 @@ import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -62,6 +63,8 @@ class DetailViewModel @AssistedInject constructor(
         }
     }
 
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun loadFact() {
         viewModelScope.launch {
             _state.update { it.copy(isLoading = true) }
@@ -81,12 +84,16 @@ class DetailViewModel @AssistedInject constructor(
                 } else {
                     _state.update { it.copy(error = UiText.Resource(R.string.error_fact_not_found), isLoading = false) }
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.update { it.copy(error = e.toUiText(), isLoading = false) }
             }
         }
     }
 
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun toggleBookmark() {
         val fact = _state.value.fact ?: return
         viewModelScope.launch {
@@ -95,6 +102,8 @@ class DetailViewModel @AssistedInject constructor(
                 eventTracker.trackBookmarkToggled(fact.id, !fact.isBookmarked)
                 val updated = repository.getFactById(fact.id)
                 _state.update { it.copy(fact = updated) }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _sideEffects.send(DetailSideEffect.ShowSnackbar(UiText.Resource(R.string.error_bookmark_failed)))
             }
@@ -111,17 +120,31 @@ class DetailViewModel @AssistedInject constructor(
         }
     }
 
+    // Repository failures become stable UI errors; cancellation remains a lifecycle signal.
+    @Suppress("TooGenericExceptionCaught", "SwallowedException")
     private fun saveNote() {
-        val fact = _state.value.fact ?: return
+        val current = _state.value
+        val fact = current.fact ?: return
+        if (current.isSavingNote) return
+        val submittedNote = current.editedNote
+        _state.update { it.copy(isSavingNote = true) }
         viewModelScope.launch {
             try {
-                saveNoteUseCase(fact.id, _state.value.editedNote)
-                savedStateHandle.remove<String>(DRAFT_NOTE_KEY)
+                saveNoteUseCase(fact.id, submittedNote)
                 val updated = repository.getFactById(fact.id)
-                _state.update { it.copy(fact = updated, hasNoteChanges = false) }
+                _state.update {
+                    it.copy(fact = updated, hasNoteChanges = it.editedNote != updated?.personalNote)
+                }
+                if (_state.value.editedNote == submittedNote) {
+                    savedStateHandle.remove<String>(DRAFT_NOTE_KEY)
+                }
                 _sideEffects.send(DetailSideEffect.ShowSnackbar(UiText.Resource(R.string.success_note_saved)))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _sideEffects.send(DetailSideEffect.ShowSnackbar(UiText.Resource(R.string.error_note_save_failed)))
+            } finally {
+                _state.update { it.copy(isSavingNote = false) }
             }
         }
     }

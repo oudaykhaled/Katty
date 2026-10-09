@@ -1,15 +1,21 @@
 plugins {
     alias(libs.plugins.android.test)
+    alias(libs.plugins.androidx.baselineprofile)
 }
 
 android {
     namespace = "com.catfact.app.benchmark"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 24
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunnerArguments["androidx.benchmark.suppressErrors"] = "EMULATOR,DEBUGGABLE"
+        // Explicit opt-in for local exploratory emulator runs; never mask target debuggability.
+        providers.gradleProperty("benchmarkAllowEmulator").orNull?.toBoolean()?.let { allowEmulator ->
+            if (allowEmulator) {
+                testInstrumentationRunnerArguments["androidx.benchmark.suppressErrors"] = "EMULATOR"
+            }
+        }
     }
 
     flavorDimensions += "environment"
@@ -18,12 +24,9 @@ android {
         create("prod") { dimension = "environment" }
     }
 
-    buildTypes {
-        create("benchmark") {
-            isDebuggable = true
-            signingConfig = signingConfigs.getByName("debug")
-            matchingFallbacks += listOf("release")
-        }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     targetProjectPath = ":app"
@@ -32,7 +35,7 @@ android {
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
 
@@ -43,8 +46,6 @@ dependencies {
     implementation(libs.androidx.benchmark.macro.junit4)
 }
 
-androidComponents {
-    beforeVariants(selector().all()) {
-        it.enable = it.buildType == "benchmark"
-    }
+baselineProfile {
+    useConnectedDevices = true
 }

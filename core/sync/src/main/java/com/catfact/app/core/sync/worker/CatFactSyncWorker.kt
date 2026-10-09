@@ -9,6 +9,7 @@ import com.catfact.app.core.logging.Logger
 import com.catfact.app.core.telemetry.EventTracker
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
+import kotlinx.coroutines.CancellationException
 
 @HiltWorker
 class CatFactSyncWorker @AssistedInject constructor(
@@ -19,15 +20,19 @@ class CatFactSyncWorker @AssistedInject constructor(
     private val eventTracker: EventTracker
 ) : CoroutineWorker(appContext, workerParams) {
 
+    // WorkManager is the failure boundary for repository/network/storage exceptions.
+    @Suppress("TooGenericExceptionCaught")
     override suspend fun doWork(): Result {
         logger.logSyncEvent("sync_started", mapOf("runAttempt" to runAttemptCount))
         val startTime = System.currentTimeMillis()
         return try {
-            val result = repository.refreshFacts(page = 1, limit = SYNC_PAGE_SIZE)
+            val result = repository.refreshCachedFacts(limit = SYNC_PAGE_SIZE)
             val durationMs = System.currentTimeMillis() - startTime
-            logger.logSyncEvent("sync_completed", mapOf("factCount" to result.facts.size))
-            eventTracker.trackSyncCompleted(result.facts.size, durationMs)
+            logger.logSyncEvent("sync_completed", mapOf("factCount" to result.size))
+            eventTracker.trackSyncCompleted(result.size, durationMs)
             Result.success()
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             logger.logError("CatFactSyncWorker", e, mapOf("runAttempt" to runAttemptCount))
             if (runAttemptCount < MAX_RETRIES) Result.retry() else Result.failure()

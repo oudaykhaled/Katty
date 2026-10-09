@@ -14,9 +14,12 @@ class CatFactAndroidLibraryPlugin : Plugin<Project> {
         with(target) {
             pluginManager.apply("com.android.library")
             pluginManager.apply("jacoco")
+            extensions.configure<org.gradle.testing.jacoco.plugins.JacocoPluginExtension> {
+                toolVersion = "0.8.15"
+            }
 
             extensions.configure<LibraryExtension> {
-                compileSdk = 36
+                compileSdk = 37
                 defaultConfig {
                     minSdk = 24
                     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -27,8 +30,8 @@ class CatFactAndroidLibraryPlugin : Plugin<Project> {
                     create("prod") { dimension = "environment" }
                 }
                 compileOptions {
-                    sourceCompatibility = org.gradle.api.JavaVersion.VERSION_11
-                    targetCompatibility = org.gradle.api.JavaVersion.VERSION_11
+                    sourceCompatibility = org.gradle.api.JavaVersion.VERSION_17
+                    targetCompatibility = org.gradle.api.JavaVersion.VERSION_17
                 }
                 buildTypes {
                     getByName("debug") {
@@ -52,7 +55,7 @@ class CatFactAndroidLibraryPlugin : Plugin<Project> {
 
             extensions.configure<KotlinAndroidProjectExtension> {
                 compilerOptions {
-                    jvmTarget.set(JvmTarget.JVM_11)
+                    jvmTarget.set(JvmTarget.JVM_17)
                 }
             }
 

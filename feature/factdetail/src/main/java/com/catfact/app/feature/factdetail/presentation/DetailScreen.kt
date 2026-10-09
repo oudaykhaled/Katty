@@ -1,6 +1,7 @@
 package com.catfact.app.feature.factdetail.presentation
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -36,95 +37,85 @@ import com.catfact.app.feature.factdetail.presentation.components.NoteEditor
 import com.catfact.app.feature.factdetail.viewmodel.DetailEvent
 import com.catfact.app.feature.factdetail.viewmodel.DetailUiState
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailScreen(
-    state: DetailUiState,
-    onEvent: (DetailEvent) -> Unit
-) {
+fun DetailScreen(state: DetailUiState, onEvent: (DetailEvent) -> Unit) {
     Scaffold(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.detail_title)) },
-                navigationIcon = {
-                    IconButton(onClick = { onEvent(DetailEvent.NavigateBack) }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.cd_back))
-                    }
-                },
-                actions = {
-                    if (state.fact != null) {
-                        IconButton(onClick = { onEvent(DetailEvent.ShareFact) }) {
-                            Icon(Icons.Filled.Share, contentDescription = stringResource(R.string.cd_share))
-                        }
-                    }
-                }
+        topBar = { DetailTopBar(state, onEvent) }
+    ) { padding ->
+        when {
+            state.isLoading -> CircularProgressIndicator(
+                modifier = Modifier.fillMaxSize().padding(padding).padding(MaterialTheme.spacing.extraLarge)
+            )
+            state.fact != null -> DetailContent(state, onEvent, Modifier.padding(padding))
+            state.error != null -> Text(
+                text = state.error.asString(), color = MaterialTheme.colorScheme.error,
+                modifier = Modifier.fillMaxSize().padding(padding).padding(MaterialTheme.spacing.extraLarge)
             )
         }
-    ) { padding ->
-        if (state.isLoading) {
-            CircularProgressIndicator(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-                    .padding(MaterialTheme.spacing.extraLarge)
-            )
-        } else if (state.fact != null) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-                    .padding(MaterialTheme.spacing.extraLarge)
-                    .verticalScroll(rememberScrollState())
-                    .testTag("detail_screen")
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun DetailTopBar(state: DetailUiState, onEvent: (DetailEvent) -> Unit) {
+    TopAppBar(
+        title = { Text(stringResource(R.string.detail_title)) },
+        navigationIcon = {
+            IconButton(
+                onClick = { onEvent(DetailEvent.NavigateBack) }, modifier = Modifier.testTag("detail_back")
             ) {
-                Text(
-                    text = state.fact.fact,
-                    style = MaterialTheme.typography.headlineMedium
-                )
-
-                Spacer(Modifier.height(MaterialTheme.spacing.extraLarge))
-
-                CategoryChip(category = state.fact.category)
-
-                Spacer(Modifier.height(MaterialTheme.spacing.medium))
-
-                SyncIndicator(syncStatus = state.fact.syncStatus)
-
-                Spacer(Modifier.height(MaterialTheme.spacing.extraLarge))
-
-                BookmarkButton(
-                    isBookmarked = state.fact.isBookmarked,
-                    onClick = { onEvent(DetailEvent.ToggleBookmark) }
-                )
-
-                Spacer(Modifier.height(MaterialTheme.spacing.xxxLarge))
-
-                NoteEditor(
-                    note = state.editedNote,
-                    onNoteChange = { onEvent(DetailEvent.UpdateNote(it)) },
-                    modifier = Modifier.fillMaxWidth()
-                )
-
-                if (state.hasNoteChanges) {
-                    Spacer(Modifier.height(MaterialTheme.spacing.large))
-                    Button(
-                        onClick = { onEvent(DetailEvent.SaveNote) },
-                        modifier = Modifier.align(Alignment.End)
-                    ) {
-                        Text(stringResource(R.string.detail_save_note))
-                    }
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.cd_back))
+            }
+        },
+        actions = {
+            if (state.fact != null) {
+                IconButton(
+                    onClick = { onEvent(DetailEvent.ShareFact) }, modifier = Modifier.testTag("detail_share")
+                ) {
+                    Icon(Icons.Filled.Share, stringResource(R.string.cd_share))
                 }
             }
-        } else if (state.error != null) {
-            Text(
-                text = state.error.asString(),
-                color = MaterialTheme.colorScheme.error,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-                    .padding(MaterialTheme.spacing.extraLarge)
-            )
         }
+    )
+}
+
+@Composable
+private fun DetailContent(state: DetailUiState, onEvent: (DetailEvent) -> Unit, modifier: Modifier = Modifier) {
+    val fact = state.fact ?: return
+    Column(
+        modifier = modifier.fillMaxSize().padding(MaterialTheme.spacing.extraLarge)
+            .verticalScroll(rememberScrollState()).testTag("detail_screen")
+    ) {
+        Text(
+            text = fact.fact, style = MaterialTheme.typography.headlineMedium,
+            modifier = Modifier.testTag("detail_fact_text")
+        )
+        Spacer(Modifier.height(MaterialTheme.spacing.extraLarge))
+        CategoryChip(category = fact.category)
+        Spacer(Modifier.height(MaterialTheme.spacing.medium))
+        SyncIndicator(syncStatus = fact.syncStatus)
+        Spacer(Modifier.height(MaterialTheme.spacing.extraLarge))
+        BookmarkButton(
+            isBookmarked = fact.isBookmarked,
+            onClick = { onEvent(DetailEvent.ToggleBookmark) }, modifier = Modifier.testTag("detail_bookmark")
+        )
+        Spacer(Modifier.height(MaterialTheme.spacing.xxxLarge))
+        NoteSection(state, onEvent)
+    }
+}
+
+@Composable
+private fun ColumnScope.NoteSection(state: DetailUiState, onEvent: (DetailEvent) -> Unit) {
+    NoteEditor(
+        note = state.editedNote,
+        onNoteChange = { onEvent(DetailEvent.UpdateNote(it)) }, modifier = Modifier.fillMaxWidth()
+    )
+    if (state.hasNoteChanges) {
+        Spacer(Modifier.height(MaterialTheme.spacing.large))
+        Button(
+            onClick = { onEvent(DetailEvent.SaveNote) }, enabled = !state.isSavingNote,
+            modifier = Modifier.align(Alignment.End).testTag("detail_save_note")
+        ) { Text(stringResource(R.string.detail_save_note)) }
     }
 }

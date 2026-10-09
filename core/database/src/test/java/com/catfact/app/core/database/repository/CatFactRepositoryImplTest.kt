@@ -3,7 +3,6 @@ package com.catfact.app.core.database.repository
 import app.cash.turbine.test
 import com.catfact.app.core.database.dao.CatFactDao
 import com.catfact.app.core.database.entity.CatFactEntity
-import com.catfact.app.core.domain.model.SyncStatus
 import com.catfact.app.core.logging.Logger
 import com.catfact.app.core.network.api.CatFactApi
 import com.catfact.app.core.network.model.CatFactListResponse
@@ -33,6 +32,11 @@ class CatFactRepositoryImplTest {
     @Before
     fun setUp() {
         dao = mockk(relaxed = true)
+        coEvery { dao.insertFact(any()) } answers { firstArg() }
+        coEvery { dao.insertFacts(any()) } answers { firstArg() }
+        coEvery { dao.replaceAllFacts(any()) } answers { firstArg() }
+        coEvery { dao.updateBookmark(any(), any()) } returns 1
+        coEvery { dao.updateNote(any(), any()) } returns 1
         api = mockk()
         logger = mockk(relaxed = true)
         repository = CatFactRepositoryImpl(catFactDao = dao, catFactApi = api, logger = logger)
@@ -157,8 +161,7 @@ class CatFactRepositoryImplTest {
         coVerify {
             dao.updateBookmark(
                 factId = "b1",
-                isBookmarked = true,
-                syncStatus = SyncStatus.SYNCED.name
+                isBookmarked = true
             )
         }
     }
@@ -170,21 +173,19 @@ class CatFactRepositoryImplTest {
         coVerify {
             dao.updateBookmark(
                 factId = "b1",
-                isBookmarked = false,
-                syncStatus = SyncStatus.SYNCED.name
+                isBookmarked = false
             )
         }
     }
 
     @Test
-    fun `updateNote calls dao with note and synced status`() = runTest {
+    fun `updateNote writes local note`() = runTest {
         repository.updateNote("n1", "My note")
 
         coVerify {
             dao.updateNote(
                 factId = "n1",
-                note = "My note",
-                syncStatus = SyncStatus.SYNCED.name
+                note = "My note"
             )
         }
     }
@@ -208,7 +209,7 @@ class CatFactRepositoryImplTest {
     fun `fetchRandomFact generates UUID for id`() = runTest {
         coEvery { api.getRandomFact() } returns CatFactResponse(fact = "A fact", length = 6)
         val entitySlot = slot<CatFactEntity>()
-        coEvery { dao.insertFact(capture(entitySlot)) } returns Unit
+        coEvery { dao.insertFact(capture(entitySlot)) } answers { firstArg() }
 
         repository.fetchRandomFact()
 
@@ -224,13 +225,13 @@ class CatFactRepositoryImplTest {
             total = 1
         )
         val entitiesSlot = slot<List<CatFactEntity>>()
-        coEvery { dao.replaceAllFacts(capture(entitiesSlot)) } returns Unit
+        coEvery { dao.replaceAllFacts(capture(entitiesSlot)) } answers { firstArg() }
 
         repository.refreshFacts(page = 1, limit = 10)
 
         val id1 = entitiesSlot.captured[0].id
 
-        coEvery { dao.replaceAllFacts(capture(entitiesSlot)) } returns Unit
+        coEvery { dao.replaceAllFacts(capture(entitiesSlot)) } answers { firstArg() }
         repository.refreshFacts(page = 1, limit = 10)
 
         assertEquals(id1, entitiesSlot.captured[0].id)

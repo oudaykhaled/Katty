@@ -1,6 +1,7 @@
 package com.catfact.app.core.network.interceptor
 
 import okhttp3.Interceptor
+import org.junit.Assert.assertSame
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -12,13 +13,27 @@ class InterceptorEntryTest {
 
     @Test
     fun `sorted entries execute in order regardless of insertion order`() {
-        val third = InterceptorEntry(order = 30, interceptor = stubInterceptor("retry"), type = InterceptorType.APPLICATION)
-        val first = InterceptorEntry(order = 10, interceptor = stubInterceptor("headers"), type = InterceptorType.APPLICATION)
-        val second = InterceptorEntry(order = 20, interceptor = stubInterceptor("auth"), type = InterceptorType.APPLICATION)
+        val third = InterceptorEntry(
+            order = 30,
+            interceptor = stubInterceptor("retry"),
+            type = InterceptorType.APPLICATION
+        )
+        val first = InterceptorEntry(
+            order = 10,
+            interceptor = stubInterceptor("headers"),
+            type = InterceptorType.APPLICATION
+        )
+        val second = InterceptorEntry(
+            order = 20,
+            interceptor = stubInterceptor("auth"),
+            type = InterceptorType.APPLICATION
+        )
 
         val sorted = listOf(third, first, second).sorted()
 
-        assertEquals("headers", sorted[0].interceptor.javaClass.simpleName.takeIf { true }.let { "headers" })
+        assertSame(first, sorted[0])
+        assertSame(second, sorted[1])
+        assertSame(third, sorted[2])
         assertEquals(10, sorted[0].order)
         assertEquals(20, sorted[1].order)
         assertEquals(30, sorted[2].order)
@@ -26,9 +41,21 @@ class InterceptorEntryTest {
 
     @Test
     fun `filtering by type separates APPLICATION and NETWORK interceptors`() {
-        val appInterceptor = InterceptorEntry(order = 1, interceptor = stubInterceptor("app"), type = InterceptorType.APPLICATION)
-        val netInterceptor = InterceptorEntry(order = 2, interceptor = stubInterceptor("net"), type = InterceptorType.NETWORK)
-        val appInterceptor2 = InterceptorEntry(order = 3, interceptor = stubInterceptor("app2"), type = InterceptorType.APPLICATION)
+        val appInterceptor = InterceptorEntry(
+            order = 1,
+            interceptor = stubInterceptor("app"),
+            type = InterceptorType.APPLICATION
+        )
+        val netInterceptor = InterceptorEntry(
+            order = 2,
+            interceptor = stubInterceptor("net"),
+            type = InterceptorType.NETWORK
+        )
+        val appInterceptor2 = InterceptorEntry(
+            order = 3,
+            interceptor = stubInterceptor("app2"),
+            type = InterceptorType.APPLICATION
+        )
 
         val all = listOf(appInterceptor, netInterceptor, appInterceptor2)
         val appEntries = all.filter { it.type == InterceptorType.APPLICATION }.sorted()

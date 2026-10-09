@@ -1,10 +1,10 @@
 package com.catfact.app.benchmark
 
+import androidx.benchmark.macro.MacrobenchmarkScope
 import androidx.benchmark.macro.junit4.BaselineProfileRule
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.Direction
 import androidx.test.uiautomator.Until
-import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import java.util.regex.Pattern
@@ -13,15 +13,12 @@ import java.util.regex.Pattern
  * Baseline profile generator covering all critical user paths.
  *
  * Run separately via:
- *   ./gradlew :app:generateBaselineProfile
+ *   ./gradlew :app:generateDevReleaseBaselineProfile
  *
- * @Ignore'd because the `androidx.baselineprofile` producer plugin is
- * incompatible with AGP 9 (TestExtension API removed). Without the plugin
- * orchestrating dex2oat, [BaselineProfileRule.collect] runs as a plain
- * connected test whose heavy compilation can OOM-kill the instrumentation
- * process. Re-enable when the baselineprofile plugin ships AGP 9 support.
+ * The stable Baseline Profile plugin owns the non-minified, profileable target
+ * and isolates profile generation from Macrobenchmark measurement rules.
+ * Generated rules are saved per variant after collection; the authored main profile is retained until review.
  */
-@Ignore("baselineprofile plugin incompatible with AGP 9 — collect() OOM-kills the instrumentation process")
 class BaselineProfileGenerator {
 
     @get:Rule
@@ -31,80 +28,84 @@ class BaselineProfileGenerator {
     fun generate() {
         baselineProfileRule.collect(
             packageName = PACKAGE_NAME,
-            maxIterations = 3,
+            maxIterations = PROFILE_ITERATIONS,
             includeInStartupProfile = true
         ) {
             // Startup
             pressHome()
             startActivityAndWait()
-            device.wait(Until.hasObject(By.res("facts_list")), TIMEOUT_MS)
-
-            // Scroll facts list to warm LazyColumn item composition paths
-            val list = device.findObject(By.res("facts_list"))
-            if (list != null) {
-                list.setGestureMargin(device.displayWidth / 5)
-                repeat(3) {
-                    list.fling(Direction.DOWN)
-                    device.waitForIdle()
-                }
-                repeat(3) {
-                    list.fling(Direction.UP)
-                    device.waitForIdle()
-                }
+            check(device.wait(Until.hasObject(By.res("facts_list")), TIMEOUT_MS)) {
+                "Facts list did not appear during profile generation"
+            }
+            check(device.wait(Until.hasObject(By.res(Pattern.compile("fact_card_.*"))), TIMEOUT_MS)) {
+                "Profile generation requires loaded facts"
             }
 
-            // Bookmark toggle to warm animation + database write paths
-            val bookmark = device.findObject(By.desc("Add to favorites"))
-            if (bookmark != null) {
-                bookmark.click()
-                device.waitForIdle()
-                val removeBookmark = device.findObject(By.desc("Remove from favorites"))
-                removeBookmark?.click()
-                device.waitForIdle()
-            }
-
-            // Search to warm filter + recomposition paths
-            val searchField = device.findObject(By.res("search_field"))
-            if (searchField != null) {
-                searchField.click()
-                device.waitForIdle()
-                searchField.text = "cat"
-                device.waitForIdle()
-                Thread.sleep(300)
-                searchField.clear()
-                device.waitForIdle()
-            }
-
-            // Navigate to detail to warm detail screen composition
-            val firstCard = device.findObject(By.res(Pattern.compile("fact_card_.*")))
-            if (firstCard != null) {
-                firstCard.click()
-                device.wait(Until.hasObject(By.res("detail_screen")), TIMEOUT_MS)
-                device.waitForIdle()
-                device.pressBack()
-                device.wait(Until.hasObject(By.res("facts_list")), TIMEOUT_MS)
-                device.waitForIdle()
-            }
-
-            // Navigate to Favorites tab
-            val favTab = device.findObject(By.res("nav_favorites"))
-            if (favTab != null) {
-                favTab.click()
-                device.waitForIdle()
-                Thread.sleep(500)
-            }
-
-            // Navigate back to Facts tab
-            val factsTab = device.findObject(By.res("nav_facts"))
-            if (factsTab != null) {
-                factsTab.click()
-                device.waitForIdle()
-            }
+            warmListScrolling()
+            warmBookmarkToggle()
+            warmSearch()
+            warmDetailNavigation()
+            warmTabNavigation()
         }
+    }
+
+    private fun MacrobenchmarkScope.warmListScrolling() {
+        val list = device.findObject(By.res("facts_list")) ?: return
+        list.setGestureMargin(device.displayWidth / GESTURE_MARGIN_DIVISOR)
+        repeat(SCROLL_COUNT) {
+            list.fling(Direction.DOWN)
+            device.waitForIdle()
+        }
+        repeat(SCROLL_COUNT) {
+            list.fling(Direction.UP)
+            device.waitForIdle()
+        }
+    }
+
+    private fun MacrobenchmarkScope.warmBookmarkToggle() {
+        val bookmark = device.findObject(By.desc("Add to favorites")) ?: return
+        bookmark.click()
+        device.waitForIdle()
+        device.findObject(By.desc("Remove from favorites"))?.click()
+        device.waitForIdle()
+    }
+
+    private fun MacrobenchmarkScope.warmSearch() {
+        val searchField = device.findObject(By.res("search_field")) ?: return
+        searchField.click()
+        device.waitForIdle()
+        searchField.text = "cat"
+        device.waitForIdle()
+        Thread.sleep(SEARCH_SETTLE_MS)
+        searchField.clear()
+        device.waitForIdle()
+    }
+
+    private fun MacrobenchmarkScope.warmDetailNavigation() {
+        val firstCard = device.findObject(By.res(Pattern.compile("fact_card_.*"))) ?: return
+        firstCard.click()
+        device.wait(Until.hasObject(By.res("detail_screen")), TIMEOUT_MS)
+        device.waitForIdle()
+        device.pressBack()
+        device.wait(Until.hasObject(By.res("facts_list")), TIMEOUT_MS)
+        device.waitForIdle()
+    }
+
+    private fun MacrobenchmarkScope.warmTabNavigation() {
+        device.findObject(By.res("nav_favorites"))?.click()
+        device.waitForIdle()
+        Thread.sleep(TAB_SETTLE_MS)
+        device.findObject(By.res("nav_facts"))?.click()
+        device.waitForIdle()
     }
 
     private companion object {
         const val PACKAGE_NAME = "com.catfact.app"
         const val TIMEOUT_MS = 10_000L
+        const val PROFILE_ITERATIONS = 3
+        const val SCROLL_COUNT = 3
+        const val GESTURE_MARGIN_DIVISOR = 5
+        const val SEARCH_SETTLE_MS = 300L
+        const val TAB_SETTLE_MS = 500L
     }
 }

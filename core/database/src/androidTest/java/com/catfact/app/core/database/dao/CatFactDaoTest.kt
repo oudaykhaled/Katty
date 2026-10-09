@@ -53,9 +53,9 @@ class CatFactDaoTest {
     }
 
     @Test
-    fun insertFacts_batch_and_observeAll_emits_ordered_by_cachedAt() = runTest {
-        val older = CatFactEntity(id = "a", fact = "Older", length = 5, cachedAt = 1000L)
-        val newer = CatFactEntity(id = "b", fact = "Newer", length = 5, cachedAt = 2000L)
+    fun insertFacts_batch_and_observeAll_emits_ordered_by_feedPosition() = runTest {
+        val older = CatFactEntity(id = "a", fact = "Older", length = 5, cachedAt = 2000L, feedPosition = 1L)
+        val newer = CatFactEntity(id = "b", fact = "Newer", length = 5, cachedAt = 1000L, feedPosition = 0L)
         dao.insertFacts(listOf(older, newer))
 
         dao.observeAllFacts().test {
@@ -85,9 +85,9 @@ class CatFactDaoTest {
     }
 
     @Test
-    fun updateBookmark_toggles_flag_and_sets_syncStatus() = runTest {
-        dao.insertFact(CatFactEntity(id = "1", fact = "Fact", length = 4))
-        dao.updateBookmark(factId = "1", isBookmarked = true, syncStatus = "PENDING")
+    fun updateBookmark_changes_flag_and_preserves_syncStatus() = runTest {
+        dao.insertFact(CatFactEntity(id = "1", fact = "Fact", length = 4, syncStatus = "PENDING"))
+        dao.updateBookmark(factId = "1", isBookmarked = true)
 
         val updated = dao.getFactById("1")!!
         assertTrue(updated.isBookmarked)
@@ -95,9 +95,9 @@ class CatFactDaoTest {
     }
 
     @Test
-    fun updateNote_persists_note_and_syncStatus() = runTest {
-        dao.insertFact(CatFactEntity(id = "1", fact = "Fact", length = 4))
-        dao.updateNote(factId = "1", note = "My note", syncStatus = "PENDING")
+    fun updateNote_persists_note_and_preserves_syncStatus() = runTest {
+        dao.insertFact(CatFactEntity(id = "1", fact = "Fact", length = 4, syncStatus = "PENDING"))
+        dao.updateNote(factId = "1", note = "My note")
 
         val updated = dao.getFactById("1")!!
         assertEquals("My note", updated.personalNote)
@@ -119,7 +119,8 @@ class CatFactDaoTest {
         assertEquals("Pending", pending.fact)
         assertEquals("PENDING", pending.syncStatus)
 
-        assertNull(dao.getFactById("synced-1"))
+        assertNotNull(dao.getFactById("synced-1"))
+        assertNull(dao.getFactById("synced-1")!!.feedPosition)
 
         val newFact = dao.getFactById("new-1")!!
         assertEquals("Brand new", newFact.fact)
@@ -141,9 +142,9 @@ class CatFactDaoTest {
     fun searchFacts_returns_matching_facts() = runTest {
         dao.insertFacts(
             listOf(
-                CatFactEntity(id = "1", fact = "Cats can jump 6 times their length", length = 34),
-                CatFactEntity(id = "2", fact = "Dogs are loyal", length = 14),
-                CatFactEntity(id = "3", fact = "A cat has 230 bones", length = 19)
+                CatFactEntity(id = "1", fact = "Cats can jump 6 times their length", length = 34, feedPosition = 0L),
+                CatFactEntity(id = "2", fact = "Dogs are loyal", length = 14, feedPosition = 1L),
+                CatFactEntity(id = "3", fact = "A cat has 230 bones", length = 19, feedPosition = 2L)
             )
         )
 

@@ -5,12 +5,12 @@ import javax.inject.Singleton
 
 @Singleton
 class NoOpEventTracker @Inject constructor() : EventTracker {
-    override fun trackFactViewed(factId: String, category: String) {}
-    override fun trackBookmarkToggled(factId: String, isBookmarked: Boolean) {}
-    override fun trackSyncCompleted(factCount: Int, durationMs: Long) {}
-    override fun trackError(errorType: String, message: String, context: Map<String, Any?>) {}
-    override fun trackScreenView(screenName: String) {}
-    override fun trackUserAction(action: String, properties: Map<String, Any?>) {}
+    override fun trackFactViewed(factId: String, category: String) = Unit
+    override fun trackBookmarkToggled(factId: String, isBookmarked: Boolean) = Unit
+    override fun trackSyncCompleted(factCount: Int, durationMs: Long) = Unit
+    override fun trackError(errorType: String, message: String, context: Map<String, Any?>) = Unit
+    override fun trackScreenView(screenName: String) = Unit
+    override fun trackUserAction(action: String, properties: Map<String, Any?>) = Unit
 }
 
 @Singleton
@@ -21,15 +21,15 @@ class NoOpPerformanceTracer @Inject constructor() : PerformanceTracer {
 }
 
 private object NoOpTraceHandle : TraceHandle {
-    override fun putAttribute(key: String, value: String) {}
-    override fun putMetric(key: String, value: Long) {}
-    override fun stop() {}
+    override fun putAttribute(key: String, value: String) = Unit
+    override fun putMetric(key: String, value: Long) = Unit
+    override fun stop() = Unit
 }
 
 @Singleton
 class NoOpCrashReporter @Inject constructor() : CrashReporter {
-    override fun recordException(throwable: Throwable, context: Map<String, Any?>) {}
-    override fun setUserId(userId: String?) {}
-    override fun setCustomKey(key: String, value: String) {}
-    override fun log(message: String) {}
+    override fun recordException(throwable: Throwable, context: Map<String, Any?>) = Unit
+    override fun setUserId(userId: String?) = Unit
+    override fun setCustomKey(key: String, value: String) = Unit
+    override fun log(message: String) = Unit
 }

@@ -26,7 +26,9 @@ fun CatFact.toEntity(): CatFactEntity = CatFactEntity(
     syncStatus = syncStatus.name
 )
 
-fun CatFactResponse.toEntity(id: String = UUID.nameUUIDFromBytes(fact.toByteArray()).toString()): CatFactEntity =
+fun CatFactResponse.toEntity(
+    id: String = UUID.nameUUIDFromBytes(fact.toByteArray(Charsets.UTF_8)).toString()
+): CatFactEntity =
     CatFactEntity(
         id = id,
         fact = fact,
