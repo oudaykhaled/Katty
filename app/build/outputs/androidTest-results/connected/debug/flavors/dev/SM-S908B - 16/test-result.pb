@@ -1,97 +1,0 @@
-
-
-R5CT71TVVAJprimary§
-q
-HiltGraphTestcom.catfact.apphiltDependencyGraphResolves2„á˝ŒÄŸ±¡:„á˝Œ¿Ù∂ﬂB
-R5CT71TVVAJprimary"Ì
-
-logcatandroid◊
-‘/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.HiltGraphTest-hiltDependencyGraphResolves.txt"º
-
-device-infoandroid°
-û/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ω
-
-device-info.meminfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ω
-
-device-info.cpuinfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfoﬂ
-é
-AppNavigationFlowTestcom.catfact.app.navigation%bottomNavigation_displaysFavoritesTab2„á˝ŒÄØ–Â:Âá˝Œ¿æ—ﬂB
-R5CT71TVVAJprimary"ä
-
-logcatandroidÙ
-Ò/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.navigation.AppNavigationFlowTest-bottomNavigation_displaysFavoritesTab.txt"º
-
-device-infoandroid°
-û/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ω
-
-device-info.meminfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ω
-
-device-info.cpuinfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo◊
-ä
-AppNavigationFlowTestcom.catfact.app.navigation!bottomNavigation_displaysFactsTab2Âá˝ŒÄÃà·:Áá˝ŒÄøﬂÄB
-R5CT71TVVAJprimary"Ü
-
-logcatandroid
-Ì/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.navigation.AppNavigationFlowTest-bottomNavigation_displaysFactsTab.txt"º
-
-device-infoandroid°
-û/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ω
-
-device-info.meminfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ω
-
-device-info.cpuinfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo‰
-ê
-AppNavigationFlowTestcom.catfact.app.navigation(navigateToFavorites_showsFavoritesScreen2Áá˝Œ¿√úÅ:Èá˝Œ¿˘ÔB
-R5CT71TVVAJprimary"ç
-
-logcatandroid˜
-Ù/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.navigation.AppNavigationFlowTest-navigateToFavorites_showsFavoritesScreen.txt"º
-
-device-infoandroid°
-û/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ω
-
-device-info.meminfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ω
-
-device-info.cpuinfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo‹
-å
-AppNavigationFlowTestcom.catfact.app.navigation$hiltGraphResolvesAndActivityLaunches2Èá˝ŒÄ¸Ÿ:Íá˝Œ¿˛ÖB
-R5CT71TVVAJprimary"â
-
-logcatandroidÛ
-/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.navigation.AppNavigationFlowTest-hiltGraphResolvesAndActivityLaunches.txt"º
-
-device-infoandroid°
-û/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ω
-
-device-info.meminfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ω
-
-device-info.cpuinfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo›
-ç
-AppNavigationFlowTestcom.catfact.app.navigation$navigateBackToFacts_showsFactsScreen2Íá˝ŒÄıªÜ:Ïá˝ŒÄıªÜB
-R5CT71TVVAJprimary"â
-
-logcatandroidÛ
-/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.navigation.AppNavigationFlowTest-navigateBackToFacts_showsFactsScreen.txt"º
-
-device-infoandroid°
-û/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ω
-
-device-info.meminfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ω
-
-device-info.cpuinfoandroidö
-ó/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo*°
-c
-test-results.logOcom.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver´
-®/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/app/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/testlog/test-results.log 2
-text/plain

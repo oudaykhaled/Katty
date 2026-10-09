@@ -1,3 +1,0 @@
-restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun AppNavigation(
-  stable initialDeepLinkFactId: String? = @static null
-)

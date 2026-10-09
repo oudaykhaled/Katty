@@ -1,2 +1,0 @@
-
-R5CT71TVVAJ36 —™ê*	arm64-v8a*armeabi-v7a*armeabi2samsung:R5CT71TVVAJRSM-S908B
