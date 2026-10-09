@@ -1,1 +1,0 @@
--keep,allowobfuscation,allowshrinking class com.catfact.app.feature.favorites.viewmodel.FavoritesViewModel

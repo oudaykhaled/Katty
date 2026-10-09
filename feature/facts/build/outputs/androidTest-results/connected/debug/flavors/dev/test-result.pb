@@ -1,96 +1,0 @@
-
-•
-•
-FactsScreenTest*com.catfact.app.feature.facts.presentation"emptyStateShowsSearchBarButNoCards2ŠˆıÎ€™¶ş:‹ˆıÎÀŠÚÀB
-R5CT71TVVAJprimary"›
-
-logcatandroid…
-‚/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.facts.presentation.FactsScreenTest-emptyStateShowsSearchBarButNoCards.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo 
-š
-FactsScreenTest*com.catfact.app.feature.facts.presentation(heroCardIsDisplayedWhenRandomFactPresent2ŒˆıÎÀµ×Ş:ˆıÎ€÷yB
-R5CT71TVVAJprimary"¡
-
-logcatandroid‹
-ˆ/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.facts.presentation.FactsScreenTest-heroCardIsDisplayedWhenRandomFactPresent.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo™
-—
-FactsScreenTest*com.catfact.app.feature.facts.presentation$errorBannerIsDisplayedAndDismissible2ˆıÎÀĞÎÛ:ˆıÎÀ­‹”B
-R5CT71TVVAJprimary"
-
-logcatandroid‡
-„/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.facts.presentation.FactsScreenTest-errorBannerIsDisplayedAndDismissible.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfoü
-ˆ
-FactsScreenTest*com.catfact.app.feature.facts.presentationfactsListDisplaysItems2ˆıÎ€ú†(:ˆıÎ€–¬ÛB
-R5CT71TVVAJprimary"
-
-logcatandroidù
-ö/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.facts.presentation.FactsScreenTest-factsListDisplaysItems.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo“
-”
-FactsScreenTest*com.catfact.app.feature.facts.presentation!loadingMoreShowsProgressIndicator2ˆıÎ€Ÿ¦Ü:‘ˆıÎÀÜÉ…B
-R5CT71TVVAJprimary"š
-
-logcatandroid„
-/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.facts.presentation.FactsScreenTest-loadingMoreShowsProgressIndicator.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo•
-•
-FactsScreenTest*com.catfact.app.feature.facts.presentation"factCardClickDispatchesFactClicked2‘ˆıÎÀåÃ†:’ˆıÎ€«ª€B
-R5CT71TVVAJprimary"›
-
-logcatandroid…
-‚/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.feature.facts.presentation.FactsScreenTest-factCardClickDispatchesFactClicked.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo*«
-c
-test-results.logOcom.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriverµ
-²/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/feature/facts/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/testlog/test-results.log 2
-text/plain

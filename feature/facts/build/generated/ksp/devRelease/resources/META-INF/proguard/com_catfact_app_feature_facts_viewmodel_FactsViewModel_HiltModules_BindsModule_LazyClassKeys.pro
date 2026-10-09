@@ -1,1 +1,0 @@
--keep,allowobfuscation,allowshrinking class com.catfact.app.feature.facts.viewmodel.FactsViewModel

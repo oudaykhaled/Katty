@@ -1,171 +1,0 @@
-
-‹
-
-CatFactDaoTest!com.catfact.app.core.database.dao'replaceAllFacts_preserves_pending_items2Ú‡ıÎÀ¥¿É:Ú‡ıÎ€ùóßB
-R5CT71TVVAJprimary"–
-
-logcatandroid€
-ı/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-replaceAllFacts_preserves_pending_items.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo‡
-
-CatFactDaoTest!com.catfact.app.core.database.dao%insertFact_and_getFactById_returns_it2Ú‡ıÎÀª“å:Ú‡ıÎ€¯ĞåB
-R5CT71TVVAJprimary"”
-
-logcatandroidş
-û/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-insertFact_and_getFactById_returns_it.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo‹
-
-CatFactDaoTest!com.catfact.app.core.database.dao'getFactById_returns_null_for_missing_id2Ú‡ıÎ€¯Ğå:Ú‡ıÎ€¤ƒòB
-R5CT71TVVAJprimary"–
-
-logcatandroid€
-ı/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-getFactById_returns_null_for_missing_id.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo•
-•
-CatFactDaoTest!com.catfact.app.core.database.dao,getPendingFactIds_returns_pending_and_failed2Ú‡ıÎÀ¨Àò:Ú‡ıÎ€­ıòB
-R5CT71TVVAJprimary"›
-
-logcatandroid…
-‚/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-getPendingFactIds_returns_pending_and_failed.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo
-‹
-CatFactDaoTest!com.catfact.app.core.database.dao"searchFacts_returns_matching_facts2Ú‡ıÎÀ±ºó:Ú‡ıÎÀ¦íÿB
-R5CT71TVVAJprimary"‘
-
-logcatandroidû
-ø/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-searchFacts_returns_matching_facts.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo›
-˜
-CatFactDaoTest!com.catfact.app.core.database.dao/updateBookmark_toggles_flag_and_sets_syncStatus2Ú‡ıÎ€«ª€:Ú‡ıÎÀ¯ç€B
-R5CT71TVVAJprimary"
-
-logcatandroidˆ
-…/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-updateBookmark_toggles_flag_and_sets_syncStatus.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo‹
-
-CatFactDaoTest!com.catfact.app.core.database.dao'updateNote_persists_note_and_syncStatus2Ú‡ıÎ€´¤:Ú‡ıÎ€²ÑB
-R5CT71TVVAJprimary"–
-
-logcatandroid€
-ı/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-updateNote_persists_note_and_syncStatus.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo
-‘
-CatFactDaoTest!com.catfact.app.core.database.dao(observeFavorites_returns_only_bookmarked2Ú‡ıÎÀ¶:Ú‡ıÎ€»ËB
-R5CT71TVVAJprimary"—
-
-logcatandroid
-ş/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-observeFavorites_returns_only_bookmarked.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo“
-”
-CatFactDaoTest!com.catfact.app.core.database.dao+replaceAllFacts_also_preserves_failed_items2Ú‡ıÎÀ¿ˆ:Ú‡ıÎÀ½µB
-R5CT71TVVAJprimary"š
-
-logcatandroid„
-/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-replaceAllFacts_also_preserves_failed_items.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo
-’
-CatFactDaoTest!com.catfact.app.core.database.dao)insertFact_with_same_id_replaces_existing2Ú‡ıÎ€Âò:Ú‡ıÎÀÍÖ¬B
-R5CT71TVVAJprimary"˜
-
-logcatandroid‚
-ÿ/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-insertFact_with_same_id_replaces_existing.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo±
-£
-CatFactDaoTest!com.catfact.app.core.database.dao:insertFacts_batch_and_observeAll_emits_ordered_by_cachedAt2Ú‡ıÎ€Ò“­:Ú‡ıÎÀÖĞ­B
-R5CT71TVVAJprimary"©
-
-logcatandroid“
-/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/logcat-com.catfact.app.core.database.dao.CatFactDaoTest-insertFacts_batch_and_observeAll_emits_ordered_by_cachedAt.txt"Æ
-
-device-infoandroid«
-¨/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/device-info.pb"Ç
-
-device-info.meminfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/meminfo"Ç
-
-device-info.cpuinfoandroid¤
-¡/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/cpuinfo*«
-c
-test-results.logOcom.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriverµ
-²/Users/oudaykhaled/AndroidStudioProjects/MyApplication2/CatFact/core/database/build/outputs/androidTest-results/connected/debug/flavors/dev/SM-S908B - 16/testlog/test-results.log 2
-text/plain
